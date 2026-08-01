@@ -1,0 +1,27 @@
+.ek-reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity var(--ek-duration-slow) var(--ek-ease-out),
+    filter var(--ek-duration-slow) var(--ek-ease-out),
+    transform var(--ek-duration-slow) var(--ek-ease-out);
+  transition-delay: var(--ek-reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.ek-reveal--visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-reveal {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

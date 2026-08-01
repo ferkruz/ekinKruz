@@ -1,0 +1,96 @@
+<section class="ek-hero" aria-labelledby="hero-title">
+  <div class="ek-hero__glow" aria-hidden="true"></div>
+  <div class="ek-hero__field" aria-hidden="true">
+    <ek-card-scene accent="signal" />
+  </div>
+  <div class="ek-hero__stage" aria-hidden="true">
+    <ek-hero-scene />
+  </div>
+
+  <ek-container [wide]="true">
+    <div class="ek-hero__content">
+      <p class="ek-eyebrow ek-hero__enter" style="--ek-enter-delay: 80ms">EKIN KRUZ</p>
+      <h1 id="hero-title" class="ek-display-xl ek-hero__title ek-hero__enter" style="--ek-enter-delay: 160ms">
+        Construimos el software que impulsa la próxima generación de experiencias digitales.
+      </h1>
+      <p class="ek-body-lg ek-hero__sub ek-hero__enter" style="--ek-enter-delay: 260ms">
+        Desarrollamos plataformas a medida, experiencias web 3D e inteligencia artificial para
+        organizaciones que buscan innovar.
+      </p>
+      <div class="ek-hero__actions ek-hero__enter" style="--ek-enter-delay: 360ms">
+        <ek-button variant="primary" size="lg" routerLink="/contacto">Agendar una reunión</ek-button>
+        <ek-button variant="ghost" size="lg" routerLink="/portfolio">Ver proyectos</ek-button>
+      </div>
+    </div>
+  </ek-container>
+</section>
+
+<section class="ek-section" aria-label="Capacidades">
+  <ek-container>
+    <ek-section-header
+      eyebrow="Capacidades"
+      title="Cuatro disciplinas. Una entrega integrada."
+      description="Vendemos capacidad tecnológica seria: de la arquitectura al pixel, del modelo 3D al modelo de lenguaje."
+    />
+
+    <div class="ek-service-grid">
+      @for (service of services; track service.title) {
+        <article class="ek-service-card ek-glass" ekSignalTilt>
+          <div class="ek-service-card__field" aria-hidden="true">
+            <ek-card-scene [accent]="service.accent" />
+          </div>
+          <div class="ek-service-card__body">
+            <span class="ek-mono ek-service-card__index">{{ service.eyebrow }}</span>
+            <h3 class="ek-heading-sm">{{ service.title }}</h3>
+            <p class="ek-body">{{ service.description }}</p>
+            <ek-button variant="text" routerLink="/servicios">Explorar</ek-button>
+          </div>
+        </article>
+      }
+    </div>
+  </ek-container>
+</section>
+
+<section class="ek-section ek-section--alt" aria-label="Portfolio">
+  <ek-container>
+    <ek-section-header
+      eyebrow="Portfolio"
+      title="Casos que demuestran rigor."
+      description="Selección de experiencias construidas para decisión, operación y conversión."
+    />
+
+    <div class="ek-case-grid">
+      @for (item of cases; track item.title) {
+        <article class="ek-case-card" ekSignalTilt>
+          <div class="ek-case-card__field" aria-hidden="true">
+            <ek-card-scene [accent]="item.accent" />
+          </div>
+          <div class="ek-case-card__body">
+            <p class="ek-mono ek-case-card__tag">{{ item.tag }}</p>
+            <h3 class="ek-heading-sm">{{ item.title }}</h3>
+            <p class="ek-body">{{ item.summary }}</p>
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="ek-section__cta">
+      <ek-button variant="ghost" routerLink="/portfolio">Ver todos los proyectos</ek-button>
+    </div>
+  </ek-container>
+</section>
+
+<section class="ek-section" aria-labelledby="cta-title">
+  <ek-container>
+    <div class="ek-cta-band ek-glass">
+      <div>
+        <p class="ek-eyebrow">Siguiente paso</p>
+        <h2 id="cta-title" class="ek-display-lg">Hablemos de lo que querés construir.</h2>
+        <p class="ek-body-lg">
+          Una conversación corta. Claridad técnica. Una propuesta alineada a tu roadmap.
+        </p>
+      </div>
+      <ek-button variant="primary" size="lg" routerLink="/contacto">Agendar una reunión</ek-button>
+    </div>
+  </ek-container>
+</section>

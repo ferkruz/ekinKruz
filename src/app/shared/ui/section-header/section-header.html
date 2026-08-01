@@ -1,0 +1,7 @@
+<header class="ek-section-header" [class.ek-section-header--center]="align === 'center'">
+  <p class="ek-eyebrow">{{ eyebrow }}</p>
+  <h2 class="ek-display-lg">{{ title }}</h2>
+  @if (description) {
+    <p class="ek-body-lg ek-section-header__desc">{{ description }}</p>
+  }
+</header>

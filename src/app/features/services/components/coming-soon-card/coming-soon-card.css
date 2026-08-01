@@ -1,0 +1,44 @@
+:host {
+  display: block;
+}
+
+.ek-soon {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: var(--ek-radius-xl);
+  transform: rotateX(var(--ek-tilt-x, 0deg)) rotateY(var(--ek-tilt-y, 0deg));
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.ek-soon__field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.ek-soon__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-4);
+  max-width: 42rem;
+}
+
+.ek-soon__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ek-space-3);
+  margin-top: var(--ek-space-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-soon {
+    transform: none !important;
+    will-change: auto;
+  }
+}

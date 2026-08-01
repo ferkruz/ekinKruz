@@ -1,0 +1,83 @@
+:host {
+  display: inline-flex;
+}
+
+.ek-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ek-space-2);
+  min-height: 2.75rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--ek-radius-md);
+  font-family: var(--ek-font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition:
+    transform var(--ek-duration-fast) var(--ek-ease-out),
+    background-color var(--ek-duration-fast) var(--ek-ease-out),
+    border-color var(--ek-duration-fast) var(--ek-ease-out),
+    color var(--ek-duration-fast) var(--ek-ease-out),
+    box-shadow var(--ek-duration-fast) var(--ek-ease-out);
+}
+
+.ek-btn--lg {
+  min-height: 3.25rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+}
+
+.ek-btn--primary {
+  background: var(--ek-signal);
+  color: var(--ek-void);
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.ek-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(46, 230, 214, 0.25);
+}
+
+.ek-btn--primary:active {
+  transform: translateY(0);
+}
+
+.ek-btn--ghost {
+  background: transparent;
+  color: var(--ek-text-primary);
+  border: 1px solid var(--ek-border-strong);
+}
+
+.ek-btn--ghost:hover {
+  background: var(--ek-surface-1);
+  border-color: rgba(46, 230, 214, 0.35);
+}
+
+.ek-btn--text {
+  min-height: auto;
+  padding: 0.25rem 0;
+  color: var(--ek-text-secondary);
+  border-radius: var(--ek-radius-sm);
+}
+
+.ek-btn--text:hover {
+  color: var(--ek-signal);
+}
+
+.ek-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-btn,
+  .ek-btn--primary:hover {
+    transition: none;
+    transform: none;
+  }
+}

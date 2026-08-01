@@ -1,0 +1,59 @@
+<footer class="ek-footer">
+  <ek-container [wide]="true">
+    <div class="ek-footer__grid">
+      <div class="ek-footer__brand">
+        <a routerLink="/" class="ek-footer__logo" aria-label="EKIN KRUZ">
+          <span class="ek-footer__mark" aria-hidden="true">EK</span>
+          <span>EKIN KRUZ</span>
+        </a>
+        <p class="ek-body ek-footer__tagline">
+          Software factory premium. Plataformas, 3D e IA para organizaciones que escalan.
+        </p>
+      </div>
+
+      @for (column of columns; track column.title) {
+        <div class="ek-footer__col">
+          <p class="ek-eyebrow">{{ column.title }}</p>
+          <ul>
+            @for (link of column.links; track link.label) {
+              <li>
+                <a [routerLink]="link.path" class="ek-footer__link">{{ link.label }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+
+      <div class="ek-footer__col">
+        <p class="ek-eyebrow">Conectar</p>
+        <ul>
+          <li>
+            <a
+              class="ek-footer__link"
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a class="ek-footer__link" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <a class="ek-footer__link" href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+              Calendly
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ek-footer__bottom">
+      <p class="ek-caption">© {{ year }} EKIN KRUZ. Todos los derechos reservados.</p>
+      <p class="ek-mono ek-footer__signal">Obsidian Signal</p>
+    </div>
+  </ek-container>
+</footer>

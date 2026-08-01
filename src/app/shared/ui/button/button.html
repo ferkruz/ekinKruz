@@ -1,0 +1,38 @@
+@if (routerLink) {
+  <a
+    class="ek-btn"
+    [class.ek-btn--primary]="variant === 'primary'"
+    [class.ek-btn--ghost]="variant === 'ghost'"
+    [class.ek-btn--text]="variant === 'text'"
+    [class.ek-btn--lg]="size === 'lg'"
+    [routerLink]="routerLink"
+    [attr.aria-label]="ariaLabel"
+  >
+    <ng-content />
+  </a>
+} @else if (href) {
+  <a
+    class="ek-btn"
+    [class.ek-btn--primary]="variant === 'primary'"
+    [class.ek-btn--ghost]="variant === 'ghost'"
+    [class.ek-btn--text]="variant === 'text'"
+    [class.ek-btn--lg]="size === 'lg'"
+    [href]="href"
+    [attr.aria-label]="ariaLabel"
+  >
+    <ng-content />
+  </a>
+} @else {
+  <button
+    class="ek-btn"
+    [class.ek-btn--primary]="variant === 'primary'"
+    [class.ek-btn--ghost]="variant === 'ghost'"
+    [class.ek-btn--text]="variant === 'text'"
+    [class.ek-btn--lg]="size === 'lg'"
+    [type]="type"
+    [disabled]="disabled"
+    [attr.aria-label]="ariaLabel"
+  >
+    <ng-content />
+  </button>
+}

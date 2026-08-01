@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.ek-container {
+  width: 100%;
+  max-width: var(--ek-container);
+  margin-inline: auto;
+  padding-inline: var(--ek-gutter);
+}
+
+.ek-container--wide {
+  max-width: var(--ek-container-wide);
+}

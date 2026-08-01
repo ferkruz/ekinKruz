@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ek-card-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ek-card-scene__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-card-scene--ready .ek-card-scene__canvas {
+  opacity: 1;
+}
+
+.ek-card-scene__fallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(46, 230, 214, 0.12), transparent 42%),
+    radial-gradient(circle at 70% 60%, rgba(91, 124, 255, 0.1), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(46, 230, 214, 0.06), transparent 40%);
+  opacity: 0.9;
+}
+
+.ek-card-scene--ready:not(.ek-card-scene--fallback) .ek-card-scene__fallback {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-card-scene__canvas {
+    transition: none;
+  }
+}

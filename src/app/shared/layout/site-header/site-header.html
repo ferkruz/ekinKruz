@@ -1,0 +1,38 @@
+<header class="ek-header" [class.ek-header--scrolled]="scrolled()">
+  <div class="ek-header__inner">
+    <a routerLink="/" class="ek-logo" (click)="closeMenu()" aria-label="EKIN KRUZ — Inicio">
+      <span class="ek-logo__mark" aria-hidden="true">EK</span>
+      <span class="ek-logo__word">EKIN KRUZ</span>
+    </a>
+
+    <nav class="ek-nav" aria-label="Principal" [class.ek-nav--open]="menuOpen()">
+      <ul class="ek-nav__list">
+        @for (item of navItems; track item.path) {
+          <li>
+            <a
+              [routerLink]="item.path"
+              routerLinkActive="ek-nav__link--active"
+              class="ek-nav__link"
+              (click)="closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+      <a routerLink="/contacto" class="ek-nav__cta" (click)="closeMenu()">Contacto</a>
+    </nav>
+
+    <button
+      type="button"
+      class="ek-menu-toggle"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="mobile-nav"
+      [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+      (click)="toggleMenu()"
+    >
+      <span class="ek-menu-toggle__bar" aria-hidden="true"></span>
+      <span class="ek-menu-toggle__bar" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>

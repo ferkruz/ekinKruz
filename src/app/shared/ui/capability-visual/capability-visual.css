@@ -1,0 +1,155 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ek-visual {
+  width: 100%;
+  height: 100%;
+  min-height: 9rem;
+}
+
+.ek-visual__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ek-visual__nodes circle,
+.ek-visual__core {
+  fill: var(--ek-signal);
+  opacity: 0.85;
+}
+
+.ek-visual__links path,
+.ek-visual__wires path,
+.ek-visual__orbit ellipse {
+  stroke: rgba(91, 124, 255, 0.45);
+  stroke-width: 1.2;
+  fill: none;
+}
+
+.ek-visual__blocks rect,
+.ek-visual__frames rect,
+.ek-visual__ui rect {
+  fill: rgba(46, 230, 214, 0.06);
+  stroke: rgba(46, 230, 214, 0.35);
+  stroke-width: 1.2;
+}
+
+.ek-visual__iso-top {
+  fill: rgba(91, 124, 255, 0.18);
+  stroke: rgba(91, 124, 255, 0.55);
+}
+
+.ek-visual__iso-left {
+  fill: rgba(46, 230, 214, 0.08);
+  stroke: rgba(46, 230, 214, 0.4);
+}
+
+.ek-visual__iso-right {
+  fill: rgba(46, 230, 214, 0.14);
+  stroke: rgba(46, 230, 214, 0.45);
+}
+
+.ek-visual__iso-inner {
+  fill: none;
+  stroke: rgba(232, 237, 245, 0.35);
+  stroke-width: 1;
+}
+
+.ek-visual__pulse,
+.ek-visual__spark {
+  fill: var(--ek-signal);
+}
+
+.ek-visual__iso {
+  transform-origin: 140px 110px;
+  transition: transform var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-visual--active .ek-visual__iso {
+  transform: rotate(-4deg) translateY(-4px);
+}
+
+.ek-visual__blocks rect,
+.ek-visual__frames rect {
+  transition:
+    transform var(--ek-duration-base) var(--ek-ease-out),
+    stroke var(--ek-duration-base) var(--ek-ease-out),
+    fill var(--ek-duration-base) var(--ek-ease-out);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.ek-visual--active .ek-visual__blocks rect,
+.ek-visual--active .ek-visual__frames rect {
+  fill: rgba(46, 230, 214, 0.12);
+  stroke: rgba(46, 230, 214, 0.65);
+  transform: translateY(-2px);
+}
+
+.ek-visual__nodes circle {
+  transition: transform var(--ek-duration-base) var(--ek-ease-out);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.ek-visual--active .ek-visual__nodes circle {
+  transform: scale(1.15);
+}
+
+.ek-visual__pulse {
+  offset-path: path('M52,110 A88,28 0 1,1 228,110 A88,28 0 1,1 52,110');
+  offset-rotate: 0deg;
+  animation: ek-orbit 7s linear infinite;
+}
+
+.ek-visual__spark {
+  animation: ek-spark 2.8s var(--ek-ease-soft) infinite;
+}
+
+.ek-visual__links path {
+  stroke-dasharray: 4 6;
+  animation: ek-dash 8s linear infinite;
+}
+
+@keyframes ek-orbit {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes ek-spark {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.8);
+  }
+}
+
+@keyframes ek-dash {
+  to {
+    stroke-dashoffset: -80;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-visual__pulse,
+  .ek-visual__spark,
+  .ek-visual__links path {
+    animation: none;
+  }
+
+  .ek-visual--active .ek-visual__iso,
+  .ek-visual--active .ek-visual__blocks rect,
+  .ek-visual--active .ek-visual__frames rect,
+  .ek-visual--active .ek-visual__nodes circle {
+    transform: none;
+  }
+}

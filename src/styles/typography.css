@@ -1,0 +1,63 @@
+.ek-display-xl {
+  font-family: var(--ek-font-display);
+  font-size: var(--ek-text-display-xl);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.ek-display-lg {
+  font-family: var(--ek-font-display);
+  font-size: var(--ek-text-display-lg);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.ek-heading-md {
+  font-family: var(--ek-font-display);
+  font-size: var(--ek-text-heading-md);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.ek-heading-sm {
+  font-family: var(--ek-font-display);
+  font-size: var(--ek-text-heading-sm);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.ek-body-lg {
+  font-size: var(--ek-text-body-lg);
+  line-height: 1.65;
+  color: var(--ek-text-secondary);
+}
+
+.ek-body {
+  font-size: var(--ek-text-body);
+  line-height: 1.6;
+  color: var(--ek-text-secondary);
+}
+
+.ek-caption {
+  font-size: var(--ek-text-caption);
+  line-height: 1.4;
+  color: var(--ek-text-muted);
+}
+
+.ek-eyebrow {
+  font-family: var(--ek-font-mono);
+  font-size: var(--ek-text-mono-sm);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ek-signal);
+}
+
+.ek-mono {
+  font-family: var(--ek-font-mono);
+  font-size: var(--ek-text-mono-sm);
+  letter-spacing: 0.04em;
+}

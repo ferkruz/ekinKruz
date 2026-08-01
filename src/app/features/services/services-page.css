@@ -1,0 +1,302 @@
+:host {
+  display: block;
+}
+
+.ek-services {
+  position: relative;
+  padding-block: var(--ek-section-y);
+  overflow: clip;
+}
+
+.ek-services__intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(22rem, 0.72fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-bottom: clamp(3.5rem, 8vw, 6rem);
+  perspective: 1400px;
+}
+
+.ek-services__copy {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+}
+
+.ek-services-visual {
+  position: relative;
+  min-height: clamp(22rem, 36vw, 30rem);
+  overflow: hidden;
+  border-radius: var(--ek-radius-xl);
+  transform: rotateX(var(--ek-tilt-x, 0deg)) rotateY(var(--ek-tilt-y, 0deg));
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.ek-services-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      380px circle at var(--ek-glow-x, 50%) var(--ek-glow-y, 50%),
+      rgba(46, 230, 214, 0.2),
+      transparent 58%
+    ),
+    linear-gradient(135deg, rgba(91, 124, 255, 0.18), transparent 42%);
+}
+
+.ek-services-visual__field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.ek-services-visual__orbit {
+  position: absolute;
+  inset: 12%;
+  z-index: 2;
+  transform: translateZ(42px);
+  transform-style: preserve-3d;
+}
+
+.ek-services-visual__ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(227, 235, 244, 0.18);
+  border-radius: 999px;
+  box-shadow: inset 0 0 42px rgba(46, 230, 214, 0.08);
+}
+
+.ek-services-visual__ring--outer {
+  animation: ek-services-orbit 18s linear infinite;
+}
+
+.ek-services-visual__ring--inner {
+  inset: 22%;
+  border-color: rgba(46, 230, 214, 0.24);
+  transform: rotateX(62deg) rotateZ(-18deg);
+  animation: ek-services-orbit 14s linear infinite reverse;
+}
+
+.ek-services-visual__node {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid rgba(227, 235, 244, 0.2);
+  border-radius: 1.35rem;
+  background: rgba(11, 15, 20, 0.72);
+  color: var(--ek-text);
+  font: 700 0.84rem/1 var(--ek-font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(14px);
+  animation: ek-services-float 5s var(--ek-ease-out) infinite;
+}
+
+.ek-services-visual__node--product {
+  top: 4%;
+  left: 16%;
+  color: var(--ek-signal);
+}
+
+.ek-services-visual__node--platform {
+  top: 12%;
+  right: 7%;
+  animation-delay: -1.2s;
+}
+
+.ek-services-visual__node--ai {
+  right: 18%;
+  bottom: 5%;
+  color: var(--ek-trust);
+  animation-delay: -2.4s;
+}
+
+.ek-services-visual__node--cloud {
+  left: 4%;
+  bottom: 17%;
+  animation-delay: -3.6s;
+}
+
+.ek-services-visual__core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: clamp(8rem, 15vw, 11rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(46, 230, 214, 0.28);
+  border-radius: 2rem;
+  background:
+    linear-gradient(145deg, rgba(46, 230, 214, 0.18), rgba(91, 124, 255, 0.12)),
+    rgba(11, 15, 20, 0.8);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translate3d(-50%, -50%, 64px) rotateX(10deg) rotateY(-12deg);
+  text-align: center;
+}
+
+.ek-services-visual__core span {
+  color: var(--ek-text-muted);
+}
+
+.ek-services-visual__core strong {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  letter-spacing: -0.05em;
+}
+
+.ek-services-visual__signals {
+  position: absolute;
+  right: var(--ek-space-5);
+  bottom: var(--ek-space-5);
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--ek-space-2);
+  max-width: 18rem;
+  list-style: none;
+  transform: translateZ(70px);
+}
+
+.ek-services-visual__signals li {
+  border: 1px solid rgba(227, 235, 244, 0.16);
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  background: rgba(11, 15, 20, 0.58);
+  color: var(--ek-text-muted);
+  font-size: 0.78rem;
+  backdrop-filter: blur(12px);
+}
+
+.ek-services__editorial {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  perspective: 1400px;
+}
+
+.ek-services__cell {
+  min-width: 0;
+}
+
+.ek-services__cell[data-size='hero'] {
+  grid-column: span 7;
+  grid-row: span 1;
+}
+
+.ek-services__cell[data-size='tall'] {
+  grid-column: span 5;
+  grid-row: span 2;
+}
+
+.ek-services__cell[data-size='wide'] {
+  grid-column: span 4;
+}
+
+.ek-services__cell[data-size='standard'] {
+  grid-column: span 3;
+}
+
+.ek-services__soon {
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+}
+
+@keyframes ek-services-orbit {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes ek-services-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -0.65rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .ek-services__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .ek-services-visual {
+    min-height: 24rem;
+  }
+
+  .ek-services__cell[data-size='hero'] {
+    grid-column: span 12;
+  }
+
+  .ek-services__cell[data-size='tall'] {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+
+  .ek-services__cell[data-size='wide'],
+  .ek-services__cell[data-size='standard'] {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 720px) {
+  .ek-services__intro {
+    gap: var(--ek-space-6);
+  }
+
+  .ek-services-visual {
+    min-height: 20rem;
+  }
+
+  .ek-services-visual__orbit {
+    inset: 10%;
+  }
+
+  .ek-services-visual__node {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 1rem;
+    font-size: 0.72rem;
+  }
+
+  .ek-services-visual__signals {
+    right: var(--ek-space-4);
+    bottom: var(--ek-space-4);
+    justify-content: flex-start;
+  }
+
+  .ek-services__cell[data-size='hero'],
+  .ek-services__cell[data-size='tall'],
+  .ek-services__cell[data-size='wide'],
+  .ek-services__cell[data-size='standard'] {
+    grid-column: span 12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-services-visual {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .ek-services-visual__ring,
+  .ek-services-visual__node {
+    animation: none;
+  }
+}
+

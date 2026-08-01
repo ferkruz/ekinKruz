@@ -1,0 +1,36 @@
+<article
+  class="ek-cap"
+  [class.ek-cap--hero]="capability.size === 'hero'"
+  [class.ek-cap--tall]="capability.size === 'tall'"
+  [class.ek-cap--wide]="capability.size === 'wide'"
+  [class.ek-cap--standard]="capability.size === 'standard'"
+  [class.ek-cap--signal]="capability.accent === 'signal'"
+  [class.ek-cap--trust]="capability.accent === 'trust'"
+  [class.ek-cap--active]="active()"
+  ekSignalTilt
+  ekReveal
+  [ekRevealDelay]="revealDelay"
+  tabindex="0"
+  (pointerenter)="onActivate()"
+  (pointerleave)="onDeactivate()"
+  (focusin)="onActivate()"
+  (focusout)="onDeactivate()"
+>
+  <div class="ek-cap__visual">
+    <ek-capability-visual [kind]="capability.visual" [active]="active()" />
+  </div>
+
+  <div class="ek-cap__content">
+    <p class="ek-mono ek-cap__index">{{ capability.index }}</p>
+    <h3 class="ek-heading-md ek-cap__title">{{ capability.title }}</h3>
+    <p class="ek-body ek-cap__desc">{{ capability.description }}</p>
+
+    <ul class="ek-cap__related" [attr.aria-hidden]="!active()">
+      @for (item of capability.related; track item) {
+        <li>
+          <span class="ek-cap__tag">{{ item }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</article>

@@ -1,0 +1,51 @@
+<section class="ek-services" aria-label="Servicios">
+  <ek-container [wide]="true">
+    <header class="ek-services__intro" ekReveal>
+      <div class="ek-services__copy">
+        <ek-section-header
+          eyebrow="Servicios"
+          title="Capacidades para construir y escalar."
+          description="Diseñamos y desarrollamos soluciones digitales que combinan ingeniería, experiencia de usuario y tecnologías emergentes para generar impacto real en el negocio."
+        />
+      </div>
+
+      <aside class="ek-services-visual ek-glass" ekSignalTilt aria-label="Sistema de servicios">
+        <div class="ek-services-visual__field" aria-hidden="true">
+          <ek-card-scene accent="trust"></ek-card-scene>
+        </div>
+
+        <div class="ek-services-visual__orbit" aria-hidden="true">
+          <span class="ek-services-visual__ring ek-services-visual__ring--outer"></span>
+          <span class="ek-services-visual__ring ek-services-visual__ring--inner"></span>
+          <span class="ek-services-visual__node ek-services-visual__node--product">UX</span>
+          <span class="ek-services-visual__node ek-services-visual__node--platform">API</span>
+          <span class="ek-services-visual__node ek-services-visual__node--ai">AI</span>
+          <span class="ek-services-visual__node ek-services-visual__node--cloud">Ops</span>
+          <div class="ek-services-visual__core">
+            <span class="ek-mono">SERVICE OS</span>
+          </div>
+        </div>
+
+<!--         <ul class="ek-services-visual__signals">
+          <li>Producto</li>
+          <li>Arquitectura</li>
+          <li>Automatización</li>
+        </ul> -->
+
+        
+      </aside>
+    </header>
+
+    <div class="ek-services__editorial" role="list">
+      @for (capability of capabilities; track capability.id; let i = $index) {
+        <div class="ek-services__cell" [attr.data-size]="capability.size" role="listitem">
+          <ek-capability-card [capability]="capability" [revealDelay]="i * 90" />
+        </div>
+      }
+    </div>
+
+    <div class="ek-services__soon">
+      <ek-coming-soon-card />
+    </div>
+  </ek-container>
+</section>
