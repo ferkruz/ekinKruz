@@ -1,0 +1,52 @@
+<main class="ek-about-page" aria-labelledby="about-title">
+  <div class="ek-about-page__aura" aria-hidden="true"></div>
+
+  <ek-container [wide]="true">
+    <section class="ek-about-hero">
+      <div class="ek-about-hero__copy" ekReveal>
+        <p class="ek-eyebrow">Nosotros</p>
+        <h1 id="about-title" class="ek-display-lg">Construimos tecnología con propósito.</h1>
+        <p class="ek-body-lg ek-about-hero__lead">
+          En Ekin Kruz creemos que el software no debería limitarse a resolver problemas:
+          debe generar nuevas oportunidades, simplificar procesos y crear experiencias memorables.
+        </p>
+
+        <div class="ek-about-hero__narrative">
+          <p>
+            Combinamos ingeniería, diseño e innovación para desarrollar soluciones digitales que
+            evolucionan junto con nuestros clientes.
+          </p>
+          <p>
+            Desde plataformas empresariales hasta experiencias web 3D e inteligencia artificial,
+            cada proyecto nace de una comprensión profunda del negocio y se construye con visión
+            de largo plazo.
+          </p>
+          <p>
+            No trabajamos sobre plantillas ni soluciones genéricas. Diseñamos productos digitales
+            a medida con foco en calidad, escalabilidad y experiencia de usuario.
+          </p>
+          <p>
+            Nuestra forma de trabajar une estrategia, creatividad y excelencia técnica para
+            construir software preparado para el presente y listo para los desafíos del futuro.
+          </p>
+        </div>
+
+        <ul class="ek-about-hero__principles" aria-label="Principios de trabajo">
+          @for (principle of principles; track principle) {
+            <li>{{ principle }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="ek-about-hero__visual" ekReveal [ekRevealDelay]="160">
+        <div class="ek-about-hero__point-field" aria-hidden="true">
+          <ek-card-scene accent="signal" />
+        </div>
+
+        @if (aboutDiamondComponent(); as diamondComponent) {
+          <ng-container [ngComponentOutlet]="diamondComponent"></ng-container>
+        }
+      </div>
+    </section>
+  </ek-container>
+</main>

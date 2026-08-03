@@ -1,0 +1,27 @@
+<div
+  class="ek-about-diamond"
+  [class.ek-about-diamond--ready]="ready()"
+  [class.ek-about-diamond--fallback]="failed()"
+  [style.--ek-active-value]="activeIndex()"
+>
+  <canvas #canvas class="ek-about-diamond__canvas" aria-hidden="true"></canvas>
+  <div class="ek-about-diamond__fallback" aria-hidden="true"></div>
+
+  <div class="ek-about-diamond__values" aria-label="Valores de EKIN KRUZ">
+    @for (value of values; track value.label; let i = $index) {
+      <span
+        class="ek-about-diamond__value"
+        [class.ek-about-diamond__value--active]="activeIndex() === i"
+        [style.--ek-value-x]="value.x"
+        [style.--ek-value-y]="value.y"
+      >
+        <span class="ek-about-diamond__connector" aria-hidden="true"></span>
+        <span class="ek-about-diamond__label">{{ value.label }}</span>
+      </span>
+    }
+  </div>
+
+  <p class="ek-about-diamond__current" aria-live="polite">
+    {{ activeValue().label }}
+  </p>
+</div>

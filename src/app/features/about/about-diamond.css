@@ -1,0 +1,223 @@
+:host {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.ek-about-diamond {
+  --ek-diamond-reveal: 0;
+  --ek-diamond-glow: 0.22;
+  --ek-diamond-blur: 8px;
+  --ek-diamond-lift: 0.7rem;
+  --ek-diamond-scale: 0.95;
+  --ek-diamond-brightness: 0.46;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ek-about-diamond::before,
+.ek-about-diamond::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ek-about-diamond::before {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(232, 237, 245, calc(var(--ek-diamond-glow) * 0.16)), transparent 16%),
+    radial-gradient(circle at 52% 45%, rgba(46, 230, 214, calc(var(--ek-diamond-glow) * 0.3)), transparent 34%),
+    radial-gradient(circle at 68% 34%, rgba(91, 124, 255, calc(var(--ek-diamond-glow) * 0.2)), transparent 36%);
+  filter: blur(2px);
+  opacity: calc(0.35 + var(--ek-diamond-reveal) * 0.65);
+}
+
+.ek-about-diamond::after {
+  background:
+    linear-gradient(90deg, rgba(6, 8, 12, 0.28), transparent 35%, transparent 70%, rgba(6, 8, 12, 0.28)),
+    radial-gradient(circle at 50% 50%, transparent 38%, rgba(0, 0, 0, 0.36));
+  z-index: 5;
+}
+
+.ek-about-diamond__canvas,
+.ek-about-diamond__fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ek-about-diamond__canvas {
+  z-index: 2;
+  opacity: 0;
+  filter: brightness(0.46) blur(8px);
+  transform: scale(0.95) translate3d(0, 0.7rem, 0);
+  transition:
+    opacity var(--ek-duration-slow) var(--ek-ease-out),
+    filter var(--ek-duration-slow) var(--ek-ease-out),
+    transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-about-diamond--ready .ek-about-diamond__canvas {
+  opacity: var(--ek-diamond-opacity, var(--ek-diamond-reveal));
+  filter: brightness(var(--ek-diamond-brightness)) blur(var(--ek-diamond-blur));
+  transform: scale(var(--ek-diamond-scale)) translate3d(0, var(--ek-diamond-lift), 0);
+}
+
+.ek-about-diamond__fallback {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(46, 230, 214, 0.16), transparent 36%),
+    conic-gradient(from 24deg, transparent, rgba(46, 230, 214, 0.16), transparent 18%, rgba(91, 124, 255, 0.12), transparent 42%);
+  opacity: 0.82;
+  filter: blur(0.5px);
+}
+
+.ek-about-diamond--ready:not(.ek-about-diamond--fallback) .ek-about-diamond__fallback {
+  opacity: 0.18;
+}
+
+.ek-about-diamond__values {
+  position: absolute;
+  inset: 5%;
+  z-index: 7;
+  pointer-events: none;
+}
+
+.ek-about-diamond__value {
+  position: absolute;
+  left: calc(50% + var(--ek-value-x));
+  top: calc(50% + var(--ek-value-y));
+  display: flex;
+  align-items: center;
+  color: var(--ek-text-muted);
+  font-family: var(--ek-font-mono);
+  font-size: var(--ek-text-mono-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: calc(var(--ek-diamond-reveal) * 0.54);
+  transform: translate3d(-50%, -50%, 0);
+  transition:
+    color var(--ek-duration-base) var(--ek-ease-out),
+    opacity var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out),
+    text-shadow var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-about-diamond__connector {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(3.3rem, 8vw, 6.4rem);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(198, 245, 255, 0.24), rgba(46, 230, 214, 0.52), transparent);
+  opacity: 0.24;
+  transform: translate3d(-50%, -50%, 0) rotate(var(--ek-line-angle, 0deg)) scaleX(0.7);
+  transform-origin: 50% 50%;
+  transition:
+    opacity var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out),
+    box-shadow var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-about-diamond__value:nth-child(1) .ek-about-diamond__connector {
+  --ek-line-angle: 16deg;
+}
+
+.ek-about-diamond__value:nth-child(2) .ek-about-diamond__connector {
+  --ek-line-angle: -24deg;
+}
+
+.ek-about-diamond__value:nth-child(3) .ek-about-diamond__connector {
+  --ek-line-angle: 34deg;
+}
+
+.ek-about-diamond__value:nth-child(4) .ek-about-diamond__connector {
+  --ek-line-angle: -8deg;
+}
+
+.ek-about-diamond__value:nth-child(5) .ek-about-diamond__connector {
+  --ek-line-angle: -34deg;
+}
+
+.ek-about-diamond__value:nth-child(6) .ek-about-diamond__connector {
+  --ek-line-angle: 24deg;
+}
+
+.ek-about-diamond__label {
+  position: relative;
+  z-index: 1;
+  padding: 0.42rem 0.62rem;
+  border-radius: 999px;
+  background: rgba(8, 11, 16, 0.46);
+  border: 1px solid transparent;
+  transition:
+    background var(--ek-duration-base) var(--ek-ease-out),
+    border-color var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-about-diamond__value--active {
+  color: var(--ek-text-primary);
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0) scale(1.035);
+  text-shadow: 0 0 22px rgba(46, 230, 214, 0.38);
+}
+
+.ek-about-diamond__value--active .ek-about-diamond__connector {
+  opacity: 0.9;
+  transform: translate3d(-50%, -50%, 0) rotate(var(--ek-line-angle, 0deg)) scaleX(1);
+  box-shadow: 0 0 18px rgba(46, 230, 214, 0.28);
+}
+
+.ek-about-diamond__value--active .ek-about-diamond__label {
+  border-color: rgba(46, 230, 214, 0.18);
+  background: rgba(8, 11, 16, 0.68);
+}
+
+.ek-about-diamond__current {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  z-index: 8;
+  margin: 0;
+  color: var(--ek-signal);
+  font-family: var(--ek-font-mono);
+  font-size: var(--ek-text-mono-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: calc(var(--ek-diamond-reveal) * 0.92);
+  transform: translate3d(-50%, 0, 0);
+  text-shadow: 0 0 24px rgba(46, 230, 214, 0.34);
+}
+
+@media (max-width: 720px) {
+  .ek-about-diamond__values {
+    inset: 2%;
+  }
+
+  .ek-about-diamond__value {
+    font-size: 0.66rem;
+  }
+
+  .ek-about-diamond__connector {
+    width: 2.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-about-diamond,
+  .ek-about-diamond__canvas,
+  .ek-about-diamond__value,
+  .ek-about-diamond__connector,
+  .ek-about-diamond__label {
+    transition: none !important;
+  }
+}

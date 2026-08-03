@@ -9,6 +9,7 @@ export async function setupMethodologyScroll(
   }
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prefersStaticFlow = window.matchMedia('(max-width: 980px)').matches;
   const viewport = root.querySelector<HTMLElement>('[data-methodology-viewport]');
   const track = root.querySelector<HTMLElement>('[data-methodology-track]');
   const stages = Array.from(root.querySelectorAll<HTMLElement>('.ek-methodology-stage'));
@@ -16,7 +17,7 @@ export async function setupMethodologyScroll(
 
   onActiveStage(0);
 
-  if (!viewport || prefersReducedMotion) {
+  if (!viewport || prefersReducedMotion || prefersStaticFlow) {
     onActiveStage(-1);
     root.classList.add('ek-methodology-experience--static');
     return () => undefined;

@@ -33,7 +33,7 @@
   padding-block: clamp(7rem, 15vw, 12rem) clamp(3.5rem, 8vw, 6rem);
 }
 
-.ek-methodology-page__intro .ek-display-xl {
+.ek-methodology-page__intro .ek-display-lg {
   max-width: 12ch;
 }
 
@@ -47,7 +47,7 @@
     padding-block-start: clamp(5.5rem, 18vw, 8rem);
   }
 
-  .ek-methodology-page__intro .ek-display-xl {
+  .ek-methodology-page__intro .ek-display-lg {
     max-width: none;
   }
 }
