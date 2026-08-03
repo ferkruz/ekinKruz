@@ -1,0 +1,148 @@
+<section class="ek-contact-form ek-glass" aria-labelledby="contact-form-title">
+  @if (!submitted()) {
+    <form class="ek-contact-form__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <header class="ek-contact-form__header">
+        <p class="ek-eyebrow">Kickoff</p>
+        <div>
+          <h2 id="contact-form-title" class="ek-display-lg">Preparemos la primera conversación.</h2>
+          <p class="ek-body">
+            Compartinos lo esencial para entender el contexto, detectar oportunidades y llegar a la
+            reunión con una dirección clara.
+          </p>
+        </div>
+      </header>
+
+      <div class="ek-contact-form__grid">
+        <div class="ek-contact-form__column">
+          <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('fullName')">
+            <span>Nombre completo *</span>
+            <input
+              type="text"
+              formControlName="fullName"
+              autocomplete="name"
+              [attr.aria-invalid]="fieldInvalid('fullName')"
+              aria-describedby="fullName-error"
+            />
+            @if (fieldComplete('fullName')) {
+              <span class="ek-contact-field__check" aria-hidden="true">✓</span>
+            }
+            @if (fieldInvalid('fullName')) {
+              <small id="fullName-error">Ingresá tu nombre completo.</small>
+            }
+          </label>
+
+          <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('company')">
+            <span>Empresa *</span>
+            <input
+              type="text"
+              formControlName="company"
+              autocomplete="organization"
+              [attr.aria-invalid]="fieldInvalid('company')"
+              aria-describedby="company-error"
+            />
+            @if (fieldComplete('company')) {
+              <span class="ek-contact-field__check" aria-hidden="true">✓</span>
+            }
+            @if (fieldInvalid('company')) {
+              <small id="company-error">Contanos la empresa u organización.</small>
+            }
+          </label>
+
+          <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('email')">
+            <span>Correo electrónico *</span>
+            <input
+              type="email"
+              formControlName="email"
+              autocomplete="email"
+              [attr.aria-invalid]="fieldInvalid('email')"
+              aria-describedby="email-error"
+            />
+            @if (fieldComplete('email')) {
+              <span class="ek-contact-field__check" aria-hidden="true">✓</span>
+            }
+            @if (hasError('email', 'required')) {
+              <small id="email-error">Ingresá un correo electrónico.</small>
+            } @else if (hasError('email', 'email')) {
+              <small id="email-error">Usá un correo válido para poder responderte.</small>
+            }
+          </label>
+
+          <label class="ek-contact-field">
+            <span>Teléfono <em>(opcional)</em></span>
+            <input type="tel" formControlName="phone" autocomplete="tel" />
+            @if (fieldComplete('phone')) {
+              <span class="ek-contact-field__check" aria-hidden="true">✓</span>
+            }
+          </label>
+        </div>
+
+        <div class="ek-contact-form__column">
+          <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('projectType')">
+            <span>¿Qué tipo de proyecto estás buscando? *</span>
+            <select
+              formControlName="projectType"
+              [attr.aria-invalid]="fieldInvalid('projectType')"
+              aria-describedby="projectType-error"
+            >
+              <option value="" disabled>Seleccioná una opción</option>
+              @for (option of projectOptions; track option) {
+                <option [value]="option">{{ option }}</option>
+              }
+            </select>
+            @if (fieldComplete('projectType')) {
+              <span class="ek-contact-field__check" aria-hidden="true">✓</span>
+            }
+            @if (fieldInvalid('projectType')) {
+              <small id="projectType-error">Elegí el tipo de proyecto que mejor encaje.</small>
+            }
+          </label>
+
+          <label class="ek-contact-field ek-contact-field--textarea" [class.ek-contact-field--invalid]="fieldInvalid('brief')">
+            <span>Cuéntanos brevemente sobre tu proyecto *</span>
+            <textarea
+              formControlName="brief"
+              maxlength="500"
+              rows="7"
+              placeholder="¿Qué desafío querés resolver? ¿Qué objetivo tiene el proyecto?"
+              [attr.aria-invalid]="fieldInvalid('brief')"
+              aria-describedby="brief-error brief-count"
+            ></textarea>
+            @if (fieldComplete('brief')) {
+              <span class="ek-contact-field__check" aria-hidden="true">✓</span>
+            }
+            <span id="brief-count" class="ek-contact-field__count">{{ briefLength() }}/500</span>
+            @if (hasError('brief', 'required')) {
+              <small id="brief-error">Contanos brevemente qué necesitás construir.</small>
+            } @else if (hasError('brief', 'minlength')) {
+              <small id="brief-error">Sumá un poco más de contexto para preparar mejor la reunión.</small>
+            } @else if (hasError('brief', 'maxlength')) {
+              <small id="brief-error">El mensaje no puede superar los 500 caracteres.</small>
+            }
+          </label>
+        </div>
+      </div>
+
+      <div class="ek-contact-form__actions">
+        <div>
+          <p class="ek-caption">Solo usamos esta información para preparar la reunión de descubrimiento.</p>
+          @if (submitError()) {
+            <p class="ek-contact-form__error" role="alert">{{ submitError() }}</p>
+          }
+        </div>
+        <button class="ek-contact-form__button" type="submit" [disabled]="submitting()">
+          <span>{{ submitting() ? 'Preparando solicitud' : 'Solicitar reunión' }}</span>
+        </button>
+      </div>
+    </form>
+  } @else {
+    <article class="ek-contact-form__success" aria-live="polite">
+      <span class="ek-contact-form__success-mark" aria-hidden="true">✓</span>
+      <p class="ek-eyebrow">Solicitud recibida</p>
+      <h2 class="ek-display-lg">Gracias por contactarnos.</h2>
+      <p class="ek-body-lg">
+        Revisaremos tu consulta y nos pondremos en contacto para coordinar una reunión de
+        descubrimiento.
+      </p>
+    </article>
+  }
+</section>

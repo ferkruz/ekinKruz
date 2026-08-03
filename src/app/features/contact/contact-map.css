@@ -1,0 +1,109 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.ek-contact-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  overflow: hidden;
+  border-radius: 50%;
+  isolation: isolate;
+}
+
+.ek-contact-map::before,
+.ek-contact-map::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ek-contact-map::before {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(46, 230, 214, 0.16), transparent 34%),
+    radial-gradient(circle at 68% 28%, rgba(91, 124, 255, 0.14), transparent 36%);
+  filter: blur(3px);
+}
+
+.ek-contact-map::after {
+  z-index: 4;
+  background:
+    linear-gradient(90deg, rgba(6, 8, 12, 0.24), transparent 34%, transparent 68%, rgba(6, 8, 12, 0.3)),
+    radial-gradient(circle at 50% 50%, transparent 40%, rgba(5, 7, 10, 0.46));
+}
+
+.ek-contact-map__canvas,
+.ek-contact-map__fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ek-contact-map__canvas {
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.96);
+  transition:
+    opacity var(--ek-duration-slow) var(--ek-ease-out),
+    transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-contact-map--ready .ek-contact-map__canvas {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ek-contact-map__fallback {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(46, 230, 214, 0.18), transparent 36%),
+    conic-gradient(from 12deg, transparent, rgba(91, 124, 255, 0.12), transparent 24%, rgba(46, 230, 214, 0.12), transparent 48%);
+  opacity: 0.78;
+}
+
+.ek-contact-map--ready:not(.ek-contact-map--fallback) .ek-contact-map__fallback {
+  opacity: 0.12;
+}
+
+.ek-contact-map__legend {
+  position: absolute;
+  right: 14%;
+  bottom: 16%;
+  z-index: 6;
+  display: flex;
+  gap: var(--ek-space-2);
+  color: var(--ek-text-muted);
+  font-family: var(--ek-font-mono);
+  font-size: var(--ek-text-mono-sm);
+  letter-spacing: 0.08em;
+  opacity: 0.72;
+}
+
+.ek-contact-map__legend span {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(46, 230, 214, 0.18);
+  border-radius: 999px;
+  background: rgba(8, 11, 16, 0.54);
+}
+
+@media (max-width: 640px) {
+  .ek-contact-map__legend {
+    right: 10%;
+    bottom: 10%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-contact-map__canvas {
+    transition: none;
+  }
+}

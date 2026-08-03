@@ -1,0 +1,43 @@
+<main class="ek-contact-page" aria-labelledby="contact-title">
+  <div class="ek-contact-page__aura" aria-hidden="true"></div>
+
+  <ek-container [wide]="true">
+    <section class="ek-contact-hero">
+      <div class="ek-contact-hero__copy" ekReveal>
+        <p class="ek-eyebrow">Contacto</p>
+        <h1 id="contact-title" class="ek-display-lg">Comencemos a construir tu próximo proyecto.</h1>
+        <p class="ek-body-lg ek-contact-hero__lead">
+          Cada gran producto comienza con una conversación.
+        </p>
+        <p class="ek-body ek-contact-hero__text">
+          Contanos tu desafío y diseñaremos una solución pensada para acompañar el crecimiento de tu
+          negocio.
+        </p>
+        <p class="ek-body ek-contact-hero__text">
+          Trabajamos junto a empresas y organizaciones para desarrollar plataformas digitales,
+          experiencias 3D e inteligencia artificial con una visión de largo plazo.
+        </p>
+      </div>
+
+      <div class="ek-contact-hero__visual" aria-label="Mapa mundial abstracto con conexiones internacionales">
+        <div class="ek-contact-hero__point-field" aria-hidden="true"></div>
+        @if (mapComponent(); as contactMap) {
+          <ng-container [ngComponentOutlet]="contactMap"></ng-container>
+        }
+      </div>
+    </section>
+
+    <section class="ek-contact-kickoff" ekReveal [ekRevealDelay]="120">
+      <ek-contact-kickoff-form />
+    </section>
+
+    <section class="ek-contact-info" aria-label="Información adicional">
+      @for (item of infoItems; track item.title) {
+        <article class="ek-contact-info__item">
+          <p class="ek-eyebrow">{{ item.title }}</p>
+          <p class="ek-body">{{ item.description }}</p>
+        </article>
+      }
+    </section>
+  </ek-container>
+</main>
