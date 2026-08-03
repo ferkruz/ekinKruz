@@ -1,0 +1,56 @@
+<section
+  class="ek-methodology-experience"
+  aria-label="Recorrido cinematográfico de metodología"
+  [style.--ek-stage-count]="stages().length"
+>
+  <div class="ek-methodology-experience__viewport" data-methodology-viewport>
+    <div class="ek-methodology-experience__atmosphere" aria-hidden="true">
+      <span class="ek-methodology-experience__glow ek-methodology-experience__glow--signal"></span>
+      <span class="ek-methodology-experience__glow ek-methodology-experience__glow--trust"></span>
+    </div>
+
+    <ek-container [wide]="true">
+      <div
+        class="ek-methodology-experience__track"
+        role="list"
+        data-methodology-track
+      >
+        @for (stage of stages(); track stage.id; let i = $index) {
+          <article
+            class="ek-methodology-stage"
+            [class.ek-methodology-stage--active]="activeIndex() === i || activeIndex() === -1"
+            [class.ek-methodology-stage--discovery]="stage.visual === 'discovery'"
+            [class.ek-methodology-stage--strategy]="stage.visual === 'strategy'"
+            [attr.aria-labelledby]="'methodology-stage-' + stage.id"
+            [attr.aria-hidden]="activeIndex() !== -1 && activeIndex() !== i"
+            role="listitem"
+            [attr.tabindex]="activeIndex() === -1 || activeIndex() === i ? 0 : -1"
+          >
+            <ek-methodology-stage-visual
+              [visual]="stage.visual"
+              [active]="activeIndex() === i || activeIndex() === -1"
+            />
+
+            <div class="ek-methodology-stage__content">
+              <p class="ek-eyebrow">{{ stage.eyebrow }}</p>
+              <p class="ek-methodology-stage__index" aria-label="Etapa {{ stage.index }}">
+                {{ stage.index }}
+              </p>
+              <h2 id="methodology-stage-{{ stage.id }}" class="ek-display-lg">
+                {{ stage.title }}
+              </h2>
+              <p class="ek-body-lg">{{ stage.description }}</p>
+              <p class="ek-methodology-stage__sensation">{{ stage.sensation }}</p>
+
+              <ul class="ek-methodology-stage__tags" aria-label="Visuales de la etapa">
+                @for (term of stage.visualTerms; track term; let tagIndex = $index) {
+                  <li [style.--ek-card-delay]="tagIndex * 70 + 'ms'">{{ term }}</li>
+                }
+              </ul>
+            </div>
+          </article>
+        }
+      </div>
+    </ek-container>
+  </div>
+</section>

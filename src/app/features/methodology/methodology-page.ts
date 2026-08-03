@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { PlaceholderPage } from '../shared/placeholder-page';
+import { Container } from '../../shared/ui/container/container';
+import { RevealDirective } from '../../shared/motion/reveal.directive';
+import { MethodologyExperience } from './components/methodology-experience/methodology-experience';
+import { METHODOLOGY_STAGES } from './data/methodology-stages';
 
 @Component({
   selector: 'ek-methodology-page',
   standalone: true,
-  imports: [PlaceholderPage],
-  template: `
-    <ek-placeholder-page
-      eyebrow="Metodología"
-      title="Del descubrimiento a la evolución."
-      description="Timeline horizontal cinematográfico en una iteración dedicada."
-    />
-  `,
+  imports: [Container, RevealDirective, MethodologyExperience],
+  templateUrl: './methodology-page.html',
+  styleUrl: './methodology-page.css',
 })
-export class MethodologyPage {}
+export class MethodologyPage {
+  readonly stages = METHODOLOGY_STAGES;
+}

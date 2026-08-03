@@ -5,11 +5,20 @@ import { SectionHeader } from '../../shared/ui/section-header/section-header';
 import { HeroScene } from '../../shared/three/hero-scene/hero-scene';
 import { CardScene } from '../../shared/three/card-scene/card-scene';
 import { SignalTiltDirective } from '../../shared/motion/signal-tilt.directive';
+import { MethodologySection } from './methodology-section';
 
 @Component({
   selector: 'ek-home-page',
   standalone: true,
-  imports: [Button, Container, SectionHeader, HeroScene, CardScene, SignalTiltDirective],
+  imports: [
+    Button,
+    Container,
+    SectionHeader,
+    HeroScene,
+    CardScene,
+    SignalTiltDirective,
+    MethodologySection,
+  ],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })

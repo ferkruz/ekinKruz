@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+.ek-methodology-page {
+  position: relative;
+  min-height: 100svh;
+  overflow: clip;
+  background:
+    radial-gradient(ellipse 46% 38% at 76% 12%, rgba(91, 124, 255, 0.13), transparent 70%),
+    radial-gradient(ellipse 42% 32% at 18% 28%, rgba(46, 230, 214, 0.12), transparent 68%),
+    linear-gradient(180deg, var(--ek-void), var(--ek-surface-0) 58%, var(--ek-void));
+}
+
+.ek-methodology-page__aura {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(232, 237, 245, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 237, 245, 0.026) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 28%, #000 24%, transparent 76%);
+}
+
+.ek-methodology-page__intro {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-4);
+  max-width: 58rem;
+  padding-block: clamp(7rem, 15vw, 12rem) clamp(3.5rem, 8vw, 6rem);
+}
+
+.ek-methodology-page__intro .ek-display-xl {
+  max-width: 12ch;
+}
+
+.ek-methodology-page__intro .ek-body-lg {
+  max-width: 44rem;
+  color: var(--ek-text-secondary);
+}
+
+@media (max-width: 720px) {
+  .ek-methodology-page__intro {
+    padding-block-start: clamp(5.5rem, 18vw, 8rem);
+  }
+
+  .ek-methodology-page__intro .ek-display-xl {
+    max-width: none;
+  }
+}

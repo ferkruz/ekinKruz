@@ -1,0 +1,252 @@
+:host {
+  display: block;
+}
+
+.ek-methodology-experience {
+  --ek-camera-x: 0%;
+  --ek-camera-y: 0%;
+  --ek-camera-scale: 0.96;
+  --ek-line-chaos: 1;
+  --ek-stage-focus: 0;
+  --ek-methodology-progress: 0;
+  position: relative;
+  min-height: calc(var(--ek-stage-count, 1) * 120svh);
+}
+
+.ek-methodology-experience__viewport {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 100svh;
+  overflow: clip;
+  border-block: 1px solid rgba(227, 235, 244, 0.08);
+  background:
+    radial-gradient(
+      ellipse 52% 46% at calc(24% + (var(--ek-methodology-progress) * 22%)) 42%,
+      rgba(46, 230, 214, 0.13),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 38% 34% at 82% 18%,
+      rgba(91, 124, 255, 0.11),
+      transparent 70%
+    ),
+    linear-gradient(180deg, rgba(8, 11, 16, 0.92), rgba(13, 18, 25, 0.94));
+}
+
+.ek-methodology-experience__viewport::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.34));
+  z-index: 2;
+}
+
+.ek-methodology-experience__atmosphere,
+.ek-methodology-experience__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ek-methodology-experience__atmosphere {
+  opacity: 0.86;
+}
+
+.ek-methodology-experience__atmosphere::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background-image:
+    radial-gradient(circle, rgba(232, 237, 245, 0.12) 0 1px, transparent 1px),
+    radial-gradient(circle, rgba(46, 230, 214, 0.16) 0 1px, transparent 1px);
+  background-position:
+    0 0,
+    34px 58px;
+  background-size:
+    132px 132px,
+    178px 178px;
+  opacity: calc(0.18 + (var(--ek-stage-focus) * 0.16));
+  transform: translate3d(calc(var(--ek-camera-x) * -0.22), calc(var(--ek-camera-y) * -0.4), 0);
+  transition: opacity var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-methodology-experience__glow--signal {
+  background: radial-gradient(ellipse 34% 42% at 22% 52%, rgba(46, 230, 214, 0.16), transparent 72%);
+}
+
+.ek-methodology-experience__glow--trust {
+  background: radial-gradient(ellipse 34% 42% at 78% 32%, rgba(91, 124, 255, 0.14), transparent 72%);
+}
+
+.ek-methodology-experience__track {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: calc(var(--ek-stage-count, 1) * 100%);
+  transform:
+    translate3d(var(--ek-camera-x), var(--ek-camera-y), 0)
+    scale(var(--ek-camera-scale));
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.ek-methodology-stage {
+  position: relative;
+  flex: 0 0 calc(100% / var(--ek-stage-count, 1));
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr) minmax(16rem, 0.68fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  min-height: min(38rem, 68svh);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  outline: none;
+  opacity: 0.22;
+  filter: blur(12px);
+  transform: scale(0.92);
+  perspective: 1400px;
+  transition:
+    opacity var(--ek-duration-slow) var(--ek-ease-out),
+    filter var(--ek-duration-slow) var(--ek-ease-out),
+    transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-methodology-stage--active {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.ek-methodology-stage:focus-visible {
+  border-radius: var(--ek-radius-xl);
+  box-shadow: 0 0 0 2px var(--ek-signal);
+}
+
+.ek-methodology-stage__tags li {
+  border: 1px solid rgba(227, 235, 244, 0.14);
+  border-radius: 999px;
+  background: rgba(11, 15, 20, 0.62);
+  color: var(--ek-text-muted);
+  font-size: var(--ek-text-caption);
+}
+
+.ek-methodology-stage__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--ek-space-3);
+  transform: translateZ(88px);
+}
+
+.ek-methodology-stage__index {
+  margin: 0;
+  color: var(--ek-signal);
+  font-family: var(--ek-font-mono);
+  font-size: clamp(3.25rem, 8vw, 6.75rem);
+  font-weight: 700;
+  line-height: 0.86;
+  letter-spacing: -0.08em;
+  text-shadow: 0 0 44px rgba(46, 230, 214, 0.24);
+  opacity: calc(0.72 + (var(--ek-stage-focus) * 0.28));
+}
+
+.ek-methodology-stage__content .ek-display-lg {
+  max-width: 9ch;
+}
+
+.ek-methodology-stage__content .ek-body-lg {
+  max-width: 31rem;
+  color: var(--ek-text-secondary);
+}
+
+.ek-methodology-stage__sensation {
+  margin: 0;
+  color: var(--ek-text-primary);
+  font-family: var(--ek-font-mono);
+  font-size: var(--ek-text-mono-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ek-methodology-stage__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ek-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ek-methodology-stage__tags li {
+  padding: 0.44rem 0.68rem;
+  opacity: 0;
+  transform: translate3d(0, 0.8rem, 0) scale(0.96);
+  transition:
+    opacity var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out),
+    border-color var(--ek-duration-base) var(--ek-ease-out),
+    color var(--ek-duration-base) var(--ek-ease-out);
+  transition-delay: var(--ek-card-delay, 0ms);
+}
+
+.ek-methodology-stage--active .ek-methodology-stage__tags li {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.ek-methodology-stage__tags li:hover,
+.ek-methodology-stage:focus-within .ek-methodology-stage__tags li {
+  border-color: rgba(46, 230, 214, 0.36);
+  color: var(--ek-text-primary);
+}
+
+@media (max-width: 980px) {
+  .ek-methodology-experience {
+    min-height: auto;
+  }
+
+  .ek-methodology-experience__viewport {
+    min-height: auto;
+    padding-block: var(--ek-space-8);
+  }
+
+  .ek-methodology-stage {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  ek-methodology-stage-visual {
+    order: 2;
+  }
+
+  .ek-methodology-stage__content {
+    order: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .ek-methodology-stage {
+    gap: var(--ek-space-5);
+    padding-block: var(--ek-space-6);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-methodology-experience,
+  .ek-methodology-experience__track {
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+
+  .ek-methodology-experience {
+    --ek-line-chaos: 0;
+    --ek-stage-focus: 1;
+    min-height: auto;
+  }
+}

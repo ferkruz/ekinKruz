@@ -1,0 +1,335 @@
+:host {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.ek-methodology-graph,
+.ek-methodology-blueprint,
+.ek-methodology-ui-graph,
+.ek-methodology-stack-graph,
+.ek-methodology-qa-graph,
+.ek-methodology-cloud-graph,
+.ek-methodology-growth-graph {
+  position: absolute;
+  inset: 12%;
+}
+
+.ek-methodology-blueprint,
+.ek-methodology-ui-graph,
+.ek-methodology-stack-graph,
+.ek-methodology-qa-graph,
+.ek-methodology-cloud-graph,
+.ek-methodology-growth-graph {
+  opacity: 0;
+  transform: translate3d(0, 1rem, 118px) scale(0.94);
+  transition:
+    opacity var(--ek-duration-slow) var(--ek-ease-out),
+    transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-methodology-graph--active.ek-methodology-graph--strategy .ek-methodology-blueprint,
+.ek-methodology-graph--active.ek-methodology-graph--design .ek-methodology-ui-graph,
+.ek-methodology-graph--active.ek-methodology-graph--engineering .ek-methodology-stack-graph,
+.ek-methodology-graph--active.ek-methodology-graph--validation .ek-methodology-qa-graph,
+.ek-methodology-graph--active.ek-methodology-graph--launch .ek-methodology-cloud-graph,
+.ek-methodology-graph--active.ek-methodology-graph--evolution .ek-methodology-growth-graph {
+  opacity: 1;
+  transform: translate3d(0, 0, 118px) scale(1);
+}
+
+.ek-methodology-blueprint__block,
+.ek-methodology-blueprint__route,
+.ek-methodology-blueprint__label,
+.ek-methodology-ui-graph__card,
+.ek-methodology-stack-graph__cube,
+.ek-methodology-qa-graph__panel,
+.ek-methodology-cloud-graph__cloud,
+.ek-methodology-growth-graph__bar {
+  position: absolute;
+  border: 1px solid rgba(227, 235, 244, 0.16);
+  border-radius: 1.2rem;
+  background:
+    linear-gradient(145deg, rgba(46, 230, 214, 0.12), rgba(91, 124, 255, 0.08)),
+    rgba(11, 15, 20, 0.72);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+}
+
+.ek-methodology-blueprint__block--one,
+.ek-methodology-ui-graph__card--hero {
+  top: 5%;
+  left: 6%;
+  width: 34%;
+  height: 28%;
+}
+
+.ek-methodology-blueprint__block--two,
+.ek-methodology-ui-graph__card--side {
+  top: 18%;
+  right: 4%;
+  width: 30%;
+  height: 22%;
+}
+
+.ek-methodology-blueprint__block--three,
+.ek-methodology-ui-graph__card--footer {
+  right: 18%;
+  bottom: 10%;
+  width: 46%;
+  height: 24%;
+}
+
+.ek-methodology-blueprint__route,
+.ek-methodology-stack-graph__flow,
+.ek-methodology-cloud-graph__signal {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ek-signal), transparent);
+  transform-origin: 0 50%;
+}
+
+.ek-methodology-blueprint__route--one,
+.ek-methodology-stack-graph__flow--one {
+  top: 28%;
+  left: 38%;
+  width: 28%;
+  transform: rotate(8deg) scaleX(0);
+}
+
+.ek-methodology-blueprint__route--two,
+.ek-methodology-stack-graph__flow--two {
+  right: 31%;
+  bottom: 34%;
+  width: 26%;
+  transform: rotate(-22deg) scaleX(0);
+}
+
+.ek-methodology-graph--active .ek-methodology-blueprint__route--one,
+.ek-methodology-graph--active .ek-methodology-stack-graph__flow--one {
+  transform: rotate(8deg) scaleX(1);
+}
+
+.ek-methodology-graph--active .ek-methodology-blueprint__route--two,
+.ek-methodology-graph--active .ek-methodology-stack-graph__flow--two {
+  transform: rotate(-22deg) scaleX(1);
+}
+
+.ek-methodology-blueprint__label {
+  left: 8%;
+  bottom: 12%;
+  padding: 0.55rem 0.78rem;
+  border-radius: 999px;
+  color: var(--ek-signal);
+  font-family: var(--ek-font-mono);
+  font-size: var(--ek-text-mono-sm);
+  letter-spacing: 0.08em;
+}
+
+.ek-methodology-ui-graph__card,
+.ek-methodology-stack-graph__cube {
+  opacity: 0;
+  transform: translateY(1.2rem) scale(0.94);
+  transition:
+    opacity var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-methodology-graph--active .ek-methodology-ui-graph__card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ek-methodology-ui-graph__card--side,
+.ek-methodology-stack-graph__cube--two {
+  transition-delay: 90ms;
+}
+
+.ek-methodology-ui-graph__card--footer,
+.ek-methodology-stack-graph__cube--three {
+  transition-delay: 180ms;
+}
+
+.ek-methodology-stack-graph__cube {
+  width: 28%;
+  aspect-ratio: 1;
+  transform: rotateX(58deg) rotateZ(45deg) translateY(1.5rem);
+}
+
+.ek-methodology-graph--active .ek-methodology-stack-graph__cube {
+  opacity: 1;
+  transform: rotateX(58deg) rotateZ(45deg) translateY(0);
+}
+
+.ek-methodology-stack-graph__cube--one {
+  top: 10%;
+  left: 16%;
+}
+
+.ek-methodology-stack-graph__cube--two {
+  top: 28%;
+  left: 38%;
+}
+
+.ek-methodology-stack-graph__cube--three {
+  right: 12%;
+  bottom: 16%;
+}
+
+.ek-methodology-stack-graph__flow,
+.ek-methodology-cloud-graph__signal,
+.ek-methodology-qa-graph__check {
+  transition: transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-methodology-qa-graph__panel {
+  inset: 8% 10%;
+}
+
+.ek-methodology-qa-graph__check {
+  position: absolute;
+  left: 22%;
+  width: 54%;
+  height: 0.72rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ek-signal), rgba(46, 230, 214, 0.18));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.ek-methodology-graph--active .ek-methodology-qa-graph__check,
+.ek-methodology-graph--active .ek-methodology-cloud-graph__signal {
+  transform: scaleX(1);
+}
+
+.ek-methodology-qa-graph__check--one {
+  top: 30%;
+}
+
+.ek-methodology-qa-graph__check--two {
+  top: 48%;
+  transition-delay: 110ms;
+}
+
+.ek-methodology-qa-graph__check--three {
+  top: 66%;
+  transition-delay: 220ms;
+}
+
+.ek-methodology-cloud-graph__cloud {
+  top: 22%;
+  left: 24%;
+  width: 52%;
+  height: 34%;
+  border-radius: 999px;
+  transform: scale(0.88);
+  transition: transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-methodology-graph--active .ek-methodology-cloud-graph__cloud {
+  transform: scale(1);
+  animation: ek-graph-pulse 3.8s var(--ek-ease-out) infinite;
+}
+
+.ek-methodology-cloud-graph__signal--one,
+.ek-methodology-cloud-graph__signal--two,
+.ek-methodology-cloud-graph__signal--three {
+  top: 62%;
+  width: 28%;
+  transform: scaleX(0);
+}
+
+.ek-methodology-cloud-graph__signal--one {
+  left: 16%;
+}
+
+.ek-methodology-cloud-graph__signal--two {
+  left: 40%;
+  transition-delay: 90ms;
+}
+
+.ek-methodology-cloud-graph__signal--three {
+  right: 16%;
+  transition-delay: 180ms;
+}
+
+.ek-methodology-growth-graph__bar {
+  bottom: 18%;
+  width: 16%;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-methodology-graph--active .ek-methodology-growth-graph__bar {
+  transform: scaleY(1);
+}
+
+.ek-methodology-growth-graph__bar--one {
+  left: 18%;
+  height: 30%;
+}
+
+.ek-methodology-growth-graph__bar--two {
+  left: 42%;
+  height: 48%;
+  transition-delay: 90ms;
+}
+
+.ek-methodology-growth-graph__bar--three {
+  right: 18%;
+  height: 66%;
+  transition-delay: 180ms;
+}
+
+.ek-methodology-growth-graph__node {
+  position: absolute;
+  width: 0.95rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--ek-signal);
+  box-shadow: 0 0 26px rgba(46, 230, 214, 0.42);
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-methodology-graph--active .ek-methodology-growth-graph__node {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ek-methodology-growth-graph__node--one {
+  top: 16%;
+  right: 24%;
+  transition-delay: 260ms;
+}
+
+.ek-methodology-growth-graph__node--two {
+  top: 34%;
+  left: 26%;
+  transition-delay: 340ms;
+}
+
+@keyframes ek-graph-pulse {
+  50% {
+    box-shadow:
+      0 18px 48px rgba(0, 0, 0, 0.3),
+      0 0 44px rgba(46, 230, 214, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-methodology-blueprint,
+  .ek-methodology-ui-graph,
+  .ek-methodology-stack-graph,
+  .ek-methodology-qa-graph,
+  .ek-methodology-cloud-graph,
+  .ek-methodology-growth-graph,
+  .ek-methodology-cloud-graph__cloud {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
