@@ -1,11 +1,16 @@
 <header class="ek-header" [class.ek-header--scrolled]="scrolled()">
   <div class="ek-header__inner">
-    <a routerLink="/" class="ek-logo" (click)="closeMenu()" aria-label="EKIN KRUZ — Inicio">
+    <a routerLink="/" class="ek-logo" (click)="closeMenu()" [attr.aria-label]="'nav.logoLabel' | transloco">
       <span class="ek-logo__mark" aria-hidden="true">EK</span>
       <span class="ek-logo__word">EKIN KRUZ</span>
     </a>
 
-    <nav class="ek-nav" aria-label="Principal" [class.ek-nav--open]="menuOpen()">
+    <nav
+      id="mobile-nav"
+      class="ek-nav"
+      [attr.aria-label]="'nav.ariaLabel' | transloco"
+      [class.ek-nav--open]="menuOpen()"
+    >
       <ul class="ek-nav__list">
         @for (item of navItems; track item.path) {
           <li>
@@ -15,12 +20,13 @@
               class="ek-nav__link"
               (click)="closeMenu()"
             >
-              {{ item.label }}
+              {{ item.labelKey | transloco }}
             </a>
           </li>
         }
       </ul>
-      <a routerLink="/contacto" class="ek-nav__cta" (click)="closeMenu()">Contacto</a>
+      <ek-language-switcher />
+      <a routerLink="/contacto" class="ek-nav__cta" (click)="closeMenu()">{{ 'nav.contact' | transloco }}</a>
     </nav>
 
     <button
@@ -28,7 +34,7 @@
       class="ek-menu-toggle"
       [attr.aria-expanded]="menuOpen()"
       aria-controls="mobile-nav"
-      [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+      [attr.aria-label]="(menuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | transloco"
       (click)="toggleMenu()"
     >
       <span class="ek-menu-toggle__bar" aria-hidden="true"></span>

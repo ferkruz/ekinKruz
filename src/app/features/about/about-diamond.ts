@@ -8,13 +8,14 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { setupAboutDiamondMotion } from './about-diamond.animator';
 import type { AboutDiamondMotionCleanup } from './about-diamond.animator';
 import { AboutDiamondEngine } from './about-diamond.engine';
 import { DiamondPointerController } from './about-diamond.pointer';
 
 interface AboutDiamondValue {
-  readonly label: string;
+  readonly labelKey: string;
   readonly x: string;
   readonly y: string;
 }
@@ -22,6 +23,7 @@ interface AboutDiamondValue {
 @Component({
   selector: 'ek-about-diamond',
   standalone: true,
+  imports: [TranslocoPipe],
   templateUrl: './about-diamond.html',
   styleUrl: './about-diamond.css',
 })
@@ -30,12 +32,12 @@ export class AboutDiamondComponent implements OnDestroy {
   private readonly canvasRef = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
   readonly values: readonly AboutDiamondValue[] = [
-    { label: 'Innovación', x: '-34%', y: '-32%' },
-    { label: 'Ingeniería', x: '31%', y: '-33%' },
-    { label: 'Experiencia', x: '-38%', y: '4%' },
-    { label: 'Escalabilidad', x: '38%', y: '2%' },
-    { label: 'Calidad', x: '-25%', y: '34%' },
-    { label: 'Evolución', x: '28%', y: '34%' },
+    { labelKey: 'about.diamond.values.innovation', x: '-34%', y: '-32%' },
+    { labelKey: 'about.diamond.values.engineering', x: '31%', y: '-33%' },
+    { labelKey: 'about.diamond.values.experience', x: '-38%', y: '4%' },
+    { labelKey: 'about.diamond.values.scalability', x: '38%', y: '2%' },
+    { labelKey: 'about.diamond.values.quality', x: '-25%', y: '34%' },
+    { labelKey: 'about.diamond.values.evolution', x: '28%', y: '34%' },
   ];
 
   readonly ready = signal(false);

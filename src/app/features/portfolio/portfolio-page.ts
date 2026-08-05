@@ -7,9 +7,9 @@ import { PlaceholderPage } from '../shared/placeholder-page';
   imports: [PlaceholderPage],
   template: `
     <ek-placeholder-page
-      eyebrow="Portfolio"
-      title="Casos destacados."
-      description="Smart City, Industrial Explorer y Real Estate Configurator."
+      eyebrowKey="portfolio.eyebrow"
+      titleKey="portfolio.title"
+      descriptionKey="portfolio.description"
     />
   `,
 })

@@ -26,16 +26,15 @@ export interface ContactMapEngineOptions {
 }
 
 interface Marker {
-  readonly label: string;
   readonly lat: number;
   readonly lon: number;
 }
 
 const MARKERS: readonly Marker[] = [
-  { label: 'Norte de España', lat: 43.1, lon: -4.2 },
-  { label: 'Estados Unidos', lat: 39.5, lon: -98.3 },
-  { label: 'Argentina', lat: -34.6, lon: -64.0 },
-  { label: 'Alemania', lat: 51.2, lon: 10.4 },
+  { lat: 43.1, lon: -4.2 },
+  { lat: 39.5, lon: -98.3 },
+  { lat: -34.6, lon: -64.0 },
+  { lat: 51.2, lon: 10.4 },
 ];
 
 export class ContactMapEngine {

@@ -1,16 +1,21 @@
 import { Component, Input } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { Container } from '../../shared/ui/container/container';
 import { SectionHeader } from '../../shared/ui/section-header/section-header';
 
 @Component({
   selector: 'ek-placeholder-page',
   standalone: true,
-  imports: [Container, SectionHeader],
+  imports: [Container, SectionHeader, TranslocoPipe],
   template: `
     <section class="ek-placeholder">
       <ek-container>
-        <ek-section-header [eyebrow]="eyebrow" [title]="title" [description]="description" />
-        <p class="ek-mono ek-placeholder__note">En construcción — próxima iteración</p>
+        <ek-section-header
+          [eyebrow]="eyebrowKey | transloco"
+          [title]="titleKey | transloco"
+          [description]="descriptionKey | transloco"
+        />
+        <p class="ek-mono ek-placeholder__note">{{ 'placeholder.note' | transloco }}</p>
       </ek-container>
     </section>
   `,
@@ -27,7 +32,7 @@ import { SectionHeader } from '../../shared/ui/section-header/section-header';
   `,
 })
 export class PlaceholderPage {
-  @Input({ required: true }) eyebrow!: string;
-  @Input({ required: true }) title!: string;
-  @Input() description = 'Esta sección se construirá en una iteración posterior.';
+  @Input({ required: true }) eyebrowKey!: string;
+  @Input({ required: true }) titleKey!: string;
+  @Input() descriptionKey = 'placeholder.description';
 }

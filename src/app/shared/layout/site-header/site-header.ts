@@ -1,10 +1,12 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher';
 
 @Component({
   selector: 'ek-site-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, TranslocoPipe, LanguageSwitcherComponent],
   templateUrl: './site-header.html',
   styleUrl: './site-header.css',
 })
@@ -13,11 +15,11 @@ export class SiteHeader {
   readonly menuOpen = signal(false);
 
   readonly navItems = [
-    { label: 'Servicios', path: '/servicios' },
-    { label: 'Portfolio', path: '/portfolio' },
-    { label: 'Metodología', path: '/metodologia' },
-    { label: 'Nosotros', path: '/nosotros' },
-    { label: 'Blog', path: '/blog' },
+    { labelKey: 'nav.services', path: '/servicios' },
+    { labelKey: 'nav.portfolio', path: '/portfolio' },
+    { labelKey: 'nav.methodology', path: '/metodologia' },
+    { labelKey: 'nav.about', path: '/nosotros' },
+    { labelKey: 'nav.blog', path: '/blog' },
   ] as const;
 
   @HostListener('window:scroll')

@@ -1,4 +1,5 @@
 import { Component, Input, signal } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { Capability } from '../../data/capabilities';
 import { CapabilityVisualComponent } from '../../../../shared/ui/capability-visual/capability-visual';
 import { SignalTiltDirective } from '../../../../shared/motion/signal-tilt.directive';
@@ -7,7 +8,7 @@ import { RevealDirective } from '../../../../shared/motion/reveal.directive';
 @Component({
   selector: 'ek-capability-card',
   standalone: true,
-  imports: [CapabilityVisualComponent, SignalTiltDirective, RevealDirective],
+  imports: [CapabilityVisualComponent, SignalTiltDirective, RevealDirective, TranslocoPipe],
   templateUrl: './capability-card.html',
   styleUrl: './capability-card.css',
 })

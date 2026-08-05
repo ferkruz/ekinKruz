@@ -7,17 +7,17 @@
           <span>EKIN KRUZ</span>
         </a>
         <p class="ek-body ek-footer__tagline">
-          Software factory premium. Plataformas, 3D e IA para organizaciones que escalan.
+          {{ 'footer.tagline' | transloco }}
         </p>
       </div>
 
-      @for (column of columns; track column.title) {
+      @for (column of columns; track column.titleKey) {
         <div class="ek-footer__col">
-          <p class="ek-eyebrow">{{ column.title }}</p>
+          <p class="ek-eyebrow">{{ column.titleKey | transloco }}</p>
           <ul>
-            @for (link of column.links; track link.label) {
+            @for (link of column.links; track link.labelKey) {
               <li>
-                <a [routerLink]="link.path" class="ek-footer__link">{{ link.label }}</a>
+                <a [routerLink]="link.path" class="ek-footer__link">{{ link.labelKey | transloco }}</a>
               </li>
             }
           </ul>
@@ -25,7 +25,7 @@
       }
 
       <div class="ek-footer__col">
-        <p class="ek-eyebrow">Conectar</p>
+        <p class="ek-eyebrow">{{ 'footer.columns.connect.title' | transloco }}</p>
         <ul>
           <li>
             <a
@@ -52,8 +52,8 @@
     </div>
 
     <div class="ek-footer__bottom">
-      <p class="ek-caption">© {{ year }} EKIN KRUZ. Todos los derechos reservados.</p>
-      <p class="ek-mono ek-footer__signal">Obsidian Signal</p>
+      <p class="ek-caption">{{ 'footer.rights' | transloco: { year } }}</p>
+      <p class="ek-mono ek-footer__signal">{{ 'footer.signal' | transloco }}</p>
     </div>
   </ek-container>
 </footer>

@@ -11,39 +11,44 @@
     <div class="ek-hero__content">
       <p class="ek-eyebrow ek-hero__enter" style="--ek-enter-delay: 80ms">EKIN KRUZ</p>
       <h1 id="hero-title" class="ek-display-xl ek-hero__title ek-hero__enter" style="--ek-enter-delay: 160ms">
-        Construimos el software que impulsa la próxima generación de experiencias digitales.
+        {{ 'home.hero.title' | transloco }}
       </h1>
       <p class="ek-body-lg ek-hero__sub ek-hero__enter" style="--ek-enter-delay: 260ms">
-        Desarrollamos plataformas a medida, experiencias web 3D e inteligencia artificial para
-        organizaciones que buscan innovar.
+        {{ 'home.hero.description' | transloco }}
       </p>
       <div class="ek-hero__actions ek-hero__enter" style="--ek-enter-delay: 360ms">
-        <ek-button variant="primary" size="lg" routerLink="/contacto">Agendar una reunión</ek-button>
-        <ek-button variant="ghost" size="lg" routerLink="/portfolio">Ver proyectos</ek-button>
+        <ek-button variant="primary" size="lg" routerLink="/contacto">
+          {{ 'common.actions.scheduleMeeting' | transloco }}
+        </ek-button>
+        <ek-button variant="ghost" size="lg" routerLink="/portfolio">
+          {{ 'common.actions.viewProjects' | transloco }}
+        </ek-button>
       </div>
     </div>
   </ek-container>
 </section>
 
-<section class="ek-section" aria-label="Capacidades">
+<section class="ek-section" [attr.aria-label]="'home.capabilities.ariaLabel' | transloco">
   <ek-container>
     <ek-section-header
-      eyebrow="Capacidades"
-      title="Cuatro disciplinas. Una entrega integrada."
-      description="Vendemos capacidad tecnológica seria: de la arquitectura al pixel, del modelo 3D al modelo de lenguaje."
+      [eyebrow]="'home.capabilities.eyebrow' | transloco"
+      [title]="'home.capabilities.title' | transloco"
+      [description]="'home.capabilities.description' | transloco"
     />
 
     <div class="ek-service-grid">
-      @for (service of services; track service.title) {
+      @for (service of services; track service.id) {
         <article class="ek-service-card ek-glass" ekSignalTilt>
           <div class="ek-service-card__field" aria-hidden="true">
             <ek-card-scene [accent]="service.accent" />
           </div>
           <div class="ek-service-card__body">
             <span class="ek-mono ek-service-card__index">{{ service.eyebrow }}</span>
-            <h3 class="ek-heading-sm">{{ service.title }}</h3>
-            <p class="ek-body">{{ service.description }}</p>
-            <ek-button variant="text" routerLink="/servicios">Explorar</ek-button>
+            <h3 class="ek-heading-sm">{{ service.titleKey | transloco }}</h3>
+            <p class="ek-body">{{ service.descriptionKey | transloco }}</p>
+            <ek-button variant="text" routerLink="/servicios">
+              {{ 'common.actions.explore' | transloco }}
+            </ek-button>
           </div>
         </article>
       }
@@ -53,31 +58,33 @@
 
 <ek-methodology-section />
 
-<section class="ek-section ek-section--alt" aria-label="Portfolio">
+<section class="ek-section ek-section--alt" [attr.aria-label]="'home.portfolio.ariaLabel' | transloco">
   <ek-container>
     <ek-section-header
-      eyebrow="Portfolio"
-      title="Casos que demuestran rigor."
-      description="Selección de experiencias construidas para decisión, operación y conversión."
+      [eyebrow]="'home.portfolio.eyebrow' | transloco"
+      [title]="'home.portfolio.title' | transloco"
+      [description]="'home.portfolio.description' | transloco"
     />
 
     <div class="ek-case-grid">
-      @for (item of cases; track item.title) {
+      @for (item of cases; track item.id) {
         <article class="ek-case-card" ekSignalTilt>
           <div class="ek-case-card__field" aria-hidden="true">
             <ek-card-scene [accent]="item.accent" />
           </div>
           <div class="ek-case-card__body">
-            <p class="ek-mono ek-case-card__tag">{{ item.tag }}</p>
-            <h3 class="ek-heading-sm">{{ item.title }}</h3>
-            <p class="ek-body">{{ item.summary }}</p>
+            <p class="ek-mono ek-case-card__tag">{{ item.tagKey | transloco }}</p>
+            <h3 class="ek-heading-sm">{{ item.titleKey | transloco }}</h3>
+            <p class="ek-body">{{ item.summaryKey | transloco }}</p>
           </div>
         </article>
       }
     </div>
 
     <div class="ek-section__cta">
-      <ek-button variant="ghost" routerLink="/portfolio">Ver todos los proyectos</ek-button>
+      <ek-button variant="ghost" routerLink="/portfolio">
+        {{ 'common.actions.viewAllProjects' | transloco }}
+      </ek-button>
     </div>
   </ek-container>
 </section>
@@ -86,13 +93,15 @@
   <ek-container>
     <div class="ek-cta-band ek-glass">
       <div>
-        <p class="ek-eyebrow">Siguiente paso</p>
-        <h2 id="cta-title" class="ek-display-lg">Hablemos de lo que querés construir.</h2>
+        <p class="ek-eyebrow">{{ 'home.cta.eyebrow' | transloco }}</p>
+        <h2 id="cta-title" class="ek-display-lg">{{ 'home.cta.title' | transloco }}</h2>
         <p class="ek-body-lg">
-          Una conversación corta. Claridad técnica. Una propuesta alineada a tu roadmap.
+          {{ 'home.cta.description' | transloco }}
         </p>
       </div>
-      <ek-button variant="primary" size="lg" routerLink="/contacto">Agendar una reunión</ek-button>
+      <ek-button variant="primary" size="lg" routerLink="/contacto">
+        {{ 'common.actions.scheduleMeeting' | transloco }}
+      </ek-button>
     </div>
   </ek-container>
 </section>

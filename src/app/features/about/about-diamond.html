@@ -7,8 +7,8 @@
   <canvas #canvas class="ek-about-diamond__canvas" aria-hidden="true"></canvas>
   <div class="ek-about-diamond__fallback" aria-hidden="true"></div>
 
-  <div class="ek-about-diamond__values" aria-label="Valores de EKIN KRUZ">
-    @for (value of values; track value.label; let i = $index) {
+  <div class="ek-about-diamond__values" [attr.aria-label]="'about.diamond.ariaLabel' | transloco">
+    @for (value of values; track value.labelKey; let i = $index) {
       <span
         class="ek-about-diamond__value"
         [class.ek-about-diamond__value--active]="activeIndex() === i"
@@ -16,12 +16,12 @@
         [style.--ek-value-y]="value.y"
       >
         <span class="ek-about-diamond__connector" aria-hidden="true"></span>
-        <span class="ek-about-diamond__label">{{ value.label }}</span>
+        <span class="ek-about-diamond__label">{{ value.labelKey | transloco }}</span>
       </span>
     }
   </div>
 
   <p class="ek-about-diamond__current" aria-live="polite">
-    {{ activeValue().label }}
+    {{ activeValue().labelKey | transloco }}
   </p>
 </div>

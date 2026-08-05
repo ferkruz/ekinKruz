@@ -39,7 +39,6 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "baseHref": "/ekinKruz/",
             "polyfills": [
               "zone.js"
             ],
@@ -114,8 +113,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "2db5d01d-cf9a-4e55-a848-33b83b4993dc"
   }
 }

@@ -2,26 +2,21 @@
   <ek-container [wide]="true">
     <div class="ek-methodology-strip__inner">
       <div class="ek-methodology-strip__heading">
-        <p class="ek-eyebrow">Metodología</p>
+        <p class="ek-eyebrow">{{ 'methodology.shared.eyebrow' | transloco }}</p>
         <h2 id="methodology-title" class="ek-display-lg">
-          Un recorrido cinematográfico por la creación de producto digital.
+          {{ 'home.methodology.title' | transloco }}
         </h2>
       </div>
 
       <p class="ek-body ek-methodology-strip__copy">
-        De la primera conversación al crecimiento continuo: una práctica sólida, iterativa y
-        escalable diseñada para convertir complejidad en dirección.
+        {{ 'home.methodology.description' | transloco }}
       </p>
     </div>
 
-    <div class="ek-methodology-strip__pills" aria-label="Etapas de metodología">
-      <span><strong>01</strong> Descubrimiento</span>
-      <span><strong>02</strong> Estrategia</span>
-      <span><strong>03</strong> Diseño</span>
-      <span><strong>04</strong> Ingeniería</span>
-      <span><strong>05</strong> Validación</span>
-      <span><strong>06</strong> Lanzamiento</span>
-      <span><strong>07</strong> Evolución</span>
+    <div class="ek-methodology-strip__pills" [attr.aria-label]="'methodology.shared.stagesAria' | transloco">
+      @for (stage of stages; track stage.index) {
+        <span><strong>{{ stage.index }}</strong> {{ stage.labelKey | transloco }}</span>
+      }
     </div>
   </ek-container>
 </section>

@@ -2,12 +2,11 @@
   @if (!submitted()) {
     <form class="ek-contact-form__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
       <header class="ek-contact-form__header">
-        <p class="ek-eyebrow">Kickoff</p>
+        <p class="ek-eyebrow">{{ 'contact.form.eyebrow' | transloco }}</p>
         <div>
-          <h2 id="contact-form-title" class="ek-display-lg">Preparemos la primera conversación.</h2>
+          <h2 id="contact-form-title" class="ek-display-lg">{{ 'contact.form.title' | transloco }}</h2>
           <p class="ek-body">
-            Compartinos lo esencial para entender el contexto, detectar oportunidades y llegar a la
-            reunión con una dirección clara.
+            {{ 'contact.form.description' | transloco }}
           </p>
         </div>
       </header>
@@ -15,7 +14,7 @@
       <div class="ek-contact-form__grid">
         <div class="ek-contact-form__column">
           <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('fullName')">
-            <span>Nombre completo *</span>
+            <span>{{ 'contact.form.fields.fullName.label' | transloco }}</span>
             <input
               type="text"
               formControlName="fullName"
@@ -27,12 +26,12 @@
               <span class="ek-contact-field__check" aria-hidden="true">✓</span>
             }
             @if (fieldInvalid('fullName')) {
-              <small id="fullName-error">Ingresá tu nombre completo.</small>
+              <small id="fullName-error">{{ 'contact.form.errors.fullName' | transloco }}</small>
             }
           </label>
 
           <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('company')">
-            <span>Empresa *</span>
+            <span>{{ 'contact.form.fields.company.label' | transloco }}</span>
             <input
               type="text"
               formControlName="company"
@@ -44,12 +43,12 @@
               <span class="ek-contact-field__check" aria-hidden="true">✓</span>
             }
             @if (fieldInvalid('company')) {
-              <small id="company-error">Contanos la empresa u organización.</small>
+              <small id="company-error">{{ 'contact.form.errors.company' | transloco }}</small>
             }
           </label>
 
           <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('email')">
-            <span>Correo electrónico *</span>
+            <span>{{ 'contact.form.fields.email.label' | transloco }}</span>
             <input
               type="email"
               formControlName="email"
@@ -61,14 +60,14 @@
               <span class="ek-contact-field__check" aria-hidden="true">✓</span>
             }
             @if (hasError('email', 'required')) {
-              <small id="email-error">Ingresá un correo electrónico.</small>
+              <small id="email-error">{{ 'contact.form.errors.emailRequired' | transloco }}</small>
             } @else if (hasError('email', 'email')) {
-              <small id="email-error">Usá un correo válido para poder responderte.</small>
+              <small id="email-error">{{ 'contact.form.errors.emailInvalid' | transloco }}</small>
             }
           </label>
 
           <label class="ek-contact-field">
-            <span>Teléfono <em>(opcional)</em></span>
+            <span>{{ 'contact.form.fields.phone.label' | transloco }} <em>{{ 'common.optional' | transloco }}</em></span>
             <input type="tel" formControlName="phone" autocomplete="tel" />
             @if (fieldComplete('phone')) {
               <span class="ek-contact-field__check" aria-hidden="true">✓</span>
@@ -78,32 +77,32 @@
 
         <div class="ek-contact-form__column">
           <label class="ek-contact-field" [class.ek-contact-field--invalid]="fieldInvalid('projectType')">
-            <span>¿Qué tipo de proyecto estás buscando? *</span>
+            <span>{{ 'contact.form.fields.projectType.label' | transloco }}</span>
             <select
               formControlName="projectType"
               [attr.aria-invalid]="fieldInvalid('projectType')"
               aria-describedby="projectType-error"
             >
-              <option value="" disabled>Seleccioná una opción</option>
+              <option value="" disabled>{{ 'contact.form.fields.projectType.placeholder' | transloco }}</option>
               @for (option of projectOptions; track option) {
-                <option [value]="option">{{ option }}</option>
+                <option [value]="option">{{ 'contact.form.projectOptions.' + option | transloco }}</option>
               }
             </select>
             @if (fieldComplete('projectType')) {
               <span class="ek-contact-field__check" aria-hidden="true">✓</span>
             }
             @if (fieldInvalid('projectType')) {
-              <small id="projectType-error">Elegí el tipo de proyecto que mejor encaje.</small>
+              <small id="projectType-error">{{ 'contact.form.errors.projectType' | transloco }}</small>
             }
           </label>
 
           <label class="ek-contact-field ek-contact-field--textarea" [class.ek-contact-field--invalid]="fieldInvalid('brief')">
-            <span>Cuéntanos brevemente sobre tu proyecto *</span>
+            <span>{{ 'contact.form.fields.brief.label' | transloco }}</span>
             <textarea
               formControlName="brief"
               maxlength="500"
               rows="7"
-              placeholder="¿Qué desafío querés resolver? ¿Qué objetivo tiene el proyecto?"
+              [placeholder]="'contact.form.fields.brief.placeholder' | transloco"
               [attr.aria-invalid]="fieldInvalid('brief')"
               aria-describedby="brief-error brief-count"
             ></textarea>
@@ -112,11 +111,11 @@
             }
             <span id="brief-count" class="ek-contact-field__count">{{ briefLength() }}/500</span>
             @if (hasError('brief', 'required')) {
-              <small id="brief-error">Contanos brevemente qué necesitás construir.</small>
+              <small id="brief-error">{{ 'contact.form.errors.briefRequired' | transloco }}</small>
             } @else if (hasError('brief', 'minlength')) {
-              <small id="brief-error">Sumá un poco más de contexto para preparar mejor la reunión.</small>
+              <small id="brief-error">{{ 'contact.form.errors.briefMinLength' | transloco }}</small>
             } @else if (hasError('brief', 'maxlength')) {
-              <small id="brief-error">El mensaje no puede superar los 500 caracteres.</small>
+              <small id="brief-error">{{ 'contact.form.errors.briefMaxLength' | transloco }}</small>
             }
           </label>
         </div>
@@ -124,24 +123,23 @@
 
       <div class="ek-contact-form__actions">
         <div>
-          <p class="ek-caption">Solo usamos esta información para preparar la reunión de descubrimiento.</p>
-          @if (submitError()) {
-            <p class="ek-contact-form__error" role="alert">{{ submitError() }}</p>
+          <p class="ek-caption">{{ 'contact.form.privacy' | transloco }}</p>
+          @if (submitErrorKey()) {
+            <p class="ek-contact-form__error" role="alert">{{ submitErrorKey() | transloco }}</p>
           }
         </div>
         <button class="ek-contact-form__button" type="submit" [disabled]="submitting()">
-          <span>{{ submitting() ? 'Preparando solicitud' : 'Solicitar reunión' }}</span>
+          <span>{{ (submitting() ? 'contact.form.actions.submitting' : 'contact.form.actions.submit') | transloco }}</span>
         </button>
       </div>
     </form>
   } @else {
     <article class="ek-contact-form__success" aria-live="polite">
       <span class="ek-contact-form__success-mark" aria-hidden="true">✓</span>
-      <p class="ek-eyebrow">Solicitud recibida</p>
-      <h2 class="ek-display-lg">Gracias por contactarnos.</h2>
+      <p class="ek-eyebrow">{{ 'contact.form.success.eyebrow' | transloco }}</p>
+      <h2 class="ek-display-lg">{{ 'contact.form.success.title' | transloco }}</h2>
       <p class="ek-body-lg">
-        Revisaremos tu consulta y nos pondremos en contacto para coordinar una reunión de
-        descubrimiento.
+        {{ 'contact.form.success.description' | transloco }}
       </p>
     </article>
   }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { Container } from '../../ui/container/container';
 
 @Component({
   selector: 'ek-site-footer',
   standalone: true,
-  imports: [RouterLink, Container],
+  imports: [RouterLink, Container, TranslocoPipe],
   templateUrl: './site-footer.html',
   styleUrl: './site-footer.css',
 })
@@ -14,21 +15,21 @@ export class SiteFooter {
 
   readonly columns = [
     {
-      title: 'Empresa',
+      titleKey: 'footer.columns.company.title',
       links: [
-        { label: 'Nosotros', path: '/nosotros' },
-        { label: 'Metodología', path: '/metodologia' },
-        { label: 'Blog', path: '/blog' },
-        { label: 'Contacto', path: '/contacto' },
+        { labelKey: 'footer.columns.company.links.about', path: '/nosotros' },
+        { labelKey: 'footer.columns.company.links.methodology', path: '/metodologia' },
+        { labelKey: 'footer.columns.company.links.blog', path: '/blog' },
+        { labelKey: 'footer.columns.company.links.contact', path: '/contacto' },
       ],
     },
     {
-      title: 'Capacidades',
+      titleKey: 'footer.columns.capabilities.title',
       links: [
-        { label: 'Software Factory', path: '/servicios' },
-        { label: 'Experiencias 3D', path: '/servicios' },
-        { label: 'Inteligencia Artificial', path: '/servicios' },
-        { label: 'UX & Producto', path: '/servicios' },
+        { labelKey: 'footer.columns.capabilities.links.softwareFactory', path: '/servicios' },
+        { labelKey: 'footer.columns.capabilities.links.spatial', path: '/servicios' },
+        { labelKey: 'footer.columns.capabilities.links.ai', path: '/servicios' },
+        { labelKey: 'footer.columns.capabilities.links.ux', path: '/servicios' },
       ],
     },
   ] as const;

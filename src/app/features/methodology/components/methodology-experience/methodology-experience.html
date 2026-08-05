@@ -1,6 +1,6 @@
 <section
   class="ek-methodology-experience"
-  aria-label="Recorrido cinematográfico de metodología"
+  [attr.aria-label]="'methodology.experience.ariaLabel' | transloco"
   [style.--ek-stage-count]="stages().length"
 >
   <div class="ek-methodology-experience__viewport" data-methodology-viewport>
@@ -32,19 +32,22 @@
             />
 
             <div class="ek-methodology-stage__content">
-              <p class="ek-eyebrow">{{ stage.eyebrow }}</p>
-              <p class="ek-methodology-stage__index" aria-label="Etapa {{ stage.index }}">
+              <p class="ek-eyebrow">{{ stage.eyebrowKey | transloco }}</p>
+              <p
+                class="ek-methodology-stage__index"
+                [attr.aria-label]="'methodology.experience.stageAria' | transloco: { index: stage.index }"
+              >
                 {{ stage.index }}
               </p>
               <h2 id="methodology-stage-{{ stage.id }}" class="ek-display-lg">
-                {{ stage.title }}
+                {{ stage.titleKey | transloco }}
               </h2>
-              <p class="ek-body-lg">{{ stage.description }}</p>
-              <p class="ek-methodology-stage__sensation">{{ stage.sensation }}</p>
+              <p class="ek-body-lg">{{ stage.descriptionKey | transloco }}</p>
+              <p class="ek-methodology-stage__sensation">{{ stage.sensationKey | transloco }}</p>
 
-              <ul class="ek-methodology-stage__tags" aria-label="Visuales de la etapa">
-                @for (term of stage.visualTerms; track term; let tagIndex = $index) {
-                  <li [style.--ek-card-delay]="tagIndex * 70 + 'ms'">{{ term }}</li>
+              <ul class="ek-methodology-stage__tags" [attr.aria-label]="'methodology.experience.visualTermsAria' | transloco">
+                @for (termKey of stage.visualTermKeys; track termKey; let tagIndex = $index) {
+                  <li [style.--ek-card-delay]="tagIndex * 70 + 'ms'">{{ termKey | transloco }}</li>
                 }
               </ul>
             </div>

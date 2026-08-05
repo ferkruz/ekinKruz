@@ -7,9 +7,9 @@ import { PlaceholderPage } from '../shared/placeholder-page';
   imports: [PlaceholderPage],
   template: `
     <ek-placeholder-page
-      eyebrow="Blog"
-      title="Pensamiento técnico con impacto comercial."
-      description="Estructura SEO lista en una iteración posterior."
+      eyebrowKey="blog.eyebrow"
+      titleKey="blog.title"
+      descriptionKey="blog.description"
     />
   `,
 })

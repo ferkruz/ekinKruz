@@ -7,6 +7,7 @@ import {
   input,
   signal,
 } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { Container } from '../../../../shared/ui/container/container';
 import { MethodologyStage } from '../../data/methodology-stages';
 import {
@@ -18,7 +19,7 @@ import { MethodologyStageVisual } from '../methodology-stage-visual/methodology-
 @Component({
   selector: 'ek-methodology-experience',
   standalone: true,
-  imports: [Container, MethodologyStageVisual],
+  imports: [Container, MethodologyStageVisual, TranslocoPipe],
   templateUrl: './methodology-experience.html',
   styleUrl: './methodology-experience.css',
 })

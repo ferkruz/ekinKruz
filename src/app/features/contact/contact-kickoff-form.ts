@@ -1,6 +1,7 @@
 import { Component, DestroyRef, ElementRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { ContactKickoffService } from './contact-kickoff.service';
 
 type ContactControlName =
@@ -14,7 +15,7 @@ type ContactControlName =
 @Component({
   selector: 'ek-contact-kickoff-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TranslocoPipe],
   templateUrl: './contact-kickoff-form.html',
   styleUrl: './contact-kickoff-form.css',
 })
@@ -22,19 +23,20 @@ export class ContactKickoffFormComponent {
   private readonly host = inject(ElementRef<HTMLElement>);
   private readonly destroyRef = inject(DestroyRef);
   private readonly service = inject(ContactKickoffService);
+  private readonly transloco = inject(TranslocoService);
 
   readonly submitting = signal(false);
   readonly submitted = signal(false);
   readonly briefLength = signal(0);
-  readonly submitError = signal('');
+  readonly submitErrorKey = signal('');
 
   readonly projectOptions = [
-    'Software a medida',
-    'Experiencia 3D',
-    'Inteligencia Artificial',
-    'UX / Producto',
-    'Integración tecnológica',
-    'Todavía no lo tengo definido',
+    'customSoftware',
+    'spatialExperience',
+    'artificialIntelligence',
+    'uxProduct',
+    'technologyIntegration',
+    'notDefined',
   ] as const;
 
   readonly form = new FormGroup({
@@ -89,15 +91,18 @@ export class ContactKickoffFormComponent {
     }
 
     this.submitting.set(true);
-    this.submitError.set('');
+    this.submitErrorKey.set('');
 
     try {
-      await this.service.requestMeeting(this.form.getRawValue());
+      const payload = this.form.getRawValue();
+
+      await this.service.requestMeeting({
+        ...payload,
+        projectType: this.transloco.translate(`contact.form.projectOptions.${payload.projectType}`),
+      });
       await this.revealSuccess();
     } catch {
-      this.submitError.set(
-        'No pudimos enviar la solicitud. Intentá nuevamente en unos segundos o escribinos directo por correo.',
-      );
+      this.submitErrorKey.set('contact.form.errors.submit');
     } finally {
       this.submitting.set(false);
     }

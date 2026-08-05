@@ -33,7 +33,7 @@
     </div>
 
     <svg class="ek-methodology-brain" viewBox="0 0 620 420" fill="none" role="img">
-      <title>Red neuronal digital</title>
+      <title>{{ 'methodology.visual.neuralTitle' | transloco }}</title>
       <path
         class="ek-methodology-brain__glow"
         d="M170 275C125 270 96 238 105 197C112 157 139 133 176 129C187 87 225 67 266 78C292 45 345 50 367 83C410 76 449 100 459 137C496 150 517 181 513 219C509 261 476 291 432 292C421 323 394 344 356 348C334 352 314 343 301 328C280 346 243 339 225 313C204 318 181 303 170 275Z"
@@ -77,11 +77,9 @@
     </svg>
 
     <div class="ek-methodology-neural__terms">
-      <span>brief</span>
-      <span>usuario</span>
-      <span>datos</span>
-      <span>riesgo</span>
-      <span>oportunidad</span>
+      @for (termKey of neuralTerms; track termKey) {
+        <span>{{ termKey | transloco }}</span>
+      }
     </div>
   </div>
 </div>

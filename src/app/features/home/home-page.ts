@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { Button } from '../../shared/ui/button/button';
 import { Container } from '../../shared/ui/container/container';
 import { SectionHeader } from '../../shared/ui/section-header/section-header';
@@ -18,6 +19,7 @@ import { MethodologySection } from './methodology-section';
     CardScene,
     SignalTiltDirective,
     MethodologySection,
+    TranslocoPipe,
   ],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
@@ -25,52 +27,55 @@ import { MethodologySection } from './methodology-section';
 export class HomePage {
   readonly services = [
     {
+      id: 'software-factory',
       eyebrow: '01',
-      title: 'Software Factory',
-      description:
-        'Plataformas empresariales, APIs e integraciones construidas para escalar con arquitectura limpia.',
+      titleKey: 'home.capabilities.cards.softwareFactory.title',
+      descriptionKey: 'home.capabilities.cards.softwareFactory.description',
       accent: 'signal' as const,
     },
     {
+      id: 'spatial-experiences',
       eyebrow: '02',
-      title: 'Experiencias 3D',
-      description:
-        'Configuradores, gemelos digitales e infografías interactivas para industria, ciudades y producto.',
+      titleKey: 'home.capabilities.cards.spatial.title',
+      descriptionKey: 'home.capabilities.cards.spatial.description',
       accent: 'trust' as const,
     },
     {
+      id: 'artificial-intelligence',
       eyebrow: '03',
-      title: 'Inteligencia Artificial',
-      description:
-        'Asistentes, automatización e integración con LLMs aplicados a flujos reales de negocio.',
+      titleKey: 'home.capabilities.cards.ai.title',
+      descriptionKey: 'home.capabilities.cards.ai.description',
       accent: 'signal' as const,
     },
     {
+      id: 'ux-product',
       eyebrow: '04',
-      title: 'UX & Producto',
-      description:
-        'Research, diseño accesible y arquitectura frontend que convierte complejidad en claridad.',
+      titleKey: 'home.capabilities.cards.ux.title',
+      descriptionKey: 'home.capabilities.cards.ux.description',
       accent: 'trust' as const,
     },
   ] as const;
 
   readonly cases = [
     {
-      title: 'Smart City',
-      tag: '3D · Datos · Gobierno',
-      summary: 'Visualización urbana interactiva para decisión operativa en tiempo real.',
+      id: 'smart-city',
+      titleKey: 'home.portfolio.cases.smartCity.title',
+      tagKey: 'home.portfolio.cases.smartCity.tag',
+      summaryKey: 'home.portfolio.cases.smartCity.summary',
       accent: 'trust' as const,
     },
     {
-      title: 'Industrial Explorer',
-      tag: 'Industria 4.0 · Gemelo digital',
-      summary: 'Exploración de planta con capas de telemetría y contexto operativo.',
+      id: 'industrial-explorer',
+      titleKey: 'home.portfolio.cases.industrial.title',
+      tagKey: 'home.portfolio.cases.industrial.tag',
+      summaryKey: 'home.portfolio.cases.industrial.summary',
       accent: 'signal' as const,
     },
     {
-      title: 'Real Estate Configurator',
-      tag: 'WebGL · Inmobiliaria',
-      summary: 'Configurador premium de tipologías con recorrido inmersivo y lead capture.',
+      id: 'real-estate-configurator',
+      titleKey: 'home.portfolio.cases.realEstate.title',
+      tagKey: 'home.portfolio.cases.realEstate.tag',
+      summaryKey: 'home.portfolio.cases.realEstate.summary',
       accent: 'trust' as const,
     },
   ] as const;

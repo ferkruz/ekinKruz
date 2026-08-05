@@ -4,38 +4,38 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./features/home/home-page').then((m) => m.HomePage),
-    title: 'EKIN KRUZ — Software Factory Premium',
+    data: { seoKey: 'home' },
   },
   {
     path: 'servicios',
     loadComponent: () => import('./features/services/services-page').then((m) => m.ServicesPage),
-    title: 'Servicios — EKIN KRUZ',
+    data: { seoKey: 'services' },
   },
   {
     path: 'portfolio',
     loadComponent: () => import('./features/portfolio/portfolio-page').then((m) => m.PortfolioPage),
-    title: 'Portfolio — EKIN KRUZ',
+    data: { seoKey: 'portfolio' },
   },
   {
     path: 'metodologia',
     loadComponent: () =>
       import('./features/methodology/methodology-page').then((m) => m.MethodologyPage),
-    title: 'Metodología — EKIN KRUZ',
+    data: { seoKey: 'methodology' },
   },
   {
     path: 'nosotros',
     loadComponent: () => import('./features/about/about-page').then((m) => m.AboutPage),
-    title: 'Nosotros — EKIN KRUZ',
+    data: { seoKey: 'about' },
   },
   {
     path: 'blog',
     loadComponent: () => import('./features/blog/blog-page').then((m) => m.BlogPage),
-    title: 'Blog — EKIN KRUZ',
+    data: { seoKey: 'blog' },
   },
   {
     path: 'contacto',
     loadComponent: () => import('./features/contact/contact-page').then((m) => m.ContactPage),
-    title: 'Contacto — EKIN KRUZ',
+    data: { seoKey: 'contact' },
   },
   { path: '**', redirectTo: '' },
 ];

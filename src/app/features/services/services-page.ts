@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { Container } from '../../shared/ui/container/container';
 import { SectionHeader } from '../../shared/ui/section-header/section-header';
 import { RevealDirective } from '../../shared/motion/reveal.directive';
@@ -19,6 +20,7 @@ import { ComingSoonCard } from './components/coming-soon-card/coming-soon-card';
     CardScene,
     CapabilityCard,
     ComingSoonCard,
+    TranslocoPipe,
   ],
   templateUrl: './services-page.html',
   styleUrl: './services-page.css',

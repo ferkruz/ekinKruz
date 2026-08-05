@@ -6,9 +6,9 @@ export type CapabilitySize = 'hero' | 'tall' | 'wide' | 'standard';
 export interface Capability {
   readonly id: string;
   readonly index: string;
-  readonly title: string;
-  readonly description: string;
-  readonly related: readonly string[];
+  readonly titleKey: string;
+  readonly descriptionKey: string;
+  readonly relatedKeys: readonly string[];
   readonly visual: CapabilityVisual;
   readonly size: CapabilitySize;
   readonly accent: 'signal' | 'trust';
@@ -18,17 +18,16 @@ export const CAPABILITIES: readonly Capability[] = [
   {
     id: 'software-factory',
     index: '01',
-    title: 'Software Factory',
-    description:
-      'Desarrollamos plataformas digitales, aplicaciones empresariales, APIs, sistemas a medida e integraciones escalables utilizando arquitecturas modernas y buenas prácticas de ingeniería.',
-    related: [
-      'Desarrollo Web',
-      'Arquitectura Frontend',
-      'Backend',
-      'APIs',
-      'Integraciones',
-      'Cloud',
-      'DevOps',
+    titleKey: 'services.capabilities.softwareFactory.title',
+    descriptionKey: 'services.capabilities.softwareFactory.description',
+    relatedKeys: [
+      'services.capabilities.softwareFactory.related.webDevelopment',
+      'services.capabilities.softwareFactory.related.frontendArchitecture',
+      'services.capabilities.softwareFactory.related.backend',
+      'services.capabilities.softwareFactory.related.apis',
+      'services.capabilities.softwareFactory.related.integrations',
+      'services.capabilities.softwareFactory.related.cloud',
+      'services.capabilities.softwareFactory.related.devOps',
     ],
     visual: 'factory',
     size: 'hero',
@@ -37,18 +36,17 @@ export const CAPABILITIES: readonly Capability[] = [
   {
     id: 'experiencias-3d',
     index: '02',
-    title: 'Experiencias 3D',
-    description:
-      'Creamos experiencias tridimensionales interactivas que permiten visualizar, explicar y comercializar productos, procesos e información compleja directamente desde el navegador.',
-    related: [
-      'Smart Cities',
-      'Digital Twins',
-      'Industria 4.0',
-      'Configuradores',
-      'Visualización Científica',
-      'Infografías Interactivas',
-      'Arquitectura',
-      'Educación',
+    titleKey: 'services.capabilities.spatial.title',
+    descriptionKey: 'services.capabilities.spatial.description',
+    relatedKeys: [
+      'services.capabilities.spatial.related.smartCities',
+      'services.capabilities.spatial.related.digitalTwins',
+      'services.capabilities.spatial.related.industry',
+      'services.capabilities.spatial.related.configurators',
+      'services.capabilities.spatial.related.scientificVisualization',
+      'services.capabilities.spatial.related.interactiveInfographics',
+      'services.capabilities.spatial.related.architecture',
+      'services.capabilities.spatial.related.education',
     ],
     visual: 'spatial',
     size: 'tall',
@@ -57,17 +55,16 @@ export const CAPABILITIES: readonly Capability[] = [
   {
     id: 'inteligencia-artificial',
     index: '03',
-    title: 'Inteligencia Artificial',
-    description:
-      'Incorporamos inteligencia artificial en productos digitales mediante asistentes inteligentes, automatización de procesos e integración con modelos generativos.',
-    related: [
-      'IA Generativa',
-      'Chatbots',
-      'Automatización',
-      'RAG',
-      'LLM',
-      'Procesamiento Documental',
-      'Agentes Inteligentes',
+    titleKey: 'services.capabilities.ai.title',
+    descriptionKey: 'services.capabilities.ai.description',
+    relatedKeys: [
+      'services.capabilities.ai.related.generativeAi',
+      'services.capabilities.ai.related.chatbots',
+      'services.capabilities.ai.related.automation',
+      'services.capabilities.ai.related.rag',
+      'services.capabilities.ai.related.llm',
+      'services.capabilities.ai.related.documentProcessing',
+      'services.capabilities.ai.related.intelligentAgents',
     ],
     visual: 'neural',
     size: 'wide',
@@ -76,16 +73,15 @@ export const CAPABILITIES: readonly Capability[] = [
   {
     id: 'ux-producto',
     index: '04',
-    title: 'UX & Producto',
-    description:
-      'Diseñamos experiencias intuitivas centradas en las personas mediante investigación, estrategia de producto, accesibilidad y diseño de interfaces.',
-    related: [
-      'UX Research',
-      'UI Design',
-      'Product Discovery',
-      'Accesibilidad',
-      'Design Systems',
-      'Arquitectura UX',
+    titleKey: 'services.capabilities.ux.title',
+    descriptionKey: 'services.capabilities.ux.description',
+    relatedKeys: [
+      'services.capabilities.ux.related.uxResearch',
+      'services.capabilities.ux.related.uiDesign',
+      'services.capabilities.ux.related.productDiscovery',
+      'services.capabilities.ux.related.accessibility',
+      'services.capabilities.ux.related.designSystems',
+      'services.capabilities.ux.related.uxArchitecture',
     ],
     visual: 'ux',
     size: 'standard',

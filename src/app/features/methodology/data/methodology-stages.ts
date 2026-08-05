@@ -10,90 +10,118 @@ export type MethodologyStageVisual =
 export interface MethodologyStage {
   readonly id: string;
   readonly index: string;
-  readonly title: string;
-  readonly eyebrow: string;
-  readonly description: string;
-  readonly sensation: string;
+  readonly titleKey: string;
+  readonly eyebrowKey: string;
+  readonly descriptionKey: string;
+  readonly sensationKey: string;
   readonly visual: MethodologyStageVisual;
-  readonly visualTerms: readonly string[];
+  readonly visualTermKeys: readonly string[];
 }
 
 export const METHODOLOGY_STAGES: readonly MethodologyStage[] = [
   {
     id: 'discovery',
     index: '01',
-    title: 'Descubrimiento',
-    eyebrow: 'Exploración inicial',
-    description:
-      'La Energy Line llega como señal dispersa: abre preguntas, detecta patrones y empieza a convertir incertidumbre en comprensión accionable.',
-    sensation: 'Exploración · Curiosidad · Comprensión',
+    titleKey: 'methodology.stages.discovery.title',
+    eyebrowKey: 'methodology.stages.discovery.eyebrow',
+    descriptionKey: 'methodology.stages.discovery.description',
+    sensationKey: 'methodology.stages.discovery.sensation',
     visual: 'discovery',
-    visualTerms: ['Partículas', 'Mapa mental', 'Conexiones', 'Nodos'],
+    visualTermKeys: [
+      'methodology.stages.discovery.visualTerms.particles',
+      'methodology.stages.discovery.visualTerms.mindMap',
+      'methodology.stages.discovery.visualTerms.connections',
+      'methodology.stages.discovery.visualTerms.nodes',
+    ],
   },
   {
     id: 'strategy',
     index: '02',
-    title: 'Estrategia',
-    eyebrow: 'Dirección del sistema',
-    description:
-      'La señal encuentra un camino: las conexiones se ordenan, aparecen mapas de arquitectura y el roadmap define dónde invertir energía primero.',
-    sensation: 'Claridad · Dirección · Orden',
+    titleKey: 'methodology.stages.strategy.title',
+    eyebrowKey: 'methodology.stages.strategy.eyebrow',
+    descriptionKey: 'methodology.stages.strategy.description',
+    sensationKey: 'methodology.stages.strategy.sensation',
     visual: 'strategy',
-    visualTerms: ['Wireframes', 'Diagramas', 'Roadmaps', 'Arquitectura'],
+    visualTermKeys: [
+      'methodology.stages.strategy.visualTerms.wireframes',
+      'methodology.stages.strategy.visualTerms.diagrams',
+      'methodology.stages.strategy.visualTerms.roadmaps',
+      'methodology.stages.strategy.visualTerms.architecture',
+    ],
   },
   {
     id: 'design',
     index: '03',
-    title: 'Diseño',
-    eyebrow: 'Experiencia tangible',
-    description:
-      'Los diagramas se transforman en interfaz: componentes, jerarquía visual y sistema de diseño empiezan a revelar cómo se sentirá el producto.',
-    sensation: 'Creatividad · Elegancia · Experiencia',
+    titleKey: 'methodology.stages.design.title',
+    eyebrowKey: 'methodology.stages.design.eyebrow',
+    descriptionKey: 'methodology.stages.design.description',
+    sensationKey: 'methodology.stages.design.sensation',
     visual: 'design',
-    visualTerms: ['Cards', 'UI', 'Componentes', 'Design system'],
+    visualTermKeys: [
+      'methodology.stages.design.visualTerms.cards',
+      'methodology.stages.design.visualTerms.ui',
+      'methodology.stages.design.visualTerms.components',
+      'methodology.stages.design.visualTerms.designSystem',
+    ],
   },
   {
     id: 'engineering',
     index: '04',
-    title: 'Ingeniería',
-    eyebrow: 'Arquitectura viva',
-    description:
-      'La línea se vuelve flujo de datos: atraviesa módulos, APIs y servicios hasta ensamblar una plataforma preparada para escalar.',
-    sensation: 'Ingeniería · Potencia · Escalabilidad',
+    titleKey: 'methodology.stages.engineering.title',
+    eyebrowKey: 'methodology.stages.engineering.eyebrow',
+    descriptionKey: 'methodology.stages.engineering.description',
+    sensationKey: 'methodology.stages.engineering.sensation',
     visual: 'engineering',
-    visualTerms: ['Módulos', 'APIs', 'Data flow', 'Código'],
+    visualTermKeys: [
+      'methodology.stages.engineering.visualTerms.modules',
+      'methodology.stages.engineering.visualTerms.apis',
+      'methodology.stages.engineering.visualTerms.dataFlow',
+      'methodology.stages.engineering.visualTerms.code',
+    ],
   },
   {
     id: 'validation',
     index: '05',
-    title: 'Validación',
-    eyebrow: 'Calidad controlada',
-    description:
-      'Cada decisión pasa por filtros de prueba: los riesgos bajan, los indicadores se iluminan y el producto gana confianza operativa.',
-    sensation: 'Confianza · Calidad · Control',
+    titleKey: 'methodology.stages.validation.title',
+    eyebrowKey: 'methodology.stages.validation.eyebrow',
+    descriptionKey: 'methodology.stages.validation.description',
+    sensationKey: 'methodology.stages.validation.sensation',
     visual: 'validation',
-    visualTerms: ['Testing', 'QA', 'Checks', 'Dashboards'],
+    visualTermKeys: [
+      'methodology.stages.validation.visualTerms.testing',
+      'methodology.stages.validation.visualTerms.qa',
+      'methodology.stages.validation.visualTerms.checks',
+      'methodology.stages.validation.visualTerms.dashboards',
+    ],
   },
   {
     id: 'launch',
     index: '06',
-    title: 'Lanzamiento',
-    eyebrow: 'Salida a producción',
-    description:
-      'La energía acumulada atraviesa infraestructura, nube y red global para convertir el sistema en una experiencia disponible y medible.',
-    sensation: 'Impacto · Producción · Escalabilidad',
+    titleKey: 'methodology.stages.launch.title',
+    eyebrowKey: 'methodology.stages.launch.eyebrow',
+    descriptionKey: 'methodology.stages.launch.description',
+    sensationKey: 'methodology.stages.launch.sensation',
     visual: 'launch',
-    visualTerms: ['Cloud', 'Deploy', 'Infraestructura', 'Red global'],
+    visualTermKeys: [
+      'methodology.stages.launch.visualTerms.cloud',
+      'methodology.stages.launch.visualTerms.deploy',
+      'methodology.stages.launch.visualTerms.infrastructure',
+      'methodology.stages.launch.visualTerms.globalNetwork',
+    ],
   },
   {
     id: 'evolution',
     index: '07',
-    title: 'Evolución',
-    eyebrow: 'Ciclo continuo',
-    description:
-      'La línea no termina: se divide, aprende de datos reales y abre nuevos ciclos de optimización, automatización e innovación.',
-    sensation: 'Innovación · Futuro · Crecimiento',
+    titleKey: 'methodology.stages.evolution.title',
+    eyebrowKey: 'methodology.stages.evolution.eyebrow',
+    descriptionKey: 'methodology.stages.evolution.description',
+    sensationKey: 'methodology.stages.evolution.sensation',
     visual: 'evolution',
-    visualTerms: ['Analytics', 'IA', 'Optimización', 'Expansión'],
+    visualTermKeys: [
+      'methodology.stages.evolution.visualTerms.analytics',
+      'methodology.stages.evolution.visualTerms.ai',
+      'methodology.stages.evolution.visualTerms.optimization',
+      'methodology.stages.evolution.visualTerms.expansion',
+    ],
   },
 ];

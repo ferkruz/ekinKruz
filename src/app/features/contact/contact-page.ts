@@ -1,6 +1,7 @@
 import { NgComponentOutlet } from '@angular/common';
 import { afterNextRender, Component, ElementRef, OnDestroy, inject, signal } from '@angular/core';
 import type { Type } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { RevealDirective } from '../../shared/motion/reveal.directive';
 import { Container } from '../../shared/ui/container/container';
 import { ContactKickoffFormComponent } from './contact-kickoff-form';
@@ -14,6 +15,7 @@ import { setupContactPageMotion, type ContactPageMotionCleanup } from './contact
     RevealDirective,
     NgComponentOutlet,
     ContactKickoffFormComponent,
+    TranslocoPipe,
   ],
   templateUrl: './contact-page.html',
   styleUrl: './contact-page.css',
@@ -24,16 +26,16 @@ export class ContactPage implements OnDestroy {
   readonly mapComponent = signal<Type<unknown> | null>(null);
   readonly infoItems = [
     {
-      title: 'Tiempo de respuesta',
-      description: 'Respondemos en menos de 24 horas hábiles.',
+      titleKey: 'contact.info.response.title',
+      descriptionKey: 'contact.info.response.description',
     },
     {
-      title: 'Modalidad',
-      description: 'Trabajamos de forma remota con clientes de diferentes países.',
+      titleKey: 'contact.info.modality.title',
+      descriptionKey: 'contact.info.modality.description',
     },
     {
-      title: 'Tecnologías',
-      description: 'Software a medida • 3D • IA • UX',
+      titleKey: 'contact.info.technologies.title',
+      descriptionKey: 'contact.info.technologies.description',
     },
   ] as const;
 

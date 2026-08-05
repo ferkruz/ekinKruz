@@ -4,22 +4,20 @@
   <ek-container [wide]="true">
     <section class="ek-contact-hero">
       <div class="ek-contact-hero__copy" ekReveal>
-        <p class="ek-eyebrow">Contacto</p>
-        <h1 id="contact-title" class="ek-display-lg">Comencemos a construir tu próximo proyecto.</h1>
+        <p class="ek-eyebrow">{{ 'contact.eyebrow' | transloco }}</p>
+        <h1 id="contact-title" class="ek-display-lg">{{ 'contact.title' | transloco }}</h1>
         <p class="ek-body-lg ek-contact-hero__lead">
-          Cada gran producto comienza con una conversación.
+          {{ 'contact.lead' | transloco }}
         </p>
         <p class="ek-body ek-contact-hero__text">
-          Contanos tu desafío y diseñaremos una solución pensada para acompañar el crecimiento de tu
-          negocio.
+          {{ 'contact.intro.challenge' | transloco }}
         </p>
         <p class="ek-body ek-contact-hero__text">
-          Trabajamos junto a empresas y organizaciones para desarrollar plataformas digitales,
-          experiencias 3D e inteligencia artificial con una visión de largo plazo.
+          {{ 'contact.intro.partnership' | transloco }}
         </p>
       </div>
 
-      <div class="ek-contact-hero__visual" aria-label="Mapa mundial abstracto con conexiones internacionales">
+      <div class="ek-contact-hero__visual" [attr.aria-label]="'contact.map.ariaLabel' | transloco">
         <div class="ek-contact-hero__point-field" aria-hidden="true"></div>
         @if (mapComponent(); as contactMap) {
           <ng-container [ngComponentOutlet]="contactMap"></ng-container>
@@ -31,11 +29,11 @@
       <ek-contact-kickoff-form />
     </section>
 
-    <section class="ek-contact-info" aria-label="Información adicional">
-      @for (item of infoItems; track item.title) {
+    <section class="ek-contact-info" [attr.aria-label]="'contact.info.ariaLabel' | transloco">
+      @for (item of infoItems; track item.titleKey) {
         <article class="ek-contact-info__item">
-          <p class="ek-eyebrow">{{ item.title }}</p>
-          <p class="ek-body">{{ item.description }}</p>
+          <p class="ek-eyebrow">{{ item.titleKey | transloco }}</p>
+          <p class="ek-body">{{ item.descriptionKey | transloco }}</p>
         </article>
       }
     </section>

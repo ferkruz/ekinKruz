@@ -22,13 +22,13 @@
 
   <div class="ek-cap__content">
     <p class="ek-mono ek-cap__index">{{ capability.index }}</p>
-    <h3 class="ek-heading-md ek-cap__title">{{ capability.title }}</h3>
-    <p class="ek-body ek-cap__desc">{{ capability.description }}</p>
+    <h3 class="ek-heading-md ek-cap__title">{{ capability.titleKey | transloco }}</h3>
+    <p class="ek-body ek-cap__desc">{{ capability.descriptionKey | transloco }}</p>
 
     <ul class="ek-cap__related" [attr.aria-hidden]="!active()">
-      @for (item of capability.related; track item) {
+      @for (itemKey of capability.relatedKeys; track itemKey) {
         <li>
-          <span class="ek-cap__tag">{{ item }}</span>
+          <span class="ek-cap__tag">{{ itemKey | transloco }}</span>
         </li>
       }
     </ul>

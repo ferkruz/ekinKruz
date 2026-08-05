@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { TranslocoService } from '@jsverse/transloco';
 
 export interface ContactKickoffPayload {
   readonly fullName: string;
@@ -11,9 +12,13 @@ export interface ContactKickoffPayload {
 
 @Injectable({ providedIn: 'root' })
 export class ContactKickoffService {
+  private readonly transloco = inject(TranslocoService);
   private readonly endpoint = 'https://formsubmit.co/ajax/fercruzhigel@hotmail.com';
 
   async requestMeeting(payload: ContactKickoffPayload): Promise<void> {
+    const subject = this.transloco.translate('contact.email.subject', { company: payload.company });
+    const phoneFallback = this.transloco.translate('contact.email.phoneFallback');
+
     const response = await fetch(this.endpoint, {
       method: 'POST',
       headers: {
@@ -22,12 +27,12 @@ export class ContactKickoffService {
       },
       body: JSON.stringify({
         _captcha: 'false',
-        _subject: `Nueva solicitud de reunión - ${payload.company}`,
+        _subject: subject,
         _template: 'table',
         nombre: payload.fullName,
         empresa: payload.company,
         email: payload.email,
-        telefono: payload.phone || 'No informado',
+        telefono: payload.phone || phoneFallback,
         tipo_de_proyecto: payload.projectType,
         mensaje: payload.brief,
         origen: window.location.href,
@@ -35,7 +40,7 @@ export class ContactKickoffService {
     });
 
     if (!response.ok) {
-      throw new Error('No se pudo enviar la solicitud de reunión.');
+      throw new Error(this.transloco.translate('contact.email.error'));
     }
   }
 }
