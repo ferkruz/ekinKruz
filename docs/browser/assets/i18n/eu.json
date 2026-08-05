@@ -1,0 +1,489 @@
+{
+  "common": {
+    "skipToContent": "Edukira joan",
+    "optional": "(aukerakoa)",
+    "actions": {
+      "scheduleMeeting": "Bilera bat adostu",
+      "viewProjects": "Proiektuak ikusi",
+      "viewAllProjects": "Proiektu guztiak ikusi",
+      "explore": "Arakatu"
+    },
+    "states": {
+      "inProgress": "Eraikitzen"
+    }
+  },
+  "language": {
+    "trigger": "Hizkuntza aldatu",
+    "menuLabel": "Hizkuntza aukeratu",
+    "options": {
+      "es": "Español",
+      "en": "English",
+      "eu": "Euskara"
+    }
+  },
+  "nav": {
+    "ariaLabel": "Nabigazio nagusia",
+    "logoLabel": "EKIN KRUZ - Hasiera",
+    "services": "Zerbitzuak",
+    "portfolio": "Portfolioa",
+    "methodology": "Metodologia",
+    "about": "Gu",
+    "blog": "Bloga",
+    "contact": "Kontaktua",
+    "openMenu": "Menua ireki",
+    "closeMenu": "Menua itxi"
+  },
+  "footer": {
+    "tagline": "Software factory premiuma. Plataformak, 3D esperientziak eta IA eskalatzen duten erakundeentzat.",
+    "rights": "© {{ year }} EKIN KRUZ. Eskubide guztiak erreserbatuta.",
+    "signal": "Obsidian Signal",
+    "columns": {
+      "company": {
+        "title": "Enpresa",
+        "links": {
+          "about": "Gu",
+          "methodology": "Metodologia",
+          "blog": "Bloga",
+          "contact": "Kontaktua"
+        }
+      },
+      "capabilities": {
+        "title": "Gaitasunak",
+        "links": {
+          "softwareFactory": "Software Factory",
+          "spatial": "3D esperientziak",
+          "ai": "Adimen Artifiziala",
+          "ux": "UX eta Produktua"
+        }
+      },
+      "connect": {
+        "title": "Konektatu"
+      }
+    }
+  },
+  "placeholder": {
+    "description": "Atal hau hurrengo iterazio batean garatuko da.",
+    "note": "Eraikitzen - hurrengo iterazioa"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolioa",
+    "title": "Proiektu nabarmenak.",
+    "description": "Smart City, Industrial Explorer eta Real Estate Configurator."
+  },
+  "blog": {
+    "eyebrow": "Bloga",
+    "title": "Pentsamendu teknikoa, negozio-eraginarekin.",
+    "description": "SEO egitura prest, hurrengo iteraziorako."
+  },
+  "seo": {
+    "home": {
+      "title": "EKIN KRUZ - Software Factory Premiuma",
+      "description": "Neurrira egindako plataformak, 3D web esperientziak eta adimen artifiziala garatzen ditugu berritu nahi duten erakundeentzat.",
+      "ogTitle": "EKIN KRUZ - Software Factory Premiuma",
+      "ogDescription": "Plataforma digitalak, 3D esperientziak eta IA eskalatzen duten erakundeentzat."
+    },
+    "services": {
+      "title": "Zerbitzuak - EKIN KRUZ",
+      "description": "Software, 3D, adimen artifizial eta UX gaitasunak soluzio digital eskalagarriak eraikitzeko.",
+      "ogTitle": "Zerbitzuak - EKIN KRUZ",
+      "ogDescription": "Ingeniaritza, produktua eta teknologia emergenteak entrega premium batean."
+    },
+    "portfolio": {
+      "title": "Portfolioa - EKIN KRUZ",
+      "description": "Erabakirako, operaziorako eta bihurketarako diseinatutako kasu digitalak.",
+      "ogTitle": "Portfolioa - EKIN KRUZ",
+      "ogDescription": "Esperientzia digital premiumak, zorroztasun teknikoarekin eta negozio-fokuarekin."
+    },
+    "methodology": {
+      "title": "Metodologia - EKIN KRUZ",
+      "description": "Ziurgabetasuna produktu digital ebolutibo bihurtzeko prozesu argia.",
+      "ogTitle": "Metodologia - EKIN KRUZ",
+      "ogDescription": "Aurkikuntza, estrategia, diseinua, ingeniaritza, balidazioa, abiaraztea eta eboluzioa."
+    },
+    "about": {
+      "title": "Gu - EKIN KRUZ",
+      "description": "Helburua duen teknologia eraikitzen dugu ingeniaritza, diseinua eta berrikuntza uztartuz.",
+      "ogTitle": "Gu - EKIN KRUZ",
+      "ogDescription": "Kalitatea, eskalagarritasuna eta esperientzia digital gogoangarriak lehenesten dituen taldea."
+    },
+    "blog": {
+      "title": "Bloga - EKIN KRUZ",
+      "description": "Pentsamendu teknikoa, negozio-eraginarekin.",
+      "ogTitle": "Bloga - EKIN KRUZ",
+      "ogDescription": "Softwareari, produktuari, 3Dari, IAri eta estrategia digitalari buruzko ideiak."
+    },
+    "contact": {
+      "title": "Kontaktua - EKIN KRUZ",
+      "description": "Kontatu zure erronka eta zure roadmaparekin lerrokatutako soluzio digitala diseinatuko dugu.",
+      "ogTitle": "Kontaktua - EKIN KRUZ",
+      "ogDescription": "Lehen elkarrizketa bat adostu, ideia bat norabide tekniko bihurtzeko."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Esperientzia digitalen hurrengo belaunaldia bultzatzen duen softwarea eraikitzen dugu.",
+      "description": "Neurrira egindako plataformak, 3D web esperientziak eta adimen artifiziala garatzen ditugu berritu nahi duten erakundeentzat."
+    },
+    "capabilities": {
+      "ariaLabel": "Gaitasunak",
+      "eyebrow": "Gaitasunak",
+      "title": "Lau diziplina. Entrega integratu bakarra.",
+      "description": "Gaitasun teknologiko sendoa: arkitekturatik pixelera, 3D eredutik hizkuntza-eredura.",
+      "cards": {
+        "softwareFactory": {
+          "title": "Software Factory",
+          "description": "Arkitektura garbian oinarrituta eskalatzeko prestatutako enpresa-plataformak, APIak eta integrazioak."
+        },
+        "spatial": {
+          "title": "3D esperientziak",
+          "description": "Konfiguratzaileak, biki digitalak eta infografia interaktiboak industriarako, hirietarako eta produkturako."
+        },
+        "ai": {
+          "title": "Adimen Artifiziala",
+          "description": "Laguntzaileak, automatizazioa eta LLM integrazioa negozio-fluxu errealetan aplikatuta."
+        },
+        "ux": {
+          "title": "UX eta Produktua",
+          "description": "Researcha, diseinu irisgarria eta frontend arkitektura, konplexutasuna argitasun bihurtzeko."
+        }
+      }
+    },
+    "methodology": {
+      "title": "Produktu digitalaren sorreran zeharreko ibilbide zinematografikoa.",
+      "description": "Lehen elkarrizketatik hazkunde jarraituraino: praktika sendoa, iteratiboa eta eskalagarria, konplexutasuna norabide bihurtzeko diseinatua."
+    },
+    "portfolio": {
+      "ariaLabel": "Portfolioa",
+      "eyebrow": "Portfolioa",
+      "title": "Zorroztasuna erakusten duten kasuak.",
+      "description": "Erabakirako, operaziorako eta bihurketarako eraikitako esperientzien hautaketa.",
+      "cases": {
+        "smartCity": {
+          "title": "Smart City",
+          "tag": "3D · Datuak · Gobernua",
+          "summary": "Hiri-bistaratze interaktiboa, denbora errealeko erabaki operatiboetarako."
+        },
+        "industrial": {
+          "title": "Industrial Explorer",
+          "tag": "Industria 4.0 · Biki digitala",
+          "summary": "Lantegiaren esplorazioa telemetria-geruzekin eta testuinguru operatiboarekin."
+        },
+        "realEstate": {
+          "title": "Real Estate Configurator",
+          "tag": "WebGL · Higiezinak",
+          "summary": "Tipologien konfiguratzaile premiuma, ibilbide murgiltzailearekin eta lead capturearekin."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Hurrengo pausoa",
+      "title": "Hitz egin dezagun eraiki nahi duzunaz.",
+      "description": "Elkarrizketa laburra. Argitasun teknikoa. Zure roadmaparekin lerrokatutako proposamena."
+    }
+  },
+  "services": {
+    "ariaLabel": "Zerbitzuak",
+    "hero": {
+      "eyebrow": "Zerbitzuak",
+      "title": "Eraikitzeko eta eskalatzeko gaitasunak.",
+      "description": "Ingeniaritza, erabiltzaile-esperientzia eta teknologia emergenteak uztartzen dituzten soluzio digitalak diseinatu eta garatzen ditugu, negozioan benetako eragina sortzeko."
+    },
+    "visual": {
+      "ariaLabel": "Zerbitzu-sistema",
+      "core": "SERVICE OS",
+      "nodes": {
+        "product": "UX",
+        "platform": "API",
+        "ai": "IA",
+        "ops": "Ops"
+      }
+    },
+    "capabilities": {
+      "softwareFactory": {
+        "title": "Software Factory",
+        "description": "Plataforma digitalak, enpresa-aplikazioak, APIak, neurrira egindako sistemak eta integrazio eskalagarriak garatzen ditugu arkitektura modernoekin eta ingeniaritza-praktika sendoekin.",
+        "related": {
+          "webDevelopment": "Web garapena",
+          "frontendArchitecture": "Frontend arkitektura",
+          "backend": "Backend",
+          "apis": "APIak",
+          "integrations": "Integrazioak",
+          "cloud": "Cloud",
+          "devOps": "DevOps"
+        }
+      },
+      "spatial": {
+        "title": "3D esperientziak",
+        "description": "Produktuak, prozesuak eta informazio konplexua nabigatzailetik bertatik bistaratzea, azaltzea eta merkaturatzea ahalbidetzen duten hiru dimentsioko esperientzia interaktiboak sortzen ditugu.",
+        "related": {
+          "smartCities": "Smart Cities",
+          "digitalTwins": "Biki digitalak",
+          "industry": "Industria 4.0",
+          "configurators": "Konfiguratzaileak",
+          "scientificVisualization": "Bistaratze zientifikoa",
+          "interactiveInfographics": "Infografia interaktiboak",
+          "architecture": "Arkitektura",
+          "education": "Hezkuntza"
+        }
+      },
+      "ai": {
+        "title": "Adimen Artifiziala",
+        "description": "Adimen artifiziala produktu digitaletan txertatzen dugu laguntzaile adimendunen, prozesuen automatizazioaren eta eredu generatiboen integrazioaren bidez.",
+        "related": {
+          "generativeAi": "IA generatiboa",
+          "chatbots": "Chatbotak",
+          "automation": "Automatizazioa",
+          "rag": "RAG",
+          "llm": "LLM",
+          "documentProcessing": "Dokumentu-prozesamendua",
+          "intelligentAgents": "Agente adimendunak"
+        }
+      },
+      "ux": {
+        "title": "UX eta Produktua",
+        "description": "Pertsonengan zentratutako esperientzia intuitiboak diseinatzen ditugu ikerketaren, produktu-estrategiaren, irisgarritasunaren eta interfazeen diseinuaren bidez.",
+        "related": {
+          "uxResearch": "UX Research",
+          "uiDesign": "UI Design",
+          "productDiscovery": "Product Discovery",
+          "accessibility": "Irisgarritasuna",
+          "designSystems": "Design Systems",
+          "uxArchitecture": "UX arkitektura"
+        }
+      }
+    },
+    "comingSoon": {
+      "ariaLabel": "Hurrengo gaitasunak",
+      "title": "Jarraitu esploratzen. Gehiago dator.",
+      "description": "Gure gaitasunak eta arrakasta-kasuak etengabe zabaltzen ari gara. Laster zerbitzu berriak, demo interaktiboak eta proiektu nabarmenak gehituko ditugu."
+    }
+  },
+  "methodology": {
+    "shared": {
+      "eyebrow": "Metodologia",
+      "stagesAria": "Metodologiaren etapak"
+    },
+    "page": {
+      "title": "Energia-lerro bat. Zazpi eraldaketa.",
+      "description": "EKIN KRUZen prozesua eszena jarraitu gisa bizitzen da: seinalea kaotiko jaiotzen da, norabidea aurkitzen du eta produktu digital ebolutibo bihurtzen da."
+    },
+    "experience": {
+      "ariaLabel": "Metodologiaren ibilbide zinematografikoa",
+      "stageAria": "{{ index }}. etapa",
+      "visualTermsAria": "Etaparen bisualak"
+    },
+    "visual": {
+      "neuralTitle": "Sare neuronal digitala",
+      "terms": {
+        "brief": "briefa",
+        "user": "erabiltzailea",
+        "data": "datuak",
+        "risk": "arriskua",
+        "opportunity": "aukera"
+      }
+    },
+    "stages": {
+      "discovery": {
+        "title": "Aurkikuntza",
+        "eyebrow": "Hasierako esplorazioa",
+        "description": "Energy Line seinale sakabanatu gisa iristen da: galderak irekitzen ditu, patroiak detektatzen ditu eta ziurgabetasuna ulermen ekingarri bihurtzen hasten da.",
+        "sensation": "Esplorazioa · Jakin-mina · Ulermena",
+        "visualTerms": {
+          "particles": "Partikulak",
+          "mindMap": "Mapa mentala",
+          "connections": "Konexioak",
+          "nodes": "Nodoak"
+        }
+      },
+      "strategy": {
+        "title": "Estrategia",
+        "eyebrow": "Sistemaren norabidea",
+        "description": "Seinaleak bidea aurkitzen du: konexioak ordenatzen dira, arkitektura-mapak agertzen dira eta roadmapak energia non inbertitu lehenetsi behar den zehazten du.",
+        "sensation": "Argitasuna · Norabidea · Ordena",
+        "visualTerms": {
+          "wireframes": "Wireframeak",
+          "diagrams": "Diagramak",
+          "roadmaps": "Roadmapak",
+          "architecture": "Arkitektura"
+        }
+      },
+      "design": {
+        "title": "Diseinua",
+        "eyebrow": "Esperientzia ukigarria",
+        "description": "Diagramak interfaze bihurtzen dira: osagaiek, hierarkia bisualak eta diseinu-sistemak produktua nola sentituko den erakusten hasten dira.",
+        "sensation": "Sormena · Dotorezia · Esperientzia",
+        "visualTerms": {
+          "cards": "Cardak",
+          "ui": "UI",
+          "components": "Osagaiak",
+          "designSystem": "Design system"
+        }
+      },
+      "engineering": {
+        "title": "Ingeniaritza",
+        "eyebrow": "Arkitektura bizia",
+        "description": "Lerroa datu-fluxu bihurtzen da: moduluak, APIak eta zerbitzuak zeharkatzen ditu, eskalatzeko prest dagoen plataforma osatu arte.",
+        "sensation": "Ingeniaritza · Potentzia · Eskalagarritasuna",
+        "visualTerms": {
+          "modules": "Moduluak",
+          "apis": "APIak",
+          "dataFlow": "Datu-fluxua",
+          "code": "Kodea"
+        }
+      },
+      "validation": {
+        "title": "Balidazioa",
+        "eyebrow": "Kalitate kontrolatua",
+        "description": "Erabaki bakoitza proba-iragazkietatik igarotzen da: arriskuak jaisten dira, adierazleak pizten dira eta produktuak konfiantza operatiboa irabazten du.",
+        "sensation": "Konfiantza · Kalitatea · Kontrola",
+        "visualTerms": {
+          "testing": "Testing",
+          "qa": "QA",
+          "checks": "Checkak",
+          "dashboards": "Dashboardak"
+        }
+      },
+      "launch": {
+        "title": "Abiaraztea",
+        "eyebrow": "Produkziora irteera",
+        "description": "Metatutako energiak azpiegitura, cloud eta sare globala zeharkatzen ditu sistema esperientzia erabilgarri eta neurgarri bihurtzeko.",
+        "sensation": "Eragina · Produkzioa · Eskalagarritasuna",
+        "visualTerms": {
+          "cloud": "Cloud",
+          "deploy": "Deploy",
+          "infrastructure": "Azpiegitura",
+          "globalNetwork": "Sare globala"
+        }
+      },
+      "evolution": {
+        "title": "Eboluzioa",
+        "eyebrow": "Ziklo jarraitua",
+        "description": "Lerroa ez da amaitzen: banatu egiten da, datu errealetatik ikasten du eta optimizazio, automatizazio eta berrikuntza ziklo berriak irekitzen ditu.",
+        "sensation": "Berrikuntza · Etorkizuna · Hazkundea",
+        "visualTerms": {
+          "analytics": "Analytics",
+          "ai": "IA",
+          "optimization": "Optimizazioa",
+          "expansion": "Hedapena"
+        }
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Gu",
+    "title": "Helburua duen teknologia eraikitzen dugu.",
+    "lead": "Ekin Kruzen uste dugu softwareak arazoak konpontzetik harago joan behar duela: aukera berriak sortu, prozesuak sinplifikatu eta esperientzia gogoangarriak eraiki behar ditu.",
+    "narrative": {
+      "engineering": "Ingeniaritza, diseinua eta berrikuntza uztartzen ditugu gure bezeroekin batera eboluzionatzen duten soluzio digitalak garatzeko.",
+      "scope": "Enpresa-plataformetatik 3D web esperientzietara eta adimen artifizialera, proiektu bakoitza negozioaren ulermen sakonetik abiatzen da eta epe luzeko ikuspegiarekin eraikitzen da.",
+      "tailored": "Ez dugu txantiloiekin edo soluzio generikoekin lan egiten. Neurrira egindako produktu digitalak diseinatzen ditugu kalitatea, eskalagarritasuna eta erabiltzaile-esperientzia lehenetsiz.",
+      "future": "Gure lan egiteko moduak estrategia, sormena eta bikaintasun teknikoa batzen ditu gaurko erronketarako prest eta etorkizunerako sendo dagoen softwarea eraikitzeko."
+    },
+    "principlesAria": "Lan-printzipioak",
+    "principles": {
+      "noTemplates": "Txantiloirik gabe",
+      "quality": "Kalitatea",
+      "scalability": "Eskalagarritasuna",
+      "futureVision": "Etorkizuneko ikuspegia"
+    },
+    "diamond": {
+      "ariaLabel": "EKIN KRUZen balioak",
+      "values": {
+        "innovation": "Berrikuntza",
+        "engineering": "Ingeniaritza",
+        "experience": "Esperientzia",
+        "scalability": "Eskalagarritasuna",
+        "quality": "Kalitatea",
+        "evolution": "Eboluzioa"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontaktua",
+    "title": "Has gaitezen zure hurrengo proiektua eraikitzen.",
+    "lead": "Produktu handi bakoitza elkarrizketa batekin hasten da.",
+    "intro": {
+      "challenge": "Kontatu zure erronka eta zure negozioaren hazkundea laguntzeko pentsatutako soluzioa diseinatuko dugu.",
+      "partnership": "Enpresekin eta erakundeekin batera lan egiten dugu plataforma digitalak, 3D esperientziak eta adimen artifiziala epe luzeko ikuspegiarekin garatzeko."
+    },
+    "map": {
+      "ariaLabel": "Nazioarteko konexioak dituen mundu-mapa abstraktua"
+    },
+    "info": {
+      "ariaLabel": "Informazio gehigarria",
+      "response": {
+        "title": "Erantzun-denbora",
+        "description": "24 lanordu baino gutxiagoan erantzuten dugu."
+      },
+      "modality": {
+        "title": "Lan-modua",
+        "description": "Urrunetik lan egiten dugu herrialde ezberdinetako bezeroekin."
+      },
+      "technologies": {
+        "title": "Teknologiak",
+        "description": "Neurrira egindako softwarea • 3D • IA • UX"
+      }
+    },
+    "form": {
+      "eyebrow": "Kickoff",
+      "title": "Presta dezagun lehen elkarrizketa.",
+      "description": "Partekatu funtsezkoa: testuingurua ulertu, aukerak identifikatu eta bilerara norabide argiarekin iristeko.",
+      "privacy": "Informazio hau aurkikuntza-bilera prestatzeko bakarrik erabiltzen dugu.",
+      "fields": {
+        "fullName": {
+          "label": "Izen-abizenak *"
+        },
+        "company": {
+          "label": "Enpresa *"
+        },
+        "email": {
+          "label": "Posta elektronikoa *"
+        },
+        "phone": {
+          "label": "Telefonoa"
+        },
+        "projectType": {
+          "label": "Zer proiektu mota bilatzen ari zara? *",
+          "placeholder": "Aukeratu aukera bat"
+        },
+        "brief": {
+          "label": "Kontatu labur zure proiektuari buruz *",
+          "placeholder": "Zer erronka konpondu nahi duzu? Zein da proiektuaren helburua?"
+        }
+      },
+      "projectOptions": {
+        "customSoftware": "Neurrira egindako softwarea",
+        "spatialExperience": "3D esperientzia",
+        "artificialIntelligence": "Adimen Artifiziala",
+        "uxProduct": "UX / Produktua",
+        "technologyIntegration": "Integrazio teknologikoa",
+        "notDefined": "Oraindik definitzen ari naiz"
+      },
+      "errors": {
+        "fullName": "Sartu zure izen-abizenak.",
+        "company": "Adierazi enpresa edo erakundea.",
+        "emailRequired": "Sartu posta elektroniko bat.",
+        "emailInvalid": "Erabili baliozko posta elektronikoa erantzun ahal izateko.",
+        "projectType": "Aukeratu hobekien egokitzen den proiektu mota.",
+        "briefRequired": "Kontatu labur zer eraiki behar duzun.",
+        "briefMinLength": "Gehitu testuinguru pixka bat gehiago bilera hobeto prestatzeko.",
+        "briefMaxLength": "Mezuak ezin ditu 500 karaktere gainditu.",
+        "submit": "Ezin izan dugu eskaera bidali. Saiatu berriro segundo gutxi barru edo idatzi zuzenean posta elektronikoz."
+      },
+      "actions": {
+        "submit": "Bilera eskatu",
+        "submitting": "Eskaera prestatzen"
+      },
+      "success": {
+        "eyebrow": "Eskaera jasota",
+        "title": "Eskerrik asko gurekin harremanetan jartzeagatik.",
+        "description": "Zure kontsulta aztertuko dugu eta harremanetan jarriko gara aurkikuntza-bilera koordinatzeko."
+      }
+    },
+    "email": {
+      "subject": "Bilera-eskaera berria - {{ company }}",
+      "phoneFallback": "Ez da adierazi",
+      "error": "Ezin izan da bilera-eskaera bidali."
+    }
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "common": {
+    "skipToContent": "Skip to content",
+    "optional": "(optional)",
+    "actions": {
+      "scheduleMeeting": "Book a meeting",
+      "viewProjects": "View projects",
+      "viewAllProjects": "View all projects",
+      "explore": "Explore"
+    },
+    "states": {
+      "inProgress": "In progress"
+    }
+  },
+  "language": {
+    "trigger": "Change language",
+    "menuLabel": "Select language",
+    "options": {
+      "es": "Español",
+      "en": "English",
+      "eu": "Euskara"
+    }
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "logoLabel": "EKIN KRUZ - Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "methodology": "Methodology",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "tagline": "A premium software factory for platforms, 3D and AI built for scaling organisations.",
+    "rights": "© {{ year }} EKIN KRUZ. All rights reserved.",
+    "signal": "Obsidian Signal",
+    "columns": {
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About",
+          "methodology": "Methodology",
+          "blog": "Blog",
+          "contact": "Contact"
+        }
+      },
+      "capabilities": {
+        "title": "Capabilities",
+        "links": {
+          "softwareFactory": "Software Factory",
+          "spatial": "3D Experiences",
+          "ai": "Artificial Intelligence",
+          "ux": "UX & Product"
+        }
+      },
+      "connect": {
+        "title": "Connect"
+      }
+    }
+  },
+  "placeholder": {
+    "description": "This section will be developed in a future iteration.",
+    "note": "In progress - next iteration"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Selected work.",
+    "description": "Smart City, Industrial Explorer and Real Estate Configurator."
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Technical thinking with commercial impact.",
+    "description": "SEO-ready structure for a later iteration."
+  },
+  "seo": {
+    "home": {
+      "title": "EKIN KRUZ - Premium Software Factory",
+      "description": "We build bespoke platforms, 3D web experiences and artificial intelligence for organisations ready to innovate.",
+      "ogTitle": "EKIN KRUZ - Premium Software Factory",
+      "ogDescription": "Digital platforms, 3D experiences and AI for organisations that scale."
+    },
+    "services": {
+      "title": "Services - EKIN KRUZ",
+      "description": "Software, 3D, artificial intelligence and UX capabilities for scalable digital solutions.",
+      "ogTitle": "Services - EKIN KRUZ",
+      "ogDescription": "Engineering, product and emerging technology brought together in a premium delivery model."
+    },
+    "portfolio": {
+      "title": "Portfolio - EKIN KRUZ",
+      "description": "Digital cases designed for decision-making, operations and conversion.",
+      "ogTitle": "Portfolio - EKIN KRUZ",
+      "ogDescription": "Premium digital experiences with technical rigour and business focus."
+    },
+    "methodology": {
+      "title": "Methodology - EKIN KRUZ",
+      "description": "A clear process for turning uncertainty into evolving digital products.",
+      "ogTitle": "Methodology - EKIN KRUZ",
+      "ogDescription": "Discovery, strategy, design, engineering, validation, launch and evolution."
+    },
+    "about": {
+      "title": "About - EKIN KRUZ",
+      "description": "We build purposeful technology by combining engineering, design and innovation.",
+      "ogTitle": "About - EKIN KRUZ",
+      "ogDescription": "A team focused on quality, scalability and memorable digital experiences."
+    },
+    "blog": {
+      "title": "Blog - EKIN KRUZ",
+      "description": "Technical thinking with commercial impact.",
+      "ogTitle": "Blog - EKIN KRUZ",
+      "ogDescription": "Ideas on software, product, 3D, AI and digital strategy."
+    },
+    "contact": {
+      "title": "Contact - EKIN KRUZ",
+      "description": "Tell us about your challenge and we will shape a digital solution aligned with your roadmap.",
+      "ogTitle": "Contact - EKIN KRUZ",
+      "ogDescription": "Book a first conversation and turn an idea into technical direction."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "We build the software behind the next generation of digital experiences.",
+      "description": "We create bespoke platforms, 3D web experiences and artificial intelligence for organisations ready to innovate."
+    },
+    "capabilities": {
+      "ariaLabel": "Capabilities",
+      "eyebrow": "Capabilities",
+      "title": "Four disciplines. One integrated delivery.",
+      "description": "Serious technology capacity: from architecture to pixel, from 3D model to language model.",
+      "cards": {
+        "softwareFactory": {
+          "title": "Software Factory",
+          "description": "Enterprise platforms, APIs and integrations built to scale on clean architecture."
+        },
+        "spatial": {
+          "title": "3D Experiences",
+          "description": "Configurators, digital twins and interactive infographics for industry, cities and product."
+        },
+        "ai": {
+          "title": "Artificial Intelligence",
+          "description": "Assistants, automation and LLM integration applied to real business workflows."
+        },
+        "ux": {
+          "title": "UX & Product",
+          "description": "Research, accessible design and frontend architecture that turn complexity into clarity."
+        }
+      }
+    },
+    "methodology": {
+      "title": "A cinematic journey through digital product creation.",
+      "description": "From the first conversation to continuous growth: a solid, iterative and scalable practice designed to turn complexity into direction."
+    },
+    "portfolio": {
+      "ariaLabel": "Portfolio",
+      "eyebrow": "Portfolio",
+      "title": "Cases that prove rigour.",
+      "description": "A selection of experiences built for decision-making, operations and conversion.",
+      "cases": {
+        "smartCity": {
+          "title": "Smart City",
+          "tag": "3D · Data · Government",
+          "summary": "Interactive urban visualisation for real-time operational decisions."
+        },
+        "industrial": {
+          "title": "Industrial Explorer",
+          "tag": "Industry 4.0 · Digital twin",
+          "summary": "Plant exploration with telemetry layers and operational context."
+        },
+        "realEstate": {
+          "title": "Real Estate Configurator",
+          "tag": "WebGL · Real estate",
+          "summary": "Premium typology configurator with immersive exploration and lead capture."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Next step",
+      "title": "Let’s talk about what you want to build.",
+      "description": "A short conversation. Technical clarity. A proposal aligned with your roadmap."
+    }
+  },
+  "services": {
+    "ariaLabel": "Services",
+    "hero": {
+      "eyebrow": "Services",
+      "title": "Capabilities to build and scale.",
+      "description": "We design and develop digital solutions that combine engineering, user experience and emerging technologies to create real business impact."
+    },
+    "visual": {
+      "ariaLabel": "Service system",
+      "core": "SERVICE OS",
+      "nodes": {
+        "product": "UX",
+        "platform": "API",
+        "ai": "AI",
+        "ops": "Ops"
+      }
+    },
+    "capabilities": {
+      "softwareFactory": {
+        "title": "Software Factory",
+        "description": "We develop digital platforms, enterprise applications, APIs, bespoke systems and scalable integrations using modern architectures and solid engineering practices.",
+        "related": {
+          "webDevelopment": "Web Development",
+          "frontendArchitecture": "Frontend Architecture",
+          "backend": "Backend",
+          "apis": "APIs",
+          "integrations": "Integrations",
+          "cloud": "Cloud",
+          "devOps": "DevOps"
+        }
+      },
+      "spatial": {
+        "title": "3D Experiences",
+        "description": "We create interactive three-dimensional experiences that help visualise, explain and commercialise products, processes and complex information directly in the browser.",
+        "related": {
+          "smartCities": "Smart Cities",
+          "digitalTwins": "Digital Twins",
+          "industry": "Industry 4.0",
+          "configurators": "Configurators",
+          "scientificVisualization": "Scientific Visualisation",
+          "interactiveInfographics": "Interactive Infographics",
+          "architecture": "Architecture",
+          "education": "Education"
+        }
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "We embed artificial intelligence into digital products through intelligent assistants, process automation and integration with generative models.",
+        "related": {
+          "generativeAi": "Generative AI",
+          "chatbots": "Chatbots",
+          "automation": "Automation",
+          "rag": "RAG",
+          "llm": "LLM",
+          "documentProcessing": "Document Processing",
+          "intelligentAgents": "Intelligent Agents"
+        }
+      },
+      "ux": {
+        "title": "UX & Product",
+        "description": "We design intuitive, human-centred experiences through research, product strategy, accessibility and interface design.",
+        "related": {
+          "uxResearch": "UX Research",
+          "uiDesign": "UI Design",
+          "productDiscovery": "Product Discovery",
+          "accessibility": "Accessibility",
+          "designSystems": "Design Systems",
+          "uxArchitecture": "UX Architecture"
+        }
+      }
+    },
+    "comingSoon": {
+      "ariaLabel": "Upcoming capabilities",
+      "title": "Keep exploring. More is on the way.",
+      "description": "We are continuously expanding our capabilities and success cases. New services, interactive demos and featured projects will be added soon."
+    }
+  },
+  "methodology": {
+    "shared": {
+      "eyebrow": "Methodology",
+      "stagesAria": "Methodology stages"
+    },
+    "page": {
+      "title": "One energy line. Seven transformations.",
+      "description": "The EKIN KRUZ process unfolds as a continuous scene: the signal starts chaotic, finds direction and becomes an evolving digital product."
+    },
+    "experience": {
+      "ariaLabel": "Cinematic methodology journey",
+      "stageAria": "Stage {{ index }}",
+      "visualTermsAria": "Stage visuals"
+    },
+    "visual": {
+      "neuralTitle": "Digital neural network",
+      "terms": {
+        "brief": "brief",
+        "user": "user",
+        "data": "data",
+        "risk": "risk",
+        "opportunity": "opportunity"
+      }
+    },
+    "stages": {
+      "discovery": {
+        "title": "Discovery",
+        "eyebrow": "Initial exploration",
+        "description": "The Energy Line arrives as a scattered signal: it opens questions, detects patterns and begins turning uncertainty into actionable understanding.",
+        "sensation": "Exploration · Curiosity · Understanding",
+        "visualTerms": {
+          "particles": "Particles",
+          "mindMap": "Mind map",
+          "connections": "Connections",
+          "nodes": "Nodes"
+        }
+      },
+      "strategy": {
+        "title": "Strategy",
+        "eyebrow": "System direction",
+        "description": "The signal finds a path: connections become organised, architecture maps appear and the roadmap defines where to invest energy first.",
+        "sensation": "Clarity · Direction · Order",
+        "visualTerms": {
+          "wireframes": "Wireframes",
+          "diagrams": "Diagrams",
+          "roadmaps": "Roadmaps",
+          "architecture": "Architecture"
+        }
+      },
+      "design": {
+        "title": "Design",
+        "eyebrow": "Tangible experience",
+        "description": "Diagrams become interface: components, visual hierarchy and a design system start revealing how the product will feel.",
+        "sensation": "Creativity · Elegance · Experience",
+        "visualTerms": {
+          "cards": "Cards",
+          "ui": "UI",
+          "components": "Components",
+          "designSystem": "Design system"
+        }
+      },
+      "engineering": {
+        "title": "Engineering",
+        "eyebrow": "Living architecture",
+        "description": "The line becomes data flow: it moves through modules, APIs and services until it assembles a platform ready to scale.",
+        "sensation": "Engineering · Power · Scalability",
+        "visualTerms": {
+          "modules": "Modules",
+          "apis": "APIs",
+          "dataFlow": "Data flow",
+          "code": "Code"
+        }
+      },
+      "validation": {
+        "title": "Validation",
+        "eyebrow": "Controlled quality",
+        "description": "Every decision passes through test filters: risks fall, indicators light up and the product gains operational confidence.",
+        "sensation": "Confidence · Quality · Control",
+        "visualTerms": {
+          "testing": "Testing",
+          "qa": "QA",
+          "checks": "Checks",
+          "dashboards": "Dashboards"
+        }
+      },
+      "launch": {
+        "title": "Launch",
+        "eyebrow": "Into production",
+        "description": "Accumulated energy moves through infrastructure, cloud and global networks to become an available, measurable experience.",
+        "sensation": "Impact · Production · Scalability",
+        "visualTerms": {
+          "cloud": "Cloud",
+          "deploy": "Deploy",
+          "infrastructure": "Infrastructure",
+          "globalNetwork": "Global network"
+        }
+      },
+      "evolution": {
+        "title": "Evolution",
+        "eyebrow": "Continuous cycle",
+        "description": "The line does not end: it branches, learns from real data and opens new cycles of optimisation, automation and innovation.",
+        "sensation": "Innovation · Future · Growth",
+        "visualTerms": {
+          "analytics": "Analytics",
+          "ai": "AI",
+          "optimization": "Optimisation",
+          "expansion": "Expansion"
+        }
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "We build purposeful technology.",
+    "lead": "At Ekin Kruz, we believe software should do more than solve problems: it should create new opportunities, simplify operations and shape memorable experiences.",
+    "narrative": {
+      "engineering": "We combine engineering, design and innovation to develop digital solutions that evolve alongside our clients.",
+      "scope": "From enterprise platforms to 3D web experiences and artificial intelligence, every project starts with deep business understanding and is built with a long-term view.",
+      "tailored": "We do not work from templates or generic solutions. We design bespoke digital products focused on quality, scalability and user experience.",
+      "future": "Our way of working brings together strategy, creativity and technical excellence to build software ready for today and prepared for what comes next."
+    },
+    "principlesAria": "Working principles",
+    "principles": {
+      "noTemplates": "No templates",
+      "quality": "Quality",
+      "scalability": "Scalability",
+      "futureVision": "Future vision"
+    },
+    "diamond": {
+      "ariaLabel": "EKIN KRUZ values",
+      "values": {
+        "innovation": "Innovation",
+        "engineering": "Engineering",
+        "experience": "Experience",
+        "scalability": "Scalability",
+        "quality": "Quality",
+        "evolution": "Evolution"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let’s start building your next project.",
+    "lead": "Every great product starts with a conversation.",
+    "intro": {
+      "challenge": "Tell us about your challenge and we will design a solution built to support your business growth.",
+      "partnership": "We work with companies and organisations to develop digital platforms, 3D experiences and artificial intelligence with a long-term vision."
+    },
+    "map": {
+      "ariaLabel": "Abstract world map with international connections"
+    },
+    "info": {
+      "ariaLabel": "Additional information",
+      "response": {
+        "title": "Response time",
+        "description": "We reply in less than 24 business hours."
+      },
+      "modality": {
+        "title": "Modality",
+        "description": "We work remotely with clients across different countries."
+      },
+      "technologies": {
+        "title": "Technologies",
+        "description": "Bespoke software • 3D • AI • UX"
+      }
+    },
+    "form": {
+      "eyebrow": "Kickoff",
+      "title": "Let’s prepare the first conversation.",
+      "description": "Share the essentials so we can understand the context, identify opportunities and arrive at the meeting with clear direction.",
+      "privacy": "We only use this information to prepare the discovery meeting.",
+      "fields": {
+        "fullName": {
+          "label": "Full name *"
+        },
+        "company": {
+          "label": "Company *"
+        },
+        "email": {
+          "label": "Email address *"
+        },
+        "phone": {
+          "label": "Phone"
+        },
+        "projectType": {
+          "label": "What type of project are you looking for? *",
+          "placeholder": "Select an option"
+        },
+        "brief": {
+          "label": "Briefly tell us about your project *",
+          "placeholder": "What challenge do you want to solve? What is the goal of the project?"
+        }
+      },
+      "projectOptions": {
+        "customSoftware": "Bespoke software",
+        "spatialExperience": "3D experience",
+        "artificialIntelligence": "Artificial Intelligence",
+        "uxProduct": "UX / Product",
+        "technologyIntegration": "Technology integration",
+        "notDefined": "I am still defining it"
+      },
+      "errors": {
+        "fullName": "Enter your full name.",
+        "company": "Tell us the company or organisation.",
+        "emailRequired": "Enter an email address.",
+        "emailInvalid": "Use a valid email so we can reply.",
+        "projectType": "Choose the type of project that best fits.",
+        "briefRequired": "Briefly tell us what you need to build.",
+        "briefMinLength": "Add a little more context so we can prepare the meeting properly.",
+        "briefMaxLength": "The message cannot exceed 500 characters.",
+        "submit": "We could not send the request. Please try again in a few seconds or contact us directly by email."
+      },
+      "actions": {
+        "submit": "Request meeting",
+        "submitting": "Preparing request"
+      },
+      "success": {
+        "eyebrow": "Request received",
+        "title": "Thank you for contacting us.",
+        "description": "We will review your enquiry and get in touch to coordinate a discovery meeting."
+      }
+    },
+    "email": {
+      "subject": "New meeting request - {{ company }}",
+      "phoneFallback": "Not provided",
+      "error": "The meeting request could not be sent."
+    }
+  }
+}
