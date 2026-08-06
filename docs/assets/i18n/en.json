@@ -73,7 +73,7 @@
   "blog": {
     "eyebrow": "Blog",
     "title": "Technical thinking with commercial impact.",
-    "description": "SEO-ready structure for a later iteration."
+    "description": "Ideas on custom software, 3D experiences, modernization, consulting, and specialized talent."
   },
   "seo": {
     "home": {
@@ -108,9 +108,9 @@
     },
     "blog": {
       "title": "Blog - EKIN KRUZ",
-      "description": "Technical thinking with commercial impact.",
+      "description": "Ideas on custom software, 3D experiences, modernization, technology consulting, and specialized talent.",
       "ogTitle": "Blog - EKIN KRUZ",
-      "ogDescription": "Ideas on software, product, 3D, AI and digital strategy."
+      "ogDescription": "Ideas on custom software, 3D experiences, modernization, technology consulting, and specialized talent."
     },
     "contact": {
       "title": "Contact - EKIN KRUZ",
