@@ -14,7 +14,7 @@ export interface LanguageOption {
   readonly hreflang: string;
 }
 
-interface SeoTranslation {
+export interface SeoTranslation {
   readonly title: string;
   readonly description: string;
   readonly ogTitle: string;
@@ -46,6 +46,8 @@ export class LanguageService {
   );
 
   private readonly initialized = signal(false);
+  private seoOverride: SeoTranslation | null = null;
+  private currentRouteSeo: SeoTranslation | null = null;
 
   init(): void {
     if (this.initialized()) return;
@@ -60,6 +62,11 @@ export class LanguageService {
   setLanguage(language: LanguageCode): void {
     if (!this.isSupported(language)) return;
     this.applyLanguage(language, true);
+  }
+
+  setSeoOverride(seo: SeoTranslation | null): void {
+    this.seoOverride = seo;
+    this.applySeo(seo ?? this.currentRouteSeo);
   }
 
   isSupported(language: string | null | undefined): language is LanguageCode {
@@ -130,7 +137,10 @@ export class LanguageService {
         ),
         takeUntilDestroyed(this.destroyRef),
       )
-      .subscribe((seo) => this.applySeo(seo));
+      .subscribe((seo) => {
+        this.currentRouteSeo = seo;
+        this.applySeo(this.seoOverride ?? seo);
+      });
   }
 
   private currentSeoKey(): string {
@@ -143,7 +153,7 @@ export class LanguageService {
     return route.data['seoKey'] ?? 'home';
   }
 
-  private applySeo(seo: SeoTranslation): void {
+  private applySeo(seo: SeoTranslation | null): void {
     if (!seo?.title || !seo?.description) return;
 
     const locale = this.localeFor(this.activeLanguage());

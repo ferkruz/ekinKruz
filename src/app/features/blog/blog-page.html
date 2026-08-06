@@ -1,0 +1,110 @@
+@if (activePostView(); as view) {
+  <article class="ek-blog-detail">
+    <ek-container>
+      <a class="ek-blog-back ek-mono" routerLink="/blog">{{ ui().backToBlog }}</a>
+
+      <header class="ek-blog-detail__hero" ekReveal>
+        <div class="ek-blog-detail__copy">
+          <p class="ek-eyebrow">{{ view.content.category }}</p>
+          <h1 class="ek-display-lg">{{ view.content.title }}</h1>
+          <p class="ek-body-lg">{{ view.content.excerpt }}</p>
+          <p class="ek-mono ek-blog-detail__meta">{{ view.content.readTime }}</p>
+        </div>
+
+        <figure class="ek-blog-detail__media">
+          <img [src]="view.post.image" [alt]="view.imageAlt" loading="eager" />
+        </figure>
+      </header>
+
+      <div class="ek-blog-detail__body">
+        @for (section of view.content.sections; track section.heading) {
+          <section class="ek-blog-section" ekReveal>
+            <h2 class="ek-heading-sm">{{ section.heading }}</h2>
+
+            @for (paragraph of section.paragraphs ?? []; track paragraph) {
+              <p class="ek-body">{{ paragraph }}</p>
+            }
+
+            @if (section.bullets?.length) {
+              <ul>
+                @for (bullet of section.bullets; track bullet) {
+                  <li class="ek-body">{{ bullet }}</li>
+                }
+              </ul>
+            }
+
+            @if (section.ordered?.length) {
+              <ol>
+                @for (item of section.ordered; track item) {
+                  <li class="ek-body">{{ item }}</li>
+                }
+              </ol>
+            }
+          </section>
+        }
+
+        <aside class="ek-blog-cta ek-glass" ekReveal>
+          <div>
+            <p class="ek-eyebrow">CTA</p>
+            <h2 class="ek-heading-sm">{{ view.content.cta }}</h2>
+            <p class="ek-caption">{{ view.content.goal }}</p>
+          </div>
+          <a class="ek-blog-cta__link" routerLink="/contacto">{{ ui().contactLabel }}</a>
+        </aside>
+      </div>
+    </ek-container>
+  </article>
+} @else if (hasMissingPost()) {
+  <section class="ek-blog-empty">
+    <ek-container>
+      <div class="ek-blog-empty__card ek-glass">
+        <p class="ek-eyebrow">{{ 'blog.eyebrow' | transloco }}</p>
+        <h1 class="ek-display-lg">{{ ui().notFoundTitle }}</h1>
+        <p class="ek-body-lg">{{ ui().notFoundDescription }}</p>
+        <a class="ek-blog-cta__link" routerLink="/blog">{{ ui().backToBlog }}</a>
+      </div>
+    </ek-container>
+  </section>
+} @else {
+  <section class="ek-blog-list" [attr.aria-label]="ui().label">
+    <ek-container [wide]="true">
+      <header class="ek-blog-list__intro" ekReveal>
+        <ek-section-header
+          [eyebrow]="'blog.eyebrow' | transloco"
+          [title]="'blog.title' | transloco"
+          [description]="'blog.description' | transloco"
+        />
+      </header>
+
+      <div class="ek-blog-grid">
+        @for (item of posts(); track item.post.slug; let i = $index) {
+          <a
+            class="ek-blog-card"
+            [class.ek-blog-card--trust]="item.post.accent === 'trust'"
+            [routerLink]="['/blog', item.post.slug]"
+            ekReveal
+            ekSignalTilt
+            [ekRevealDelay]="i * 70"
+          >
+            <span class="ek-blog-card__media" aria-hidden="true">
+              <img
+                [src]="item.post.image"
+                alt=""
+                loading="lazy"
+              />
+            </span>
+
+            <span class="ek-blog-card__body">
+              <span class="ek-mono ek-blog-card__meta">
+                {{ item.content.category }} · {{ item.content.readTime }}
+              </span>
+              <span class="ek-heading-sm ek-blog-card__title">{{ item.content.title }}</span>
+              <span class="ek-body ek-blog-card__excerpt">{{ item.content.excerpt }}</span>
+              <span class="ek-blog-card__action">{{ ui().readArticle }}</span>
+            </span>
+          </a>
+        }
+      </div>
+    </ek-container>
+  </section>
+}

@@ -33,6 +33,11 @@ export const routes: Routes = [
     data: { seoKey: 'blog' },
   },
   {
+    path: 'blog/:slug',
+    loadComponent: () => import('./features/blog/blog-page').then((m) => m.BlogPage),
+    data: { seoKey: 'blog' },
+  },
+  {
     path: 'contacto',
     loadComponent: () => import('./features/contact/contact-page').then((m) => m.ContactPage),
     data: { seoKey: 'contact' },
