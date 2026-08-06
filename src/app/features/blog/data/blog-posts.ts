@@ -30,7 +30,7 @@ export interface BlogPost {
 export const BLOG_POSTS: readonly BlogPost[] = [
   {
     slug: 'software-a-medida',
-    image: '/assets/blog/custom-software.png',
+    image: 'assets/blog/custom-software.png',
     accent: 'signal',
     imageAlt: {
       es: 'Flujos de trabajo dispersos que se transforman en una plataforma de software modular.',
@@ -191,7 +191,7 @@ export const BLOG_POSTS: readonly BlogPost[] = [
   },
   {
     slug: 'experiencias-3d-interactivas',
-    image: '/assets/blog/interactive-3d-experiences.png',
+    image: 'assets/blog/interactive-3d-experiences.png',
     accent: 'trust',
     imageAlt: {
       es: 'Persona explorando una experiencia 3D interactiva con capas de datos y narrativa.',
@@ -347,7 +347,7 @@ export const BLOG_POSTS: readonly BlogPost[] = [
   },
   {
     slug: 'modernizar-sistema-legacy',
-    image: '/assets/blog/legacy-modernization.png',
+    image: 'assets/blog/legacy-modernization.png',
     accent: 'signal',
     imageAlt: {
       es: 'Sistema industrial antiguo encapsulado por capas modernas sin detener la operación.',
@@ -500,7 +500,7 @@ export const BLOG_POSTS: readonly BlogPost[] = [
   },
   {
     slug: 'realidad-3d-educacion-superior',
-    image: '/assets/blog/3d-education.png',
+    image: 'assets/blog/3d-education.png',
     accent: 'trust',
     imageAlt: {
       es: 'Estudiantes explorando un modelo anatómico 3D interactivo en un aula moderna.',
@@ -653,7 +653,7 @@ export const BLOG_POSTS: readonly BlogPost[] = [
   },
   {
     slug: 'consultoria-tecnologica',
-    image: '/assets/blog/tech-consulting.png',
+    image: 'assets/blog/tech-consulting.png',
     accent: 'signal',
     imageAlt: {
       es: 'Mapa de diagnóstico tecnológico que conecta procesos de negocio con bloques de arquitectura.',
@@ -811,7 +811,7 @@ export const BLOG_POSTS: readonly BlogPost[] = [
   },
   {
     slug: 'talent-outsourcing',
-    image: '/assets/blog/talent-outsourcing.png',
+    image: 'assets/blog/talent-outsourcing.png',
     accent: 'trust',
     imageAlt: {
       es: 'Equipo distribuido de especialistas conectados a un roadmap central de producto.',
