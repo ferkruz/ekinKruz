@@ -1,0 +1,114 @@
+:host {
+  display: block;
+}
+
+.ek-portfolio-detail {
+  position: sticky;
+  top: calc(var(--ek-header-h) + var(--ek-space-5));
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-5);
+  padding: var(--ek-space-5);
+  border-radius: var(--ek-radius-xl);
+  overflow: hidden;
+}
+
+.ek-portfolio-detail::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(46, 230, 214, 0.16), transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 34%);
+}
+
+.ek-portfolio-detail__intro,
+.ek-portfolio-detail__grid,
+.ek-portfolio-detail__impact {
+  position: relative;
+  z-index: 1;
+}
+
+.ek-portfolio-detail__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-2);
+}
+
+.ek-portfolio-detail__grid {
+  display: grid;
+  gap: var(--ek-space-4);
+}
+
+.ek-portfolio-detail__block,
+.ek-portfolio-detail__impact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-3);
+}
+
+.ek-portfolio-detail__block .ek-mono,
+.ek-portfolio-detail__impact .ek-mono {
+  color: var(--ek-text-muted);
+  text-transform: uppercase;
+}
+
+.ek-portfolio-detail ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ek-portfolio-detail li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--ek-text-secondary);
+  font-size: var(--ek-text-caption);
+  line-height: 1.5;
+}
+
+.ek-portfolio-detail li::before {
+  content: '';
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 999px;
+  background: var(--ek-signal);
+  box-shadow: 0 0 14px rgba(46, 230, 214, 0.5);
+}
+
+.ek-portfolio-detail__tech {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
+
+.ek-portfolio-detail__tech li {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--ek-border);
+  border-radius: 999px;
+  background: rgba(5, 7, 10, 0.42);
+  font-family: var(--ek-font-mono);
+  letter-spacing: 0.04em;
+}
+
+.ek-portfolio-detail__tech li::before {
+  display: none;
+}
+
+.ek-portfolio-detail__impact {
+  padding-top: var(--ek-space-4);
+  border-top: 1px solid var(--ek-border);
+}
+
+@media (max-width: 1080px) {
+  .ek-portfolio-detail {
+    position: relative;
+    top: auto;
+  }
+}

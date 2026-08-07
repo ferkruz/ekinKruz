@@ -1,0 +1,408 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.ek-portfolio-card {
+  --ek-project-glow: rgba(46, 230, 214, 0.16);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(19rem, 0.72fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  min-height: clamp(29rem, 42vw, 39rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  overflow: hidden;
+  border: 1px solid var(--ek-border);
+  border-radius: clamp(1rem, 2vw, 1.5rem);
+  background:
+    radial-gradient(
+      720px circle at var(--ek-glow-x, 54%) var(--ek-glow-y, 38%),
+      var(--ek-project-glow),
+      transparent 58%
+    ),
+    linear-gradient(145deg, rgba(18, 24, 31, 0.92), rgba(5, 7, 10, 0.96));
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34);
+  transform: rotateX(var(--ek-tilt-x, 0deg)) rotateY(var(--ek-tilt-y, 0deg));
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    border-color var(--ek-duration-base) var(--ek-ease-out),
+    box-shadow var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-portfolio-card[data-accent='trust'] {
+  --ek-project-glow: rgba(91, 124, 255, 0.17);
+}
+
+.ek-portfolio-card::before,
+.ek-portfolio-card::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.ek-portfolio-card::before {
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, transparent, rgba(46, 230, 214, 0.12), transparent),
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.07), transparent 34%);
+  opacity: 0.56;
+  mask-image: linear-gradient(180deg, #000, transparent 78%);
+}
+
+.ek-portfolio-card::after {
+  inset: auto 8% 0 8%;
+  height: 1px;
+  z-index: 2;
+  background: linear-gradient(90deg, transparent, rgba(46, 230, 214, 0.82), transparent);
+  box-shadow: 0 0 28px rgba(46, 230, 214, 0.42);
+  opacity: 0.46;
+}
+
+.ek-portfolio-card:hover,
+.ek-portfolio-card:focus-within,
+.ek-portfolio-card--selected {
+  border-color: rgba(46, 230, 214, 0.34);
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(46, 230, 214, 0.08);
+}
+
+.ek-portfolio-card--selected {
+  transform:
+    translate3d(0, -0.35rem, 0)
+    rotateX(var(--ek-tilt-x, 0deg))
+    rotateY(var(--ek-tilt-y, 0deg));
+}
+
+.ek-portfolio-card--selected::after {
+  opacity: 0.86;
+}
+
+.ek-portfolio-card__media,
+.ek-portfolio-card__content {
+  position: relative;
+  z-index: 3;
+}
+
+.ek-portfolio-card__media {
+  min-height: 24rem;
+  border-radius: calc(var(--ek-radius-xl) + 0.35rem);
+  overflow: hidden;
+  transform: translateZ(42px);
+}
+
+.ek-portfolio-card__image-shell {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: clamp(0.35rem, 0.9vw, 0.8rem);
+  overflow: hidden;
+  border: 1px solid rgba(232, 237, 245, 0.1);
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 54% 40%, rgba(46, 230, 214, 0.12), transparent 58%),
+    linear-gradient(145deg, rgba(18, 24, 31, 0.9), rgba(5, 7, 10, 0.96));
+  clip-path: inset(0 100% 0 0 round 1.35rem);
+  transition:
+    clip-path var(--ek-duration-slow) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out),
+    border-color var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-portfolio-card__image-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(46, 230, 214, 0.16) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(91, 124, 255, 0.14) 2px, transparent 2px),
+    rgba(5, 7, 10, 0.34);
+  background-size: 54px 54px;
+  mix-blend-mode: screen;
+  opacity: 0.95;
+  animation: ek-portfolio-pixel-grid 1800ms steps(10, end) forwards;
+}
+
+.ek-portfolio-card.ek-reveal--visible .ek-portfolio-card__image-shell {
+  clip-path: inset(0 0 0 0 round 1.35rem);
+}
+
+.ek-portfolio-card:hover .ek-portfolio-card__image-shell,
+.ek-portfolio-card:focus-within .ek-portfolio-card__image-shell,
+.ek-portfolio-card--selected .ek-portfolio-card__image-shell {
+  border-color: rgba(46, 230, 214, 0.22);
+  transform: translate3d(0, -0.25rem, 30px);
+}
+
+.ek-portfolio-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: calc(var(--ek-radius-xl) + 0.05rem);
+  opacity: 0.92;
+  image-rendering: pixelated;
+  filter: blur(18px) saturate(1.35) contrast(1.12);
+  transform: scale(1.07);
+  animation: ek-portfolio-image-resolve 1800ms var(--ek-ease-out) forwards;
+  transition:
+    opacity var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-slow) var(--ek-ease-out);
+}
+
+.ek-portfolio-card:hover .ek-portfolio-card__image,
+.ek-portfolio-card:focus-within .ek-portfolio-card__image,
+.ek-portfolio-card--selected .ek-portfolio-card__image {
+  opacity: 1;
+  transform: scale(1.015);
+}
+
+.ek-portfolio-card__scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 18%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.035) 0 1px,
+      transparent 1px 7px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.3;
+}
+
+.ek-portfolio-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--ek-space-4);
+  padding: clamp(1rem, 2vw, 2rem) clamp(0.5rem, 1vw, 1rem);
+  transform: translateZ(70px);
+}
+
+.ek-portfolio-card__title {
+  max-width: 12ch;
+}
+
+.ek-portfolio-card__description {
+  max-width: 36rem;
+}
+
+.ek-portfolio-card__features,
+.ek-portfolio-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ek-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ek-portfolio-card__features li {
+  padding: 0.5rem 0.68rem;
+  border: 1px solid rgba(232, 237, 245, 0.12);
+  border-radius: var(--ek-radius-sm);
+  background: rgba(5, 7, 10, 0.44);
+  color: var(--ek-text-secondary);
+  font-size: var(--ek-text-caption);
+  opacity: 0;
+  transform: translate3d(0, 0.75rem, 0);
+  transition:
+    opacity var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-base) var(--ek-ease-out),
+    border-color var(--ek-duration-base) var(--ek-ease-out);
+  transition-delay: var(--ek-feature-delay, 0ms);
+}
+
+.ek-portfolio-card.ek-reveal--visible .ek-portfolio-card__features li {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.ek-portfolio-card:hover .ek-portfolio-card__features li,
+.ek-portfolio-card:focus-within .ek-portfolio-card__features li,
+.ek-portfolio-card--selected .ek-portfolio-card__features li {
+  border-color: rgba(46, 230, 214, 0.28);
+}
+
+.ek-portfolio-card__tech li {
+  padding: 0.36rem 0.56rem;
+  border: 1px solid var(--ek-border);
+  border-radius: 999px;
+  background: rgba(11, 15, 20, 0.62);
+  color: var(--ek-text-muted);
+  font-family: var(--ek-font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.ek-portfolio-card__cta {
+  min-height: 2.75rem;
+  margin-top: var(--ek-space-2);
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(46, 230, 214, 0.34);
+  border-radius: 999px;
+  background: rgba(46, 230, 214, 0.1);
+  color: var(--ek-text-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background var(--ek-duration-base) var(--ek-ease-out),
+    transform var(--ek-duration-fast) var(--ek-ease-out),
+    box-shadow var(--ek-duration-base) var(--ek-ease-out);
+}
+
+.ek-portfolio-card__cta:hover,
+.ek-portfolio-card__cta:focus-visible {
+  background: rgba(46, 230, 214, 0.18);
+  box-shadow: 0 0 28px rgba(46, 230, 214, 0.18);
+}
+
+.ek-portfolio-card__cta:focus-visible {
+  outline: none;
+  box-shadow: var(--ek-focus-ring), 0 0 28px rgba(46, 230, 214, 0.18);
+}
+
+.ek-portfolio-card[data-layout='split'] {
+  grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1fr);
+}
+
+.ek-portfolio-card[data-layout='split'] .ek-portfolio-card__media {
+  order: 2;
+}
+
+.ek-portfolio-card[data-layout='dense'] {
+  grid-template-columns: minmax(0, 0.95fr) minmax(20rem, 0.78fr);
+  min-height: clamp(26rem, 38vw, 34rem);
+}
+
+.ek-portfolio-card[data-layout='dual'] {
+  grid-template-columns: minmax(20rem, 0.76fr) minmax(0, 1.04fr);
+}
+
+.ek-portfolio-card[data-layout='dual'] .ek-portfolio-card__media {
+  order: 2;
+}
+
+@media (max-width: 980px) {
+  .ek-portfolio-card,
+  .ek-portfolio-card[data-layout='split'],
+  .ek-portfolio-card[data-layout='dense'],
+  .ek-portfolio-card[data-layout='dual'] {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .ek-portfolio-card[data-layout='split'] .ek-portfolio-card__media,
+  .ek-portfolio-card[data-layout='dual'] .ek-portfolio-card__media {
+    order: 0;
+  }
+
+  .ek-portfolio-card__media {
+    min-height: clamp(18rem, 50vw, 28rem);
+  }
+
+  .ek-portfolio-card__content {
+    padding: var(--ek-space-5);
+  }
+
+  .ek-portfolio-card__title {
+    max-width: 18ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .ek-portfolio-card {
+    padding: var(--ek-space-3);
+    border-radius: var(--ek-radius-xl);
+  }
+
+  .ek-portfolio-card__media {
+    min-height: 17rem;
+  }
+
+  .ek-portfolio-card__content {
+    padding: var(--ek-space-4) var(--ek-space-2) var(--ek-space-3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-portfolio-card,
+  .ek-portfolio-card__image-shell,
+  .ek-portfolio-card__image,
+  .ek-portfolio-card__features li,
+  .ek-portfolio-card__cta {
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+
+  .ek-portfolio-card__image-shell {
+    clip-path: none;
+  }
+
+  .ek-portfolio-card__image-shell::before {
+    display: none;
+  }
+
+  .ek-portfolio-card__image {
+    image-rendering: auto;
+    filter: none;
+    animation: none;
+  }
+
+  .ek-portfolio-card__features li {
+    opacity: 1;
+  }
+}
+
+@keyframes ek-portfolio-image-resolve {
+  0% {
+    image-rendering: pixelated;
+    filter: blur(18px) saturate(1.35) contrast(1.12);
+    transform: scale(1.07);
+  }
+
+  42% {
+    image-rendering: pixelated;
+    filter: blur(12px) saturate(1.28) contrast(1.08);
+    transform: scale(1.045);
+  }
+
+  78% {
+    image-rendering: pixelated;
+    filter: blur(4px) saturate(1.1) contrast(1.03);
+  }
+
+  100% {
+    image-rendering: auto;
+    filter: none;
+    transform: scale(1);
+  }
+}
+
+@keyframes ek-portfolio-pixel-grid {
+  0% {
+    background-size: 72px 72px;
+    opacity: 0.95;
+  }
+
+  55% {
+    background-size: 42px 42px;
+    opacity: 0.58;
+  }
+
+  100% {
+    background-size: 24px 24px;
+    opacity: 0;
+  }
+}

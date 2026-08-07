@@ -67,8 +67,294 @@
   },
   "portfolio": {
     "eyebrow": "Portfolioa",
-    "title": "Proiektu nabarmenak.",
-    "description": "Smart City, Industrial Explorer eta Real Estate Configurator."
+    "title": "Konplexutasuna eraldatzen duten proiektuak.",
+    "description": "Neurrira egindako produktu digitalak garatzen ditugu prozesu konplexuak esperientzia sinple, eraginkor eta eskalagarri bihurtzeko.",
+    "hero": {
+      "eyebrow": "Portfolioa",
+      "title": "Konplexutasuna eraldatzen duten proiektuak.",
+      "description": "Neurrira egindako produktu digitalak garatzen ditugu prozesu konplexuak esperientzia sinple, eraginkor eta eskalagarri bihurtzeko.",
+      "concept": "Arazo konplexuak esperientzia sinple bihurtzen dituzten soluzio digitalak.",
+      "conceptAriaLabel": "Portfolioaren kontzeptu nagusia"
+    },
+    "workAriaLabel": "Proiektu nabarmenak",
+    "work": {
+      "eyebrow": "B2B kasuak",
+      "title": "Sektore konplexuetan aplikatutako esperientzia."
+    },
+    "filters": {
+      "ariaLabel": "Proiektuak iragazi",
+      "all": "Guztiak",
+      "software": "Softwarea",
+      "health": "Osasuna",
+      "logistics": "Logistika",
+      "fintech": "Fintech",
+      "government": "Gobernua / Justizia",
+      "threeD": "3D"
+    },
+    "labels": {
+      "features": "Proiektuaren funtzionalitateak",
+      "technologies": "Proiektuaren teknologiak"
+    },
+    "technologies": {
+      "angular": "Angular",
+      "typescript": "TypeScript",
+      "maps": "Mapak",
+      "apis": "APIak",
+      "realTimeData": "Denbora errealeko datuak",
+      "mobileExperience": "Mobile esperientzia",
+      "responsiveUi": "UI responsivea",
+      "accessibility": "Irisgarritasuna",
+      "searchExperience": "Bilaketa-esperientzia",
+      "enterpriseWebApp": "Web aplikazio enpresariala",
+      "advancedSearch": "Bilaketa aurreratua",
+      "dataVisualization": "Datuen bistaratzea",
+      "informationArchitecture": "Informazio-arkitektura",
+      "secureUi": "UI segurua",
+      "threeD": "3D",
+      "webgl": "WebGL",
+      "digitalTwins": "Biki digitalak",
+      "telemetry": "Telemetria"
+    },
+    "actions": {
+      "exploreSolution": "Soluzioa arakatu"
+    },
+    "detail": {
+      "ariaLabel": "Hautatutako proiektuaren xehetasuna",
+      "selected": "Hautatutako proiektua",
+      "problem": "Arazoa",
+      "solution": "Soluzioa",
+      "characteristics": "Ezaugarriak",
+      "technologies": "Teknologiak",
+      "resolves": "Zer konpontzen dugu"
+    },
+    "finalCta": {
+      "eyebrow": "Hurrengo pausoa",
+      "title": "Neurrira egindako soluzio bat behar duen erronkarik baduzu?",
+      "description": "Kontatu zer eraiki nahi duzun eta azter dezagun elkarrekin nola bihurtu esperientzia digital batean.",
+      "button": "Hitz egin dezagun zure proiektuaz"
+    },
+    "threeD": {
+      "ariaLabel": "3D showcase interaktiboak",
+      "eyebrow": "3D interaktiboa",
+      "title": "Datuak esperientzia bihurtzen diren lekua.",
+      "description": "Ingeniaritza eta 3D bistaratzea uztartzen ditugu informazio konplexua azaltzeko, esploratzeko eta eraldatzeko gai diren esperientzia interaktiboak sortzeko.",
+      "controlsAria": "3D showcasearen egoera interaktiboak",
+      "status": {
+        "concept": "Concept / EKIN KRUZ Labs"
+      },
+      "labels": {
+        "capabilities": "Gaitasunak",
+        "context": "Testuinguru-informazioa",
+        "technologies": "3D teknologiak"
+      },
+      "quiz": {
+        "ariaLabel": "Ikaskuntza-ariketa interaktiboa",
+        "eyebrow": "Mikroikaskuntza",
+        "question": "Zein organo ari zara ikusten?",
+        "options": {
+          "heart": "Bihotza",
+          "lung": "Birika",
+          "brain": "Garuna"
+        },
+        "feedback": {
+          "correct": "Zuzena. Bihotzak odola zirkulazio-sisteman zehar bultzatzen du.",
+          "incorrect": "Ez zehazki. Nabarmendutako egitura bihotza da."
+        }
+      },
+      "technologies": {
+        "threejs": "Three.js",
+        "angular": "Angular",
+        "webgl": "WebGL",
+        "visualization": "3D Visualization",
+        "responsive": "Responsive Web",
+        "learning": "Interactive Learning"
+      },
+      "cta": {
+        "eyebrow": "Interfazetik harago",
+        "title": "Zure produktua ere horrela ikus liteke?",
+        "description": "Kontatu zer eraiki nahi duzun eta azter dezagun nola eraman ohiko interfazetik harago.",
+        "button": "Hitz egin dezagun zure proiektuaz"
+      },
+      "projects": {
+        "realEstate": {
+          "category": "Real Estate / 3D",
+          "name": "Real Estate Explorer",
+          "title": "Espazio bat eraiki aurretik esploratzea.",
+          "description": "Higiezin-garapenak esploratzeko, unitateak bistaratzeko eta erosketa-prozesuan erabakiak hartzea errazteko 3D esperientzia interaktiboa.",
+          "viewerAria": "3D eraikin interaktiboa, solairu eta unitate hautaketarekin",
+          "actions": {
+            "overview": "Eraikina",
+            "floor": "08. solairua",
+            "unit": "8B unitatea"
+          },
+          "features": {
+            "building": "Eraikina nabigatzailetik esploratzea.",
+            "floor": "Solairuen hautaketa kamera-trantsizioarekin.",
+            "unit": "Unitate nabarmendua bereizketa bisualarekin.",
+            "materials": "Material eta akabera aldaketa kontzeptuala.",
+            "compare": "Unitateen konparazioa eta erabilgarritasuna.",
+            "lead": "Informazio-eskaera esperientziaren barrutik."
+          },
+          "insights": {
+            "area": "92 m²",
+            "rooms": "3 logela · 2 bainugela",
+            "orientation": "Ipar-orientazioa",
+            "terrace": "Terraza eta amenities"
+          },
+          "cta": "Unitate honi buruz kontsultatu"
+        },
+        "anatomy": {
+          "category": "Hezkuntza / 3D",
+          "name": "Anatomy Explorer",
+          "title": "Kontzeptu konplexuak esplora daitezkeen esperientzia bihurtzea.",
+          "description": "Nabigatzailetik bertatik eredu anatomikoak esploratzeko eta kontzeptu konplexuak ikaskuntza-esperientzia interaktibo bihurtzeko 3D hezkuntza-plataforma.",
+          "viewerAria": "3D eredu anatomiko interaktiboa, geruzak, bihotza eta zirkulazio-sistemarekin",
+          "actions": {
+            "overview": "Eredu osoa",
+            "circulatory": "Zirkulazio-sistema",
+            "heart": "Bihotza",
+            "quiz": "Identifikatu organoa"
+          },
+          "features": {
+            "layers": "Sistema hezurtsu, muskular, zirkulatorio, nerbioso eta organoen geruzak.",
+            "labels": "Etiketa interaktiboak eta testuinguru-informazioa.",
+            "flow": "Odol-fluxuaren animazio kontzeptuala.",
+            "exercise": "Feedback bisuala duten ikaskuntza-ariketak.",
+            "mobile": "Mobile esperientzia sinplifikatua."
+          },
+          "insights": {
+            "name": "Bihotza",
+            "description": "Odola zirkulazio-sisteman zehar bultzatzen duen organo muskularra.",
+            "function": "Egitura, funtzio eta harremanen bistaratze didaktikoa."
+          },
+          "cta": "Hezkuntza-esperientzia arakatu"
+        }
+      }
+    },
+    "projects": {
+      "logistica": {
+        "category": "Logistika",
+        "title": "Floten jarraipena denbora errealean",
+        "description": "Ibilgailuak eta eragiketa logistikoak denbora errealean monitorizatzeko plataforma digitala, ibilbideen jarraipena eta operazioaren kontrola errazteko.",
+        "imageAlt": "Logistika SaaS plataforma baten mockupa: mapa, ibilbidean dauden ibilgailuak, egoerak eta fikziozko adierazle operatiboak.",
+        "features": {
+          "map": "Mapa operatiboa",
+          "routes": "Ibilbideak eta ibilera",
+          "status": "Ibilgailuen egoerak",
+          "controlPanel": "Kontrol-panela"
+        },
+        "problem": "Eragiketa logistikoek ibilbideen, ibilgailuen eta egoeren gaineko ikusgarritasun argia behar dute eguneroko koordinazioa errazteko.",
+        "solution": "Kudeaketa-web plataforma bat, mapa, ibilbideak, adierazleak eta ibilgailu bakoitzaren informazioa SaaS esperientzia enpresarial batean zentralizatzeko.",
+        "resolves": {
+          "visibility": "Flotaren eta martxan dauden ibilbideen ikusgarritasun operatiboa.",
+          "followUp": "Egoeren, ibilbideen eta ibilgailuen informazioaren jarraipen sinpleagoa.",
+          "operation": "Datu logistiko sakabanatuak ordenatzeko kontrol-puntu bat."
+        }
+      },
+      "salud": {
+        "category": "Osasuna",
+        "title": "Kredentzial digitala eta hornitzaileen gida",
+        "description": "Kredentzialetara, estaldura-informaziora eta osasun-hornitzaileen bilaketara sarbidea errazteko esperientzia digitala.",
+        "imageAlt": "Osasuneko mobile eta responsive mockupa: kredentzial digitala, bilaketa, iragazkiak, mapa eta fikziozko hornitzaileak.",
+        "features": {
+          "credential": "Kredentzial digitala",
+          "search": "Hornitzaileen bilatzailea",
+          "filters": "Espezialitate-iragazkiak",
+          "map": "Mapa eta kokapena"
+        },
+        "problem": "Pertsonek estaldura-informaziora eta hornitzaileetara azkar sartzeko beharra dute, interfaze nahasi edo ez-irisgarririk gabe.",
+        "solution": "Mobile eta responsive esperientzia bat, kredentziala, afiliatuaren datuak, bilaketa, iragazkiak eta mapa interfaze argi eta fidagarri batean antolatzeko.",
+        "resolves": {
+          "access": "Kredentzialetara eta informazio garrantzitsura sarbide sinplea.",
+          "clarity": "Datu sentikorrentzako eta kontsulta ohikoentzako hierarkia bisual argia.",
+          "selfService": "Hornitzaileak edozein gailutatik autokudeatuta bilatzeko aukera."
+        }
+      },
+      "justicia": {
+        "category": "Justizia",
+        "title": "Informazio judizialaren kudeaketa adimenduna",
+        "description": "Prozesu eta espediente judizialei lotutako informazio-bolumen handiak zentralizatu, kontsultatu eta kudeatzeko sistema.",
+        "imageAlt": "Aplikazio judizial enpresarialaren mockupa: dashboarda, bilatzailea, espedienteak, taulak, iragazkiak eta fikziozko informazio-harremanak.",
+        "features": {
+          "dashboard": "Dashboard exekutiboa",
+          "search": "Bilaketa aurreratua",
+          "records": "Espedienteak eta taulak",
+          "relations": "Informazio-harremanak"
+        },
+        "problem": "Ingurune judizialek informazio-bolumen handiekin lan egiten dute, eta kontsulta, trazabilitatea eta egitura behar dituzte zehaztasunez jarduteko.",
+        "solution": "Aplikazio enpresarial sendo bat, espedienteak, iragazkiak, adierazleak, taulak eta datu garrantzitsuen arteko harremanak zentralizatzeko.",
+        "resolves": {
+          "centralization": "Prozesu eta espedienteei lotutako informazioaren zentralizazioa.",
+          "traceability": "Datuak kontsultatzeko eta lotzeko trazabilitate handiagoa.",
+          "consultation": "Informazio konplexuaren kontsulta ordenatua, iragazki eta bistaratzeen bidez."
+        }
+      },
+      "fintech": {
+        "category": "Fintech",
+        "title": "Banku-kontuen kudeaketa digitala",
+        "description": "Finantza-informazioa modu argi, seguru eta irisgarrian kontsultatu eta administratzeko plataforma.",
+        "imageAlt": "Fintech mockupa: desktop dashboarda, mobile aplikazioa, kontuak, saldoa, mugimenduak, txartelak eta fikziozko datuekin egindako grafikoak.",
+        "features": {
+          "accounts": "Kontuak eta saldoak",
+          "movements": "Mugimenduak",
+          "transfers": "Transferentziak",
+          "cards": "Txartelak eta adierazleak"
+        },
+        "problem": "Finantza-kudeaketa digitalak segurtasuna eta zehaztasuna transmititu behar ditu, kontuak, mugimenduak eta eragiketak kontsultatzean argitasuna galdu gabe.",
+        "solution": "Desktop eta mobile plataforma bat, kontuak, saldoak, mugimenduak, transferentziak, txartelak eta grafikoak esperientzia seguru eta irisgarri batean antolatzeko.",
+        "resolves": {
+          "control": "Finantza-informazioaren eta azken jardueraren kontrol argia.",
+          "security": "Konfiantza, zehaztasuna eta nabigazio segurua lehenesten dituen interfazea.",
+          "clarity": "Datu, grafiko eta finantza-adierazleen irakurketa sinplea."
+        }
+      },
+      "realEstateExplorer": {
+        "category": "Concept / EKIN KRUZ Labs · Real Estate / 3D",
+        "title": "Espazio bat eraiki aurretik esploratzea.",
+        "description": "Higiezin-garapenak esploratzeko, unitateak bistaratzeko eta erosketa-prozesuan erabakiak hartzea errazteko 3D esperientzia interaktiboa.",
+        "imageAlt": "Real Estate Explorer mockupa: 3D eraikina, unitate-hautaketa, informazio-panela eta fikziozko datuekin egindako mobile ikuspegia.",
+        "features": {
+          "building": "3D eraikin interaktiboa",
+          "floor": "Solairuen hautaketa",
+          "unit": "Unitate nabarmendua",
+          "lead": "Kontsulta komertziala"
+        },
+        "problem": "Higiezin-proiektuek espazioak, unitateak eta erosketa-erabakiak erakutsi behar dituzte garapena eraiki aurretik.",
+        "solution": "Web bidezko 3D explorer bat, eraikina nabigatzeko, solairuak eta unitateak hautatzeko, testuinguru-informazioa ikusteko eta kontaktua eskatzeko.",
+        "resolves": {
+          "explore": "Higiezin-garapenen esplorazio bisuala nabigatzailetik.",
+          "decide": "Orientazioa, azalera, gelak eta amenities hobeto ulertzea.",
+          "convert": "Unitate-kontsultetarako esperientzia komertzial argiagoa."
+        }
+      },
+      "anatomyExplorer": {
+        "category": "Concept / EKIN KRUZ Labs · Hezkuntza / 3D",
+        "title": "Kontzeptu konplexuak esplora daitezkeen esperientzia bihurtzea.",
+        "description": "Nabigatzailetik bertatik eredu anatomikoak esploratzeko eta kontzeptu konplexuak ikaskuntza-esperientzia interaktibo bihurtzeko 3D hezkuntza-plataforma.",
+        "imageAlt": "Anatomy Explorer mockupa: 3D eredu anatomikoa, zirkulazio-sistema, bihotz nabarmendua, hezkuntza-panela eta fikziozko datuekin egindako mobile ikuspegia.",
+        "features": {
+          "model": "3D eredu anatomikoa",
+          "layers": "Geruza interaktiboak",
+          "labels": "Etiketak eta testuingurua",
+          "learning": "Mikroikaskuntza"
+        },
+        "problem": "Hezkuntza zientifikoak egitura konplexuak modu bisual, interaktibo eta irisgarrian azaltzeko beharra du.",
+        "solution": "Web bidezko 3D plataforma bat, sistema anatomikoak esploratzeko, geruzak aktibatzeko, informazioa kontsultatzeko eta ariketen bidez ikaskuntza indartzeko.",
+        "resolves": {
+          "understand": "Sistema eta egitura anatomikoen ulermen bisuala.",
+          "interact": "Geruza, etiketa eta testuinguru-foku bidezko esplorazio interaktiboa.",
+          "learn": "Eduki konplexua ikaskuntza aktibo bihurtzen duten hezkuntza-esperientziak."
+        }
+      },
+      "industrialExplorer": {
+        "category": "3D / Industria",
+        "title": "Industrial Explorer",
+        "description": "Ingurune industrialak 3D geruzekin eta informazio operatiboarekin bistaratzeko prestatutako demo teknologikoa.",
+        "imageAlt": "Industrial Explorer etorkizuneko mockupa, 3D bistaratze industrialarekin.",
+        "problem": "Ingurune industrialek aktiboak, prozesuak eta datu operatiboak ikuspegi espazial integratu batetik ulertu behar dituzte.",
+        "solution": "Industria, telemetria eta testuinguru operatiboa esploratzeko prestatutako 3D esperientzia, kasua argitaratzeko prest dagoenean."
+      }
+    }
   },
   "blog": {
     "eyebrow": "Bloga",

@@ -67,8 +67,294 @@
   },
   "portfolio": {
     "eyebrow": "Portfolio",
-    "title": "Casos destacados.",
-    "description": "Smart City, Industrial Explorer y Real Estate Configurator."
+    "title": "Proyectos que transforman la complejidad.",
+    "description": "Desarrollamos productos digitales a medida para convertir procesos complejos en experiencias simples, eficientes y escalables.",
+    "hero": {
+      "eyebrow": "Portfolio",
+      "title": "Proyectos que transforman la complejidad.",
+      "description": "Desarrollamos productos digitales a medida para convertir procesos complejos en experiencias simples, eficientes y escalables.",
+      "concept": "Soluciones digitales que convierten problemas complejos en experiencias simples.",
+      "conceptAriaLabel": "Concepto central del portfolio"
+    },
+    "workAriaLabel": "Proyectos destacados",
+    "work": {
+      "eyebrow": "Casos B2B",
+      "title": "Experiencia aplicada a sectores complejos."
+    },
+    "filters": {
+      "ariaLabel": "Filtrar proyectos",
+      "all": "Todos",
+      "software": "Software",
+      "health": "Salud",
+      "logistics": "Logística",
+      "fintech": "Fintech",
+      "government": "Gobierno / Justicia",
+      "threeD": "3D"
+    },
+    "labels": {
+      "features": "Funcionalidades del proyecto",
+      "technologies": "Tecnologías del proyecto"
+    },
+    "technologies": {
+      "angular": "Angular",
+      "typescript": "TypeScript",
+      "maps": "Mapas",
+      "apis": "APIs",
+      "realTimeData": "Datos en tiempo real",
+      "mobileExperience": "Experiencia mobile",
+      "responsiveUi": "UI responsive",
+      "accessibility": "Accesibilidad",
+      "searchExperience": "Experiencia de búsqueda",
+      "enterpriseWebApp": "Aplicación web empresarial",
+      "advancedSearch": "Búsqueda avanzada",
+      "dataVisualization": "Visualización de datos",
+      "informationArchitecture": "Arquitectura de información",
+      "secureUi": "UI segura",
+      "threeD": "3D",
+      "webgl": "WebGL",
+      "digitalTwins": "Digital twins",
+      "telemetry": "Telemetría"
+    },
+    "actions": {
+      "exploreSolution": "Explorar solución"
+    },
+    "detail": {
+      "ariaLabel": "Detalle del proyecto seleccionado",
+      "selected": "Proyecto seleccionado",
+      "problem": "Problema",
+      "solution": "Solución",
+      "characteristics": "Características",
+      "technologies": "Tecnologías",
+      "resolves": "Qué resolvemos"
+    },
+    "finalCta": {
+      "eyebrow": "Siguiente paso",
+      "title": "¿Tenés un desafío que necesita una solución a medida?",
+      "description": "Contanos qué querés construir y exploremos juntos cómo convertirlo en una experiencia digital.",
+      "button": "Hablemos de tu proyecto"
+    },
+    "threeD": {
+      "ariaLabel": "Showcases 3D interactivos",
+      "eyebrow": "3D interactivo",
+      "title": "Donde los datos se convierten en experiencias.",
+      "description": "Combinamos ingeniería y visualización 3D para crear experiencias interactivas capaces de explicar, explorar y transformar información compleja.",
+      "controlsAria": "Estados interactivos del showcase 3D",
+      "status": {
+        "concept": "Concept / EKIN KRUZ Labs"
+      },
+      "labels": {
+        "capabilities": "Capacidades",
+        "context": "Información contextual",
+        "technologies": "Tecnologías 3D"
+      },
+      "quiz": {
+        "ariaLabel": "Ejercicio interactivo de aprendizaje",
+        "eyebrow": "Micro aprendizaje",
+        "question": "¿Qué órgano estás observando?",
+        "options": {
+          "heart": "Corazón",
+          "lung": "Pulmón",
+          "brain": "Cerebro"
+        },
+        "feedback": {
+          "correct": "Correcto. El corazón impulsa la sangre a través del sistema circulatorio.",
+          "incorrect": "No exactamente. La estructura resaltada corresponde al corazón."
+        }
+      },
+      "technologies": {
+        "threejs": "Three.js",
+        "angular": "Angular",
+        "webgl": "WebGL",
+        "visualization": "3D Visualization",
+        "responsive": "Responsive Web",
+        "learning": "Interactive Learning"
+      },
+      "cta": {
+        "eyebrow": "Más allá de la interfaz",
+        "title": "¿Tu producto también podría verse así?",
+        "description": "Contanos qué querés construir y exploremos cómo llevarlo más allá de una interfaz convencional.",
+        "button": "Hablemos de tu proyecto"
+      },
+      "projects": {
+        "realEstate": {
+          "category": "Real Estate / 3D",
+          "name": "Real Estate Explorer",
+          "title": "Explorar un espacio antes de construirlo.",
+          "description": "Experiencia 3D interactiva para explorar desarrollos inmobiliarios, visualizar unidades y facilitar la toma de decisiones durante el proceso de compra.",
+          "viewerAria": "Edificio 3D interactivo con selección de piso y unidad",
+          "actions": {
+            "overview": "Edificio",
+            "floor": "Piso 08",
+            "unit": "Unidad 8B"
+          },
+          "features": {
+            "building": "Exploración del edificio desde navegador.",
+            "floor": "Selección de pisos con transición de cámara.",
+            "unit": "Unidad destacada con separación visual.",
+            "materials": "Cambio conceptual de materiales y acabados.",
+            "compare": "Comparación de unidades y disponibilidad.",
+            "lead": "Solicitud de información desde la experiencia."
+          },
+          "insights": {
+            "area": "92 m²",
+            "rooms": "3 dormitorios · 2 baños",
+            "orientation": "Orientación norte",
+            "terrace": "Terraza y amenities"
+          },
+          "cta": "Consultar esta unidad"
+        },
+        "anatomy": {
+          "category": "Educación / 3D",
+          "name": "Anatomy Explorer",
+          "title": "Convertir conceptos complejos en experiencias que se pueden explorar.",
+          "description": "Plataforma educativa 3D para explorar modelos anatómicos directamente desde el navegador y transformar conceptos complejos en experiencias de aprendizaje interactivas.",
+          "viewerAria": "Modelo anatómico 3D interactivo con capas, corazón y sistema circulatorio",
+          "actions": {
+            "overview": "Modelo completo",
+            "circulatory": "Sistema circulatorio",
+            "heart": "Corazón",
+            "quiz": "Identifica el órgano"
+          },
+          "features": {
+            "layers": "Capas de sistema óseo, muscular, circulatorio, nervioso y órganos.",
+            "labels": "Etiquetas interactivas e información contextual.",
+            "flow": "Animación conceptual del flujo sanguíneo.",
+            "exercise": "Ejercicios de aprendizaje con feedback visual.",
+            "mobile": "Experiencia simplificada para mobile."
+          },
+          "insights": {
+            "name": "Corazón",
+            "description": "Órgano muscular encargado de impulsar la sangre a través del sistema circulatorio.",
+            "function": "Visualización educativa de estructura, función y relaciones."
+          },
+          "cta": "Explorar experiencia educativa"
+        }
+      }
+    },
+    "projects": {
+      "logistica": {
+        "category": "Logística",
+        "title": "Seguimiento de flotas en tiempo real",
+        "description": "Plataforma digital para monitorizar vehículos y operaciones logísticas en tiempo real, facilitando el seguimiento de rutas y el control de la operación.",
+        "imageAlt": "Mockup de plataforma SaaS logística con mapa, vehículos en ruta, estados e indicadores operativos ficticios.",
+        "features": {
+          "map": "Mapa operativo",
+          "routes": "Rutas y recorridos",
+          "status": "Estados de vehículos",
+          "controlPanel": "Panel de control"
+        },
+        "problem": "Las operaciones logísticas necesitan visibilidad clara sobre rutas, vehículos y estados para reducir fricción en la coordinación diaria.",
+        "solution": "Una plataforma web de gestión que centraliza mapa, recorridos, indicadores y datos de cada vehículo en una experiencia SaaS empresarial.",
+        "resolves": {
+          "visibility": "Visibilidad operativa sobre flota y rutas en curso.",
+          "followUp": "Seguimiento más simple de estados, recorridos e información de cada vehículo.",
+          "operation": "Un punto de control para ordenar datos dispersos de la operación logística."
+        }
+      },
+      "salud": {
+        "category": "Salud",
+        "title": "Credencial digital y cartilla de prestadores",
+        "description": "Experiencia digital para facilitar el acceso a credenciales, información de cobertura y búsqueda de prestadores de salud.",
+        "imageAlt": "Mockup mobile y responsive de salud con credencial digital, buscador, filtros, mapa y prestadores ficticios.",
+        "features": {
+          "credential": "Credencial digital",
+          "search": "Buscador de prestadores",
+          "filters": "Filtros por especialidad",
+          "map": "Mapa y ubicación"
+        },
+        "problem": "Las personas necesitan acceder rápido a información de cobertura y prestadores sin atravesar interfaces confusas o poco accesibles.",
+        "solution": "Una experiencia mobile y responsive que organiza credencial, datos del afiliado, búsqueda, filtros y mapa con una interfaz clara y confiable.",
+        "resolves": {
+          "access": "Acceso simple a credenciales e información relevante.",
+          "clarity": "Jerarquía visual clara para datos sensibles y consultas frecuentes.",
+          "selfService": "Autogestión de búsqueda de prestadores desde cualquier dispositivo."
+        }
+      },
+      "justicia": {
+        "category": "Justicia",
+        "title": "Gestión inteligente de información judicial",
+        "description": "Sistema para centralizar, consultar y gestionar grandes volúmenes de información asociados a procesos y expedientes judiciales.",
+        "imageAlt": "Mockup de aplicación judicial empresarial con dashboard, buscador, expedientes, tablas, filtros y relaciones de información ficticia.",
+        "features": {
+          "dashboard": "Dashboard ejecutivo",
+          "search": "Búsqueda avanzada",
+          "records": "Expedientes y tablas",
+          "relations": "Relaciones de información"
+        },
+        "problem": "Los entornos judiciales trabajan con grandes volúmenes de información que requieren consulta, trazabilidad y estructura para operar con precisión.",
+        "solution": "Una aplicación empresarial robusta para centralizar expedientes, filtros, indicadores, tablas y relaciones entre datos relevantes.",
+        "resolves": {
+          "centralization": "Centralización de información asociada a procesos y expedientes.",
+          "traceability": "Mayor trazabilidad para consultar y relacionar datos.",
+          "consultation": "Consulta ordenada de información compleja mediante filtros y visualizaciones."
+        }
+      },
+      "fintech": {
+        "category": "Fintech",
+        "title": "Gestión digital de cuentas bancarias",
+        "description": "Plataforma para consultar y administrar información financiera de forma clara, segura y accesible.",
+        "imageAlt": "Mockup fintech con dashboard desktop, aplicación mobile, cuentas, saldo, movimientos, tarjetas y gráficos con datos ficticios.",
+        "features": {
+          "accounts": "Cuentas y saldos",
+          "movements": "Movimientos",
+          "transfers": "Transferencias",
+          "cards": "Tarjetas e indicadores"
+        },
+        "problem": "La gestión financiera digital necesita transmitir seguridad y precisión sin sacrificar claridad en la consulta de cuentas, movimientos y operaciones.",
+        "solution": "Una plataforma desktop y mobile que organiza cuentas, saldos, movimientos, transferencias, tarjetas y gráficos en una experiencia segura y accesible.",
+        "resolves": {
+          "control": "Control claro sobre información financiera y actividad reciente.",
+          "security": "Interfaz orientada a confianza, precisión y navegación segura.",
+          "clarity": "Lectura simple de datos, gráficos e indicadores financieros."
+        }
+      },
+      "realEstateExplorer": {
+        "category": "Concept / EKIN KRUZ Labs · Real Estate / 3D",
+        "title": "Explorar un espacio antes de construirlo.",
+        "description": "Experiencia 3D interactiva para explorar desarrollos inmobiliarios, visualizar unidades y facilitar la toma de decisiones durante el proceso de compra.",
+        "imageAlt": "Mockup de Real Estate Explorer con edificio 3D, selección de unidad, panel de información y vista mobile con datos ficticios.",
+        "features": {
+          "building": "Edificio 3D interactivo",
+          "floor": "Selección de pisos",
+          "unit": "Unidad destacada",
+          "lead": "Consulta comercial"
+        },
+        "problem": "Los proyectos inmobiliarios necesitan mostrar espacios, unidades y decisiones de compra antes de que el desarrollo esté construido.",
+        "solution": "Un explorer 3D web que permite recorrer el edificio, seleccionar pisos y unidades, visualizar información contextual y solicitar contacto.",
+        "resolves": {
+          "explore": "Exploración visual de desarrollos inmobiliarios desde navegador.",
+          "decide": "Mejor comprensión de orientación, superficie, ambientes y amenities.",
+          "convert": "Una experiencia comercial más clara para consultas de unidades."
+        }
+      },
+      "anatomyExplorer": {
+        "category": "Concept / EKIN KRUZ Labs · Educación / 3D",
+        "title": "Convertir conceptos complejos en experiencias que se pueden explorar.",
+        "description": "Plataforma educativa 3D para explorar modelos anatómicos directamente desde el navegador y transformar conceptos complejos en experiencias de aprendizaje interactivas.",
+        "imageAlt": "Mockup de Anatomy Explorer con modelo anatómico 3D, sistema circulatorio, corazón destacado, panel educativo y vista mobile con datos ficticios.",
+        "features": {
+          "model": "Modelo anatómico 3D",
+          "layers": "Capas interactivas",
+          "labels": "Etiquetas y contexto",
+          "learning": "Micro aprendizaje"
+        },
+        "problem": "La educación científica necesita explicar estructuras complejas de forma visual, interactiva y accesible.",
+        "solution": "Una plataforma 3D web para explorar sistemas anatómicos, activar capas, consultar información y reforzar el aprendizaje con ejercicios.",
+        "resolves": {
+          "understand": "Comprensión visual de sistemas y estructuras anatómicas.",
+          "interact": "Exploración interactiva con capas, etiquetas y foco contextual.",
+          "learn": "Experiencias educativas que transforman contenido complejo en aprendizaje activo."
+        }
+      },
+      "industrialExplorer": {
+        "category": "3D / Industria",
+        "title": "Industrial Explorer",
+        "description": "Demostración tecnológica preparada para visualizar entornos industriales con capas 3D e información operativa.",
+        "imageAlt": "Mockup futuro de Industrial Explorer con visualización 3D industrial.",
+        "problem": "Los entornos industriales necesitan comprender activos, procesos y datos operativos desde una vista espacial integrada.",
+        "solution": "Una experiencia 3D preparada para explorar industria, telemetría y contexto operativo cuando el caso esté listo para publicarse."
+      }
+    }
   },
   "blog": {
     "eyebrow": "Blog",

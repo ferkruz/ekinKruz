@@ -67,8 +67,294 @@
   },
   "portfolio": {
     "eyebrow": "Portfolio",
-    "title": "Selected work.",
-    "description": "Smart City, Industrial Explorer and Real Estate Configurator."
+    "title": "Projects that transform complexity.",
+    "description": "We build bespoke digital products that turn complex processes into simple, efficient and scalable experiences.",
+    "hero": {
+      "eyebrow": "Portfolio",
+      "title": "Projects that transform complexity.",
+      "description": "We build bespoke digital products that turn complex processes into simple, efficient and scalable experiences.",
+      "concept": "Digital solutions that turn complex problems into simple experiences.",
+      "conceptAriaLabel": "Central portfolio concept"
+    },
+    "workAriaLabel": "Featured projects",
+    "work": {
+      "eyebrow": "B2B cases",
+      "title": "Applied experience across complex sectors."
+    },
+    "filters": {
+      "ariaLabel": "Filter projects",
+      "all": "All",
+      "software": "Software",
+      "health": "Health",
+      "logistics": "Logistics",
+      "fintech": "Fintech",
+      "government": "Government / Justice",
+      "threeD": "3D"
+    },
+    "labels": {
+      "features": "Project features",
+      "technologies": "Project technologies"
+    },
+    "technologies": {
+      "angular": "Angular",
+      "typescript": "TypeScript",
+      "maps": "Maps",
+      "apis": "APIs",
+      "realTimeData": "Real-time data",
+      "mobileExperience": "Mobile experience",
+      "responsiveUi": "Responsive UI",
+      "accessibility": "Accessibility",
+      "searchExperience": "Search experience",
+      "enterpriseWebApp": "Enterprise web app",
+      "advancedSearch": "Advanced search",
+      "dataVisualization": "Data visualisation",
+      "informationArchitecture": "Information architecture",
+      "secureUi": "Secure UI",
+      "threeD": "3D",
+      "webgl": "WebGL",
+      "digitalTwins": "Digital twins",
+      "telemetry": "Telemetry"
+    },
+    "actions": {
+      "exploreSolution": "Explore solution"
+    },
+    "detail": {
+      "ariaLabel": "Selected project detail",
+      "selected": "Selected project",
+      "problem": "Problem",
+      "solution": "Solution",
+      "characteristics": "Characteristics",
+      "technologies": "Technologies",
+      "resolves": "What we solve"
+    },
+    "finalCta": {
+      "eyebrow": "Next step",
+      "title": "Do you have a challenge that needs a bespoke solution?",
+      "description": "Tell us what you want to build and let’s explore how to turn it into a digital experience.",
+      "button": "Let’s talk about your project"
+    },
+    "threeD": {
+      "ariaLabel": "Interactive 3D showcases",
+      "eyebrow": "Interactive 3D",
+      "title": "Where data becomes experience.",
+      "description": "We combine engineering and 3D visualisation to create interactive experiences that can explain, explore and transform complex information.",
+      "controlsAria": "Interactive states for the 3D showcase",
+      "status": {
+        "concept": "Concept / EKIN KRUZ Labs"
+      },
+      "labels": {
+        "capabilities": "Capabilities",
+        "context": "Contextual information",
+        "technologies": "3D technologies"
+      },
+      "quiz": {
+        "ariaLabel": "Interactive learning exercise",
+        "eyebrow": "Micro learning",
+        "question": "Which organ are you looking at?",
+        "options": {
+          "heart": "Heart",
+          "lung": "Lung",
+          "brain": "Brain"
+        },
+        "feedback": {
+          "correct": "Correct. The heart pumps blood through the circulatory system.",
+          "incorrect": "Not quite. The highlighted structure is the heart."
+        }
+      },
+      "technologies": {
+        "threejs": "Three.js",
+        "angular": "Angular",
+        "webgl": "WebGL",
+        "visualization": "3D Visualization",
+        "responsive": "Responsive Web",
+        "learning": "Interactive Learning"
+      },
+      "cta": {
+        "eyebrow": "Beyond the interface",
+        "title": "Could your product look like this too?",
+        "description": "Tell us what you want to build and let’s explore how to take it beyond a conventional interface.",
+        "button": "Let’s talk about your project"
+      },
+      "projects": {
+        "realEstate": {
+          "category": "Real Estate / 3D",
+          "name": "Real Estate Explorer",
+          "title": "Explore a space before it is built.",
+          "description": "An interactive 3D experience for exploring real estate developments, visualising units and supporting decision-making during the buying process.",
+          "viewerAria": "Interactive 3D building with floor and unit selection",
+          "actions": {
+            "overview": "Building",
+            "floor": "Floor 08",
+            "unit": "Unit 8B"
+          },
+          "features": {
+            "building": "Browser-based building exploration.",
+            "floor": "Floor selection with camera transition.",
+            "unit": "Highlighted unit with visual separation.",
+            "materials": "Conceptual material and finish changes.",
+            "compare": "Unit comparison and availability.",
+            "lead": "Information request from within the experience."
+          },
+          "insights": {
+            "area": "92 m²",
+            "rooms": "3 bedrooms · 2 bathrooms",
+            "orientation": "North-facing",
+            "terrace": "Terrace and amenities"
+          },
+          "cta": "Enquire about this unit"
+        },
+        "anatomy": {
+          "category": "Education / 3D",
+          "name": "Anatomy Explorer",
+          "title": "Turn complex concepts into experiences people can explore.",
+          "description": "A 3D education platform for exploring anatomical models directly in the browser and transforming complex concepts into interactive learning experiences.",
+          "viewerAria": "Interactive 3D anatomy model with layers, heart and circulatory system",
+          "actions": {
+            "overview": "Full model",
+            "circulatory": "Circulatory system",
+            "heart": "Heart",
+            "quiz": "Identify the organ"
+          },
+          "features": {
+            "layers": "Skeletal, muscular, circulatory, nervous system and organ layers.",
+            "labels": "Interactive labels and contextual information.",
+            "flow": "Conceptual blood-flow animation.",
+            "exercise": "Learning exercises with visual feedback.",
+            "mobile": "Simplified mobile experience."
+          },
+          "insights": {
+            "name": "Heart",
+            "description": "Muscular organ responsible for pumping blood through the circulatory system.",
+            "function": "Educational visualisation of structure, function and relationships."
+          },
+          "cta": "Explore educational experience"
+        }
+      }
+    },
+    "projects": {
+      "logistica": {
+        "category": "Logistics",
+        "title": "Real-time fleet tracking",
+        "description": "A digital platform for monitoring vehicles and logistics operations in real time, supporting route tracking and operational control.",
+        "imageAlt": "Mockup of a logistics SaaS platform with a map, vehicles on route, statuses and fictional operational indicators.",
+        "features": {
+          "map": "Operational map",
+          "routes": "Routes and paths",
+          "status": "Vehicle statuses",
+          "controlPanel": "Control panel"
+        },
+        "problem": "Logistics operations need clear visibility over routes, vehicles and statuses to reduce friction in daily coordination.",
+        "solution": "A management web platform that centralises the map, routes, indicators and vehicle information in an enterprise SaaS experience.",
+        "resolves": {
+          "visibility": "Operational visibility over fleet and active routes.",
+          "followUp": "Simpler tracking of statuses, routes and vehicle information.",
+          "operation": "A control point for organising dispersed logistics data."
+        }
+      },
+      "salud": {
+        "category": "Health",
+        "title": "Digital credential and provider directory",
+        "description": "A digital experience that simplifies access to credentials, coverage information and healthcare provider search.",
+        "imageAlt": "Mobile and responsive health mockup with a digital credential, search, filters, map and fictional providers.",
+        "features": {
+          "credential": "Digital credential",
+          "search": "Provider search",
+          "filters": "Specialty filters",
+          "map": "Map and location"
+        },
+        "problem": "People need fast access to coverage information and providers without dealing with confusing or inaccessible interfaces.",
+        "solution": "A mobile and responsive experience that organises the credential, member data, search, filters and map through a clear, trustworthy interface.",
+        "resolves": {
+          "access": "Simple access to credentials and relevant information.",
+          "clarity": "Clear visual hierarchy for sensitive data and frequent enquiries.",
+          "selfService": "Self-service provider search from any device."
+        }
+      },
+      "justicia": {
+        "category": "Justice",
+        "title": "Intelligent judicial information management",
+        "description": "A system for centralising, consulting and managing large volumes of information associated with judicial processes and case files.",
+        "imageAlt": "Enterprise judicial application mockup with dashboard, search, case files, tables, filters and fictional data relationships.",
+        "features": {
+          "dashboard": "Executive dashboard",
+          "search": "Advanced search",
+          "records": "Case files and tables",
+          "relations": "Information relationships"
+        },
+        "problem": "Judicial environments handle large volumes of information that require consultation, traceability and structure to operate with precision.",
+        "solution": "A robust enterprise application for centralising case files, filters, indicators, tables and relationships between relevant data.",
+        "resolves": {
+          "centralization": "Centralisation of information linked to processes and case files.",
+          "traceability": "Stronger traceability for consulting and connecting data.",
+          "consultation": "Structured consultation of complex information through filters and visualisations."
+        }
+      },
+      "fintech": {
+        "category": "Fintech",
+        "title": "Digital bank account management",
+        "description": "A platform for consulting and managing financial information in a clear, secure and accessible way.",
+        "imageAlt": "Fintech mockup with desktop dashboard, mobile app, accounts, balance, transactions, cards and charts with fictional data.",
+        "features": {
+          "accounts": "Accounts and balances",
+          "movements": "Transactions",
+          "transfers": "Transfers",
+          "cards": "Cards and indicators"
+        },
+        "problem": "Digital financial management needs to communicate security and precision without sacrificing clarity when consulting accounts, transactions and operations.",
+        "solution": "A desktop and mobile platform that organises accounts, balances, transactions, transfers, cards and charts in a secure, accessible experience.",
+        "resolves": {
+          "control": "Clear control over financial information and recent activity.",
+          "security": "An interface designed for trust, precision and safe navigation.",
+          "clarity": "Simple reading of financial data, charts and indicators."
+        }
+      },
+      "realEstateExplorer": {
+        "category": "Concept / EKIN KRUZ Labs · Real Estate / 3D",
+        "title": "Explore a space before it is built.",
+        "description": "An interactive 3D experience for exploring real estate developments, visualising units and supporting decision-making during the buying process.",
+        "imageAlt": "Real Estate Explorer mockup with a 3D building, unit selection, information panel and mobile view using fictional data.",
+        "features": {
+          "building": "Interactive 3D building",
+          "floor": "Floor selection",
+          "unit": "Highlighted unit",
+          "lead": "Commercial enquiry"
+        },
+        "problem": "Real estate projects need to show spaces, units and buying decisions before the development is built.",
+        "solution": "A web-based 3D explorer that lets users navigate the building, select floors and units, view contextual information and request contact.",
+        "resolves": {
+          "explore": "Visual exploration of real estate developments directly in the browser.",
+          "decide": "Clearer understanding of orientation, area, rooms and amenities.",
+          "convert": "A clearer commercial experience for unit enquiries."
+        }
+      },
+      "anatomyExplorer": {
+        "category": "Concept / EKIN KRUZ Labs · Education / 3D",
+        "title": "Turn complex concepts into experiences people can explore.",
+        "description": "A 3D education platform for exploring anatomical models directly in the browser and transforming complex concepts into interactive learning experiences.",
+        "imageAlt": "Anatomy Explorer mockup with a 3D anatomy model, circulatory system, highlighted heart, educational panel and mobile view using fictional data.",
+        "features": {
+          "model": "3D anatomy model",
+          "layers": "Interactive layers",
+          "labels": "Labels and context",
+          "learning": "Micro learning"
+        },
+        "problem": "Science education needs to explain complex structures in a visual, interactive and accessible way.",
+        "solution": "A web-based 3D platform for exploring anatomical systems, activating layers, consulting information and reinforcing learning through exercises.",
+        "resolves": {
+          "understand": "Visual understanding of anatomical systems and structures.",
+          "interact": "Interactive exploration with layers, labels and contextual focus.",
+          "learn": "Educational experiences that turn complex content into active learning."
+        }
+      },
+      "industrialExplorer": {
+        "category": "3D / Industry",
+        "title": "Industrial Explorer",
+        "description": "A technology demo prepared to visualise industrial environments with 3D layers and operational information.",
+        "imageAlt": "Future Industrial Explorer mockup with industrial 3D visualisation.",
+        "problem": "Industrial environments need to understand assets, processes and operational data from an integrated spatial view.",
+        "solution": "A 3D experience prepared for exploring industry, telemetry and operational context when the case is ready to be published."
+      }
+    }
   },
   "blog": {
     "eyebrow": "Blog",

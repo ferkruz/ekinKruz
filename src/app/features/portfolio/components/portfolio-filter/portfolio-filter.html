@@ -1,0 +1,14 @@
+<div class="ek-portfolio-filter" role="list" [attr.aria-label]="'portfolio.filters.ariaLabel' | transloco">
+  @for (filter of filters; track filter.id) {
+    <button
+      class="ek-portfolio-filter__item"
+      type="button"
+      role="listitem"
+      [class.ek-portfolio-filter__item--active]="filter.id === activeFilter"
+      [attr.aria-pressed]="filter.id === activeFilter"
+      (click)="filterChange.emit(filter.id)"
+    >
+      {{ filter.labelKey | transloco }}
+    </button>
+  }
+</div>

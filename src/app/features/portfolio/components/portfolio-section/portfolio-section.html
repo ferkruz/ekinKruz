@@ -1,0 +1,84 @@
+<main class="ek-portfolio-page" aria-labelledby="portfolio-title">
+  <div class="ek-portfolio-page__aura" aria-hidden="true"></div>
+
+  <section class="ek-portfolio-hero">
+    <ek-container [wide]="true">
+      <div class="ek-portfolio-hero__grid" ekReveal>
+        <div class="ek-portfolio-hero__copy">
+          <p class="ek-eyebrow">{{ 'portfolio.hero.eyebrow' | transloco }}</p>
+          <h1 id="portfolio-title" class="ek-display-lg">
+            {{ 'portfolio.hero.title' | transloco }}
+          </h1>
+          <p class="ek-body-lg">
+            {{ 'portfolio.hero.description' | transloco }}
+          </p>
+        </div>
+
+        <aside
+          class="ek-portfolio-hero__statement ek-glass"
+          [attr.aria-label]="'portfolio.hero.conceptAriaLabel' | transloco"
+        >
+          <span class="ek-portfolio-hero__line" aria-hidden="true"></span>
+          <p>{{ 'portfolio.hero.concept' | transloco }}</p>
+        </aside>
+      </div>
+    </ek-container>
+  </section>
+
+  <section class="ek-portfolio-work" [attr.aria-label]="'portfolio.workAriaLabel' | transloco">
+    <ek-container [wide]="true">
+      <div class="ek-portfolio-work__toolbar" ekReveal>
+        <div>
+          <p class="ek-eyebrow">{{ 'portfolio.work.eyebrow' | transloco }}</p>
+          <h2 class="ek-heading-md">{{ 'portfolio.work.title' | transloco }}</h2>
+        </div>
+
+        <ek-portfolio-filter
+          [filters]="filters"
+          [activeFilter]="activeFilter()"
+          (filterChange)="selectFilter($event)"
+        />
+      </div>
+
+      <div class="ek-portfolio-work__layout">
+        <div class="ek-portfolio-work__projects" role="list">
+          @for (project of visibleProjects(); track project.id; let i = $index) {
+            <div role="listitem">
+              <ek-portfolio-project
+                [project]="project"
+                [index]="i"
+                [selected]="selectedProject().id === project.id"
+                (selectProject)="selectProject($event)"
+              />
+            </div>
+          }
+        </div>
+
+        @if (selectedProject(); as project) {
+          <ek-portfolio-project-detail [project]="project" ekReveal [ekRevealDelay]="120" />
+        }
+      </div>
+    </ek-container>
+  </section>
+
+  <section class="ek-portfolio-final" aria-labelledby="portfolio-cta-title">
+    <ek-container>
+      <div class="ek-portfolio-final__band ek-glass" ekReveal>
+        <div>
+          <p class="ek-eyebrow">{{ 'portfolio.finalCta.eyebrow' | transloco }}</p>
+          <h2 id="portfolio-cta-title" class="ek-display-lg">
+            {{ 'portfolio.finalCta.title' | transloco }}
+          </h2>
+          <p class="ek-body-lg">
+            {{ 'portfolio.finalCta.description' | transloco }}
+          </p>
+        </div>
+
+        <ek-button variant="primary" size="lg" routerLink="/contacto">
+          {{ 'portfolio.finalCta.button' | transloco }}
+        </ek-button>
+      </div>
+    </ek-container>
+  </section>
+
+</main>

@@ -1,0 +1,200 @@
+:host {
+  display: block;
+}
+
+.ek-portfolio-page {
+  position: relative;
+  overflow: clip;
+  background: var(--ek-void);
+}
+
+.ek-portfolio-page__aura {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 56% 36% at 20% 8%, rgba(46, 230, 214, 0.12), transparent 72%),
+    radial-gradient(ellipse 46% 34% at 82% 18%, rgba(91, 124, 255, 0.1), transparent 72%);
+}
+
+.ek-portfolio-hero {
+  position: relative;
+  padding-block: clamp(6rem, 12vh, 10rem) clamp(3rem, 8vh, 6rem);
+}
+
+.ek-portfolio-hero__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 0.55fr);
+  align-items: end;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.ek-portfolio-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-4);
+  max-width: 51rem;
+}
+
+.ek-portfolio-hero__copy .ek-display-lg {
+  max-width: 13ch;
+}
+
+.ek-portfolio-hero__statement {
+  position: relative;
+  min-height: 16rem;
+  padding: var(--ek-space-6);
+  border-radius: var(--ek-radius-xl);
+  overflow: hidden;
+}
+
+.ek-portfolio-hero__statement::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background:
+    linear-gradient(120deg, transparent, rgba(46, 230, 214, 0.12), transparent),
+    radial-gradient(circle at 70% 30%, rgba(91, 124, 255, 0.16), transparent 44%);
+  animation: ek-portfolio-aura 12s var(--ek-ease-soft) infinite alternate;
+}
+
+.ek-portfolio-hero__statement p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--ek-text-primary);
+  font-family: var(--ek-font-display);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.ek-portfolio-hero__line {
+  position: absolute;
+  left: var(--ek-space-6);
+  right: var(--ek-space-6);
+  bottom: var(--ek-space-6);
+  z-index: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ek-signal), rgba(91, 124, 255, 0.8), transparent);
+  box-shadow:
+    0 0 18px rgba(46, 230, 214, 0.5),
+    0 0 34px rgba(91, 124, 255, 0.28);
+}
+
+.ek-portfolio-work {
+  position: relative;
+  padding-block: clamp(3rem, 8vh, 6rem) var(--ek-section-y);
+}
+
+.ek-portfolio-work__toolbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--ek-space-5);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.ek-portfolio-work__toolbar > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-2);
+}
+
+.ek-portfolio-work__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.32fr);
+  align-items: start;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.ek-portfolio-work__projects {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  min-width: 0;
+}
+
+.ek-portfolio-final {
+  position: relative;
+  padding-block: 0 var(--ek-section-y);
+}
+
+.ek-portfolio-final__band {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ek-space-6);
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: var(--ek-radius-xl);
+  overflow: hidden;
+}
+
+.ek-portfolio-final__band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(46, 230, 214, 0.18), transparent 44%),
+    linear-gradient(100deg, rgba(91, 124, 255, 0.1), transparent 50%);
+}
+
+.ek-portfolio-final__band > div,
+.ek-portfolio-final__band ek-button {
+  position: relative;
+  z-index: 1;
+}
+
+.ek-portfolio-final__band > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ek-space-4);
+  max-width: 42rem;
+}
+
+@keyframes ek-portfolio-aura {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(3%, 2%, 0) scale(1.06);
+  }
+}
+
+@media (max-width: 1080px) {
+  .ek-portfolio-hero__grid,
+  .ek-portfolio-work__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ek-portfolio-work__toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .ek-portfolio-hero {
+    padding-block-start: var(--ek-space-8);
+  }
+
+  .ek-portfolio-hero__statement {
+    min-height: 13rem;
+    padding: var(--ek-space-5);
+  }
+
+  .ek-portfolio-final__band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ek-portfolio-hero__statement::before {
+    animation: none;
+  }
+}

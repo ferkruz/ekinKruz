@@ -1,16 +1,10 @@
 import { Component } from '@angular/core';
-import { PlaceholderPage } from '../shared/placeholder-page';
+import { PortfolioSectionComponent } from './components/portfolio-section/portfolio-section';
 
 @Component({
   selector: 'ek-portfolio-page',
   standalone: true,
-  imports: [PlaceholderPage],
-  template: `
-    <ek-placeholder-page
-      eyebrowKey="portfolio.eyebrow"
-      titleKey="portfolio.title"
-      descriptionKey="portfolio.description"
-    />
-  `,
+  imports: [PortfolioSectionComponent],
+  template: '<ek-portfolio-section />',
 })
 export class PortfolioPage {}

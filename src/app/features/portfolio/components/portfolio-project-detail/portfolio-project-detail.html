@@ -1,0 +1,45 @@
+<aside class="ek-portfolio-detail ek-glass" [attr.aria-label]="'portfolio.detail.ariaLabel' | transloco">
+  <div class="ek-portfolio-detail__intro">
+    <p class="ek-eyebrow">{{ 'portfolio.detail.selected' | transloco }}</p>
+    <h3 class="ek-heading-sm">{{ project.titleKey | transloco }}</h3>
+  </div>
+
+  <div class="ek-portfolio-detail__grid">
+    <section class="ek-portfolio-detail__block">
+      <p class="ek-mono">{{ 'portfolio.detail.problem' | transloco }}</p>
+      <p class="ek-body">{{ project.problemKey | transloco }}</p>
+    </section>
+
+    <section class="ek-portfolio-detail__block">
+      <p class="ek-mono">{{ 'portfolio.detail.solution' | transloco }}</p>
+      <p class="ek-body">{{ project.solutionKey | transloco }}</p>
+    </section>
+
+    <section class="ek-portfolio-detail__block">
+      <p class="ek-mono">{{ 'portfolio.detail.characteristics' | transloco }}</p>
+      <ul>
+        @for (featureKey of project.featureKeys; track featureKey) {
+          <li>{{ featureKey | transloco }}</li>
+        }
+      </ul>
+    </section>
+
+    <section class="ek-portfolio-detail__block">
+      <p class="ek-mono">{{ 'portfolio.detail.technologies' | transloco }}</p>
+      <ul class="ek-portfolio-detail__tech">
+        @for (technologyKey of project.technologies; track technologyKey) {
+          <li>{{ technologyKey | transloco }}</li>
+        }
+      </ul>
+    </section>
+  </div>
+
+  <section class="ek-portfolio-detail__impact">
+    <p class="ek-mono">{{ 'portfolio.detail.resolves' | transloco }}</p>
+    <ul>
+      @for (resolveKey of project.resolvesKeys; track resolveKey) {
+        <li>{{ resolveKey | transloco }}</li>
+      }
+    </ul>
+  </section>
+</aside>
