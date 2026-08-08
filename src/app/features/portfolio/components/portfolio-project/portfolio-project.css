@@ -106,8 +106,8 @@
   border: 1px solid rgba(232, 237, 245, 0.1);
   border-radius: inherit;
   background:
-    radial-gradient(circle at 54% 40%, rgba(46, 230, 214, 0.12), transparent 58%),
-    linear-gradient(145deg, rgba(18, 24, 31, 0.9), rgba(5, 7, 10, 0.96));
+    radial-gradient(circle at 54% 40%, rgba(232, 237, 245, 0.08), transparent 58%),
+    linear-gradient(145deg, rgba(36, 42, 52, 0.55), rgba(14, 18, 24, 0.72));
   clip-path: inset(0 100% 0 0 round 1.35rem);
   transition:
     clip-path var(--ek-duration-slow) var(--ek-ease-out),
@@ -122,9 +122,9 @@
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(rgba(46, 230, 214, 0.16) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(91, 124, 255, 0.14) 2px, transparent 2px),
-    rgba(5, 7, 10, 0.34);
+    linear-gradient(rgba(46, 230, 214, 0.08) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(91, 124, 255, 0.08) 2px, transparent 2px),
+    rgba(5, 7, 10, 0.18);
   background-size: 54px 54px;
   mix-blend-mode: screen;
   opacity: 0.95;
@@ -169,14 +169,14 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 18%),
     repeating-linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.035) 0 1px,
+      rgba(255, 255, 255, 0.018) 0 1px,
       transparent 1px 7px
     );
   mix-blend-mode: screen;
-  opacity: 0.3;
+  opacity: 0.18;
 }
 
 .ek-portfolio-card__content {
@@ -272,6 +272,31 @@
   box-shadow: var(--ek-focus-ring), 0 0 28px rgba(46, 230, 214, 0.18);
 }
 
+.ek-portfolio-card--selected .ek-portfolio-card__cta {
+  background: rgba(46, 230, 214, 0.2);
+  box-shadow: 0 0 24px rgba(46, 230, 214, 0.16);
+}
+
+.ek-portfolio-card__detail {
+  width: 100%;
+  margin-top: var(--ek-space-2);
+  padding-top: var(--ek-space-3);
+  border-top: 1px solid rgba(232, 237, 245, 0.1);
+  animation: ek-portfolio-detail-in 280ms var(--ek-ease-out);
+}
+
+@keyframes ek-portfolio-detail-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.6rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .ek-portfolio-card[data-layout='split'] {
   grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1fr);
 }
@@ -340,9 +365,11 @@
   .ek-portfolio-card__image-shell,
   .ek-portfolio-card__image,
   .ek-portfolio-card__features li,
-  .ek-portfolio-card__cta {
+  .ek-portfolio-card__cta,
+  .ek-portfolio-card__detail {
     transform: none !important;
     transition: none !important;
+    animation: none !important;
     will-change: auto;
   }
 

@@ -11,7 +11,6 @@ import {
 } from '../../data/portfolio-projects';
 import { PortfolioFilterComponent } from '../portfolio-filter/portfolio-filter';
 import { PortfolioProjectComponent } from '../portfolio-project/portfolio-project';
-import { PortfolioProjectDetailComponent } from '../portfolio-project-detail/portfolio-project-detail';
 
 @Component({
   selector: 'ek-portfolio-section',
@@ -23,7 +22,6 @@ import { PortfolioProjectDetailComponent } from '../portfolio-project-detail/por
     RevealDirective,
     PortfolioFilterComponent,
     PortfolioProjectComponent,
-    PortfolioProjectDetailComponent,
   ],
   templateUrl: './portfolio-section.html',
   styleUrl: './portfolio-section.css',
@@ -32,7 +30,7 @@ export class PortfolioSectionComponent {
   readonly filters = PORTFOLIO_FILTERS;
   readonly projects = PORTFOLIO_PROJECTS;
   readonly activeFilter = signal<PortfolioFilterId>('all');
-  readonly selectedProjectId = signal('logistica');
+  readonly selectedProjectId = signal<string | null>(null);
 
   readonly visibleProjects = computed(() => {
     const filter = this.activeFilter();
@@ -43,25 +41,21 @@ export class PortfolioSectionComponent {
     });
   });
 
-  readonly selectedProject = computed(() => {
-    const projects = this.visibleProjects();
-    return (
-      projects.find((project) => project.id === this.selectedProjectId()) ??
-      projects[0] ??
-      null
-    );
-  });
-
   selectFilter(filter: PortfolioFilterId): void {
     this.activeFilter.set(filter);
 
+    const selectedId = this.selectedProjectId();
+    if (!selectedId) return;
+
     const projects = this.visibleProjects();
-    if (!projects.some((project) => project.id === this.selectedProjectId())) {
-      this.selectedProjectId.set(projects[0]?.id ?? '');
+    if (!projects.some((project) => project.id === selectedId)) {
+      this.selectedProjectId.set(null);
     }
   }
 
   selectProject(projectId: string): void {
-    this.selectedProjectId.set(projectId);
+    this.selectedProjectId.update((selectedProjectId) =>
+      selectedProjectId === projectId ? null : projectId,
+    );
   }
 }

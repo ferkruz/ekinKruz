@@ -44,8 +44,24 @@
       }
     </ul>
 
-    <button class="ek-portfolio-card__cta" type="button" (click)="selectProject.emit(project.id)">
+    <button
+      class="ek-portfolio-card__cta"
+      type="button"
+      [attr.aria-expanded]="selected"
+      [attr.aria-controls]="project.id + '-detail'"
+      (click)="selectProject.emit(project.id)"
+    >
       {{ 'portfolio.actions.exploreSolution' | transloco }}
     </button>
+
+    @if (selected) {
+      <div
+        #detailPanel
+        class="ek-portfolio-card__detail"
+        [id]="project.id + '-detail'"
+      >
+        <ek-portfolio-project-detail [project]="project" />
+      </div>
+    }
   </div>
 </article>

@@ -103,13 +103,6 @@
   gap: var(--ek-space-2);
 }
 
-.ek-portfolio-work__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.32fr);
-  align-items: start;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-}
-
 .ek-portfolio-work__projects {
   display: grid;
   gap: clamp(1.5rem, 4vw, 3rem);
@@ -166,8 +159,7 @@
 }
 
 @media (max-width: 1080px) {
-  .ek-portfolio-hero__grid,
-  .ek-portfolio-work__layout {
+  .ek-portfolio-hero__grid {
     grid-template-columns: 1fr;
   }
 
